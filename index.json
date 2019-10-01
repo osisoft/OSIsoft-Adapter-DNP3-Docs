@@ -1,4 +1,9 @@
 {
+  "V1/index.html": {
+    "href": "V1/index.html",
+    "title": "Edge Adapter for DNP3",
+    "keywords": "Edge Adapter for DNP3 ======= Introduction to Edge Adapter for DNP3 Edge Adapter for DNP3 operational overview Supported features"
+  },
   "V1/readme.html": {
     "href": "V1/readme.html",
     "title": "",
@@ -8,10 +13,5 @@
     "href": "README.html",
     "title": "Edge-Adapter-DNP3-Docs",
     "keywords": "Edge-Adapter-DNP3-Docs"
-  },
-  "V1/index.html": {
-    "href": "V1/index.html",
-    "title": "Edge Adapter for DNP3",
-    "keywords": "Edge Adapter for DNP3 ======= Introduction to Edge Adapter for DNP3 Edge Adapter for DNP3 operational overview Supported features"
   }
 }
