@@ -25,15 +25,144 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure Edge Adapter for DNP3.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure Edge Adapter for DNP3.html",
+          "hash": "yUDCCWxlE2uDpJ0+G6h3jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure data selection.html",
+          "hash": "Qav2NGNGkjPcU62X7fTUew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure data source.html",
+          "hash": "YDCpZavSQU4tBCZDpyWeIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Data selection configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for DNP3/Data selection configuration schema.html",
+          "hash": "b5LXnz1R/HJ99fCo56Xryw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Data source configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for DNP3/Data source configuration schema.html",
+          "hash": "02a1+kBnnI2xXg2473e2Ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Edge Adapter for DNP3 diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Edge Adapter for DNP3 diagnostics.html",
+          "hash": "xFAmaMcbQ4sgZvakviFYVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for DNP3/Edge Adapter for DNP3 operational overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for DNP3/Edge Adapter for DNP3 operational overview.html",
+          "hash": "qNwkDJdPkoxWBR4/Q0uSIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for DNP3/Introduction to Edge Adapter for DNP3.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for DNP3/Introduction to Edge Adapter for DNP3.html",
+          "hash": "J2QjewAF5IqfYaAyV1jcJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for DNP3/Supported features.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for DNP3/Supported features.html",
+          "hash": "LOBx1X90UP98qPw7CdENyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Principles of operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Principles of operation.html",
+          "hash": "YRghieeqr/K3CzJFEGOhew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Software requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Software requirements.html",
+          "hash": "DoJwRBrImGvD1jJO5/PnYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "FgGYj6XBfb7AAnHRUzK/mg=="
+          "hash": "amsEeeieW6O+C0ZR/Tzzug=="
         }
       },
       "is_incremental": false,
@@ -66,7 +195,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 14,
           "skipped_file_count": 0
         }
       }
