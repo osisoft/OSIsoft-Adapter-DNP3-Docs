@@ -2,7 +2,7 @@
 uid: index
 ---
 
-# Edge Adapter for DNP3
+# OSIsoft Adapter for DNP3
 
 =======
 
