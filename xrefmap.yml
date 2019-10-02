@@ -1,15 +1,15 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: EdgeAdapterForDNP3OperationalOverview
-  name: Edge Adapter for DNP3 operational overview
-  href: V1/Introduction%20to%20Edge%20Adapter%20for%20DNP3/Edge%20Adapter%20for%20DNP3%20operational%20overview.html
 - uid: index
   name: Edge Adapter for DNP3
   href: V1/index.html
-- uid: IntroductionToEdgeAdapterForDNP3
-  name: Introduction to Edge Adapter for DNP3
-  href: V1/Introduction%20to%20Edge%20Adapter%20for%20DNP3/Introduction%20to%20Edge%20Adapter%20for%20DNP3.html
+- uid: IntroductionToOSIsoftAdapterForDNP3
+  name: Introduction to OSIsoft Adapter for DNP3
+  href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20DNP3/Introduction%20to%20OSIsoft%20Adapter%20for%20DNP3.html
+- uid: OSIsoftAdapterForDNP3OperationalOverview
+  name: OSIsoft Adapter for DNP3 operational overview
+  href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20DNP3/OSIsoft%20Adapter%20for%20DNP3%20operational%20overview.html
 - uid: SupportedFeaturesDNP3
   name: Supported Features
   href: V1/Introduction%20to%20Edge%20Adapter%20for%20DNP3/Supported%20features.html
