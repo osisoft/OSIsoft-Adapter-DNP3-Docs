@@ -86,18 +86,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Introduction to Edge Adapter for DNP3/Supported features.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Introduction to Edge Adapter for DNP3/Supported features.html",
-          "hash": "LOBx1X90UP98qPw7CdENyA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.md",
       "output": {
         ".html": {
@@ -115,6 +103,18 @@
         ".html": {
           "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html",
           "hash": "abWPpjh1DLH3JaOIwJzShA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
+          "hash": "MuQUAeXz3o095iaYIR33Sw=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "0zNRbC5sCl/3EPz14+38Fw=="
+          "hash": "snXikfLMIvHVE2Myn4bL6A=="
         }
       },
       "is_incremental": false,
