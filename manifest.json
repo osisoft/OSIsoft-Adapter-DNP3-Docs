@@ -26,18 +26,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Data source configuration schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for DNP3/Data source configuration schema.html",
-          "hash": "02a1+kBnnI2xXg2473e2Ew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.md",
       "output": {
         ".html": {
@@ -79,6 +67,18 @@
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data selection configuration schema.html",
           "hash": "I+m/7ze0cl+hiGGFp8XLFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data source configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data source configuration schema.html",
+          "hash": "501pdn+trxwm6Imxn/noKA=="
         }
       },
       "is_incremental": false,
