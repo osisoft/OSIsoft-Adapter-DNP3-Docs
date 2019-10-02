@@ -26,42 +26,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure Edge Adapter for DNP3.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure Edge Adapter for DNP3.html",
-          "hash": "yUDCCWxlE2uDpJ0+G6h3jg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure data selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure data selection.html",
-          "hash": "Qav2NGNGkjPcU62X7fTUew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for DNP3/Configure data source.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for DNP3/Configure data source.html",
-          "hash": "YDCpZavSQU4tBCZDpyWeIg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Configure Edge Adapter for DNP3/Data selection configuration schema.md",
       "output": {
         ".html": {
@@ -86,11 +50,35 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Edge Adapter for DNP3 diagnostics.md",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Edge Adapter for DNP3 diagnostics.html",
-          "hash": "xFAmaMcbQ4sgZvakviFYVQ=="
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
+          "hash": "3W1Dk4zAfNS4krXqionk2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
+          "hash": "7uKf3YU7MakBpJJbU/GBLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
+          "hash": "sEJxoQpFa3ADy9L6jptVKQ=="
         }
       },
       "is_incremental": false,
@@ -127,6 +115,18 @@
         ".html": {
           "relative_path": "V1/Introduction to Edge Adapter for DNP3/Supported features.html",
           "hash": "LOBx1X90UP98qPw7CdENyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
+          "hash": "3R9X4LrEF0sihebzBZsZSA=="
         }
       },
       "is_incremental": false,
