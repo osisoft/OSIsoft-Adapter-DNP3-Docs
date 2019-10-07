@@ -1,0 +1,550 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/test/Edge-Adapter-DMP3-Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "+vY0VnlUySv+9+rULXML2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
+          "hash": "tPrRgtXYKSiDi6o2uynKNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
+          "hash": "nVSidHR8ytAEYEFC2AMXlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
+          "hash": "oIz/PG1Mb6N62RViS9OCAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data selection.html",
+          "hash": "sCifLFEJUDXwtiR+pJlhgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Data source.html",
+          "hash": "+aXl/Vv43kU+6ZtunraTyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html",
+          "hash": "PnqtZrtY1t4O/bdAvgy/tA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html",
+          "hash": "abWPpjh1DLH3JaOIwJzShA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
+          "hash": "MuQUAeXz3o095iaYIR33Sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
+          "hash": "DhVyRWZcCyQHdvzfZaRNUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Principles of operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Principles of operation.html",
+          "hash": "k7ezsShbXbmJIkc7M36vtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Software requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Software requirements.html",
+          "hash": "Lni4RyT1OcAOsBttZ9CK0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/index.html",
+          "hash": "cIJmFCrKKLdHfJP3Vg7Ryw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/README.MD",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/README.html",
+          "hash": "9V2lq2edpSmHDJTQO2crTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Adapter administration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Adapter administration.html",
+          "hash": "MqyNBqdYkafONt9Epf8aow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Data buffering.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Data buffering.html",
+          "hash": "QLnMPPMR+zNHBoti2Oizxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Diagnostics.html",
+          "hash": "Cb85/GTHXn/HBPqS0vbDxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Health.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Health.html",
+          "hash": "w38m+7a60jrtv5tidpoDmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/OSIsoft OSIsoft Adapter diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/OSIsoft OSIsoft Adapter diagnostics.html",
+          "hash": "XbVg5y1/+Y4Mugj1JKhkVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Configuration schemas.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Configuration schemas.html",
+          "hash": "jAEijZXDHvUQRuq5rDHaeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Configure endpoints.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Configure endpoints.html",
+          "hash": "IF7KyDRIUuTu8pLNZF8q4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Configure message logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Configure message logging.html",
+          "hash": "QSzqPSJiy2S2k7bqbuROHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
+          "hash": "H9nX3QYHWq9KMISHiSC/KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Endpoint.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Endpoint.html",
+          "hash": "1V/He8PVGeYwsIJzTR7roQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configure the adapter/Logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configure the adapter/Logging.html",
+          "hash": "lWH4Y5lQHJ3gEXYKruMC5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Data collection and connection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Data collection and connection/Data collection and connection.html",
+          "hash": "lG/hpwgKJ9oUTsQsgS8kPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Start and stop the adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Data collection and connection/Start and stop the adapter.html",
+          "hash": "r4aLGhB1SPafFbzD5YAK6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Start and stop the data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Data collection and connection/Start and stop the data source.html",
+          "hash": "++KbfZAe83AgDzuwZ7PY2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Verify connection from data source to the adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Data collection and connection/Verify connection from data source to the adapter.html",
+          "hash": "vq1xi4u/AerzbBqd9yDnTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Verify data collection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Data collection and connection/Verify data collection.html",
+          "hash": "nuVv0nrBsLgtl4m9Doqf2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Install the adapter/Install the adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Install the adapter/Install the adapter.html",
+          "hash": "UU4sWjm4AgIhc/1cuvj6vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Install the adapter/Uninstall the adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Install the adapter/Uninstall the adapter.html",
+          "hash": "SW4kdZhUFizDP3qw8DlH4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Adapter security.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Prepare for adapter installation/Adapter security.html",
+          "hash": "tqrCqmqi5LxFe7eCef07Lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html",
+          "hash": "fVQ8x63RjxlIznSIToSXjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Hardware requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Prepare for adapter installation/Hardware requirements.html",
+          "hash": "WwTjqFOHKHywnSSSmyJoHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.html",
+          "hash": "y/NGAxksdBl6zNcZJINeew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Troubleshooting/Data buffering.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Troubleshooting/Data buffering.html",
+          "hash": "8RN1kQnSKQCu6wTGTT9t3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Troubleshooting/Logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Troubleshooting/Logging.html",
+          "hash": "5M9TATmvCNwg+R4JCW4FMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Troubleshooting/Troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Troubleshooting/Troubleshooting.html",
+          "hash": "w/3Ep1RzTTM+2D4r26wpCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/readme.html",
+          "hash": "+MhXCSp5Pf1yyTDpY2JQgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/readme.html",
+          "hash": "K/9LWVyPjTcrxWuJQ2I1MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 41,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
