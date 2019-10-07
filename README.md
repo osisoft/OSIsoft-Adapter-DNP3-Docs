@@ -1,1 +1,1 @@
-# Edge-Adapter-DNP3-Docs
+# OSIsoft Adapter DNP3 Docs
