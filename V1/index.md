@@ -24,7 +24,7 @@ uid: index
   - [Configure data source](xref:ConfigureDataSourceDNP3)
   - [Configure data selection](xref:ConfigureDataSelectionDNP3)
   - [Configure message logging](xref:ConfigureMessageLogging)
-  - [Configure enpoints](xref:ConfigureEndpoints)
+  - [Configure endpoints](xref:ConfigureEndpoints)
 - [Data collection and connection](xref:DataCollectionAndConnection)
   - [Verify connection from data source to the adapter](xref:VerifyConnectionFromDataSourceToTheAdapter)
   - [Verify data collection](xref:VerifyDataCollection)
