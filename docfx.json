@@ -32,7 +32,8 @@
     "resource": [
       {
         "files": [
-          "V1/images/**"
+          "V1/images/**",
+		  "V1/main/V1/images/**"
         ]
       }
     ],
