@@ -15,7 +15,7 @@ variables:
     value: OSIsoft-Adapter-DNP3-Docs
 
 jobs:
-  - job: 'Build DocFX'
+  - job: Build DocFX
     pool:
       name: 'vs2017-win2016'
     steps:
