@@ -31,7 +31,7 @@ jobs:
           dir
 
           echo "Update submodules"
-          cd $(reponame)
+          cd $(gitRepo)
           dir
           cd V1\main
           git checkout master
