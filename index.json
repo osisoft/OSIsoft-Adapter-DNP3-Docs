@@ -1,24 +1,4 @@
 {
-  "V1/main/README.html": {
-    "href": "V1/main/README.html",
-    "title": "OSIsoft Adapter Docs",
-    "keywords": "OSIsoft Adapter Docs"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Data source.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Data source.html",
-    "title": "Data source",
-    "keywords": "Data source"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
-    "title": "Configure data selection",
-    "keywords": "Configure data selection"
-  },
-  "V1/readme.html": {
-    "href": "V1/readme.html",
-    "title": "",
-    "keywords": ""
-  },
   "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.html": {
     "href": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.html",
     "title": "Prepare for adapter installation",
@@ -39,6 +19,101 @@
     "title": "Configure message logging",
     "keywords": "Configure message logging"
   },
+  "V1/main/V1/AdapterDeletion/DeleteAdapter.html": {
+    "href": "V1/main/V1/AdapterDeletion/DeleteAdapter.html",
+    "title": "Delete an Adapter",
+    "keywords": "Delete an Adapter An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints. File Relocation All configuration and log files will be renamed and moved to a folder called \"Removed\" within the respective directory. Configuration files will be moved to .\\Configuration\\Removed; logs files to .\\Logs\\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss. In the following example, one Modbus Adapter service is installed on a particular Windows node with the name \"ModbusService1\". A Modbus component with the name \"ModbusDeviceX\" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion: REST Command: DELETE An empty DELETE command must be made against the Id of the component to be deleted. Using cURL: curl -v -X DELETE \"http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted\" REST URLs Relative URL HTTP verb Action api/v1/configuration/system/components/{id} DELETE Deletes specified component"
+  },
+  "V1/main/V1/Supported features.html": {
+    "href": "V1/main/V1/Supported features.html",
+    "title": "Supported features",
+    "keywords": "Supported features"
+  },
+  "V1/main/V1/Data buffering.html": {
+    "href": "V1/main/V1/Data buffering.html",
+    "title": "Data buffering",
+    "keywords": "Data buffering"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
+    "title": "Configure data source",
+    "keywords": "Configure data source"
+  },
+  "V1/Software requirements.html": {
+    "href": "V1/Software requirements.html",
+    "title": "Software requirements",
+    "keywords": "Software requirements"
+  },
+  "V1/Principles of operation.html": {
+    "href": "V1/Principles of operation.html",
+    "title": "Principles of operation",
+    "keywords": "Principles of operation"
+  },
+  "V1/OSIsoft Adapter for DNP3 diagnostics.html": {
+    "href": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
+    "title": "OSIsoft Adapter for DNP3 diagnostics",
+    "keywords": "OSIsoft Adapter for DNP3 diagnostics"
+  },
+  "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html": {
+    "href": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html",
+    "title": "Download OSIsoft Adapter",
+    "keywords": "Download OSIsoft Adapter"
+  },
+  "V1/main/V1/Install the adapter/Uninstall the adapter.html": {
+    "href": "V1/main/V1/Install the adapter/Uninstall the adapter.html",
+    "title": "Uninstall the adapter",
+    "keywords": "Uninstall the adapter"
+  },
+  "V1/main/V1/Health/Device status.html": {
+    "href": "V1/main/V1/Health/Device status.html",
+    "title": "Device status",
+    "keywords": "Device status"
+  },
+  "V1/main/V1/Configure the adapter/Configure endpoints.html": {
+    "href": "V1/main/V1/Configure the adapter/Configure endpoints.html",
+    "title": "Configure endpoints",
+    "keywords": "Configure endpoints Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API. An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under Parameters . Note: Some types, and consequently containers and data, cannot be egressed. For more information, see Egress Execution Details . Configuration procedure Note: You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see REST URLs . Complete the following to create new egress endpoints: Using any text editor, create a file that contains one or more egress endpoints in JSON form. For content structure, see Examples . For a table of all available egress parameters, see Parameters . Save the file. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: http://localhost:5590/api/v1/configuration/Egress/dataendpoints/ Example using cURL: Add endpoints curl -v -d \"@Egress_DataEndpoints.config.json\" -H \"Content-Type: application/json\" -X POST \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints\" curl -v -d \"@Egress_DataEndpoints.config.json\" -H \"Content-Type: application/json\" -X PUT \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints\" Delete an endpoint curl -v -X DELETE \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}\" Update an endpoint curl -v -d \"@Egress_DataEndpoint.config.json\" -H \"Content-Type: application/json\" -X UPDATE \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}\" View endpoints curl -v -X GET \"http://localhost:5590/api/v1/configuration/Egress/DataEndpoints\" Parameters Parameter Required Type Description Id Required string Unique identifier Endpoint Required string Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. ClientId Required for OCS endpoint string Authentication with the OCS OMF endpoint. ClientSecret Required for OCS endpoint string Authentication with the OCS OMF endpoint. TokenEndpoint Optional for OCS endpoint string Retrieves an OCS token from an alternative endpoint. Username Required for PI endpoint string Basic authentication to the PI Web API OMF endpoint. Password Required for PI endpoint string Basic authentication to the PI Web API OMF endpoint. ValidateEndpointCertificate Optional boolean Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. Examples The following examples are valid egress configurations. Egress data to OCS [{ \"Id\": \"OCS\", \"Endpoint\" : \" https://{IP/FQDN of OCS}/api/Tenants/{tenantId}/Namespaces/{namespaceId}/omf\", \"ClientId\" : \"{clientId}\", \"ClientSecret\" : \"{clientSecret}\" }] Egress data to PI Web API. [{ \"Id\": \"PI WebAPI\", \"Endpoint\" : \" https://{IP/FQDN of WebApi}/piwebapi/omf\", \"userName\" : \"{username}\", \"Password\" : \"{password}\" }] REST URLs Relative URL HTTP verb Action api/v1/configuration/egress/DataEndpoints GET Gets all configured egress endpoints api/v1/configuration/egress/DataEndpoints DELETE Deletes all configured egress endpoints api/v1/configuration/egress/DataEndpoints POST Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists api/v1/configuration/egress/DataEndpoints PUT Replaces all egress endpoints api/v1/configuration/egress/DataEndpoints/{id} GET Gets configured endpoint by id api/v1/configuration/egress/DataEndpoints/{id} DELETE Deletes configured endpoint by id api/v1/configuration/egress/DataEndpoints/{id} PUT Replaces egress endpoint by id . Fails if endpoint doesn't exist api/v1/configuration/egress/DataEndpoints/{id} PATCH Allows partial updating of configured endpoint by id Egress execution details After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data. If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost. Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed."
+  },
+  "V1/main/V1/OSIsoft Adapter diagnostics.html": {
+    "href": "V1/main/V1/OSIsoft Adapter diagnostics.html",
+    "title": "OSIsoft Adapter diagnostics",
+    "keywords": "OSIsoft Adapter diagnostics"
+  },
+  "V1/main/README.html": {
+    "href": "V1/main/README.html",
+    "title": "OSIsoft Adapter Docs",
+    "keywords": "OSIsoft Adapter Docs"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Data source.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Data source.html",
+    "title": "Data source",
+    "keywords": "Data source"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
+    "title": "Configure OSIsoft Adapter for DNP3",
+    "keywords": "Configure OSIsoft Adapter for DNP3"
+  },
+  "V1/index.html": {
+    "href": "V1/index.html",
+    "title": "OSIsoft Adapter for DNP3",
+    "keywords": "OSIsoft Adapter for DNP3 ======= Introduction to OSIsoft Adapter for DNP3 OSIsoft Adapter for DNP3 operational overview Supported features Prepare for adapter installation Software requirements Hardware requirements Download OSIsoft Adapter Adapter security Install the adapter Uninstall the adapter Configure OSIsoft Adapter for DNP3 Configuration schemas Data source Data selection Logging Endpoint Configure data source Configure data selection Configure message logging Configure endpoints Data collection and connection Verify connection from data source to the adapter Verify data collection Start or stop the adapter Start or stop the data source Adapter administration Data buffering Adapter to OCS buffering Adapter to PI Server buffering Health Device status Next health message expected Diagnostics OSIsoft Adapter diagnostics OSIsoft Adapter for OPC UA diagnostics Troubleshooting Logging Data buffering"
+  },
+  "V1/main/V1/Troubleshooting/Troubleshooting.html": {
+    "href": "V1/main/V1/Troubleshooting/Troubleshooting.html",
+    "title": "Troubleshooting",
+    "keywords": "Troubleshooting"
+  },
+  "V1/main/V1/Troubleshooting/Logging.html": {
+    "href": "V1/main/V1/Troubleshooting/Logging.html",
+    "title": "Logging",
+    "keywords": "Logging"
+  },
+  "V1/main/test.html": {
+    "href": "V1/main/test.html",
+    "title": "",
+    "keywords": ""
+  },
   "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html": {
     "href": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
     "title": "Supported Features",
@@ -54,15 +129,10 @@
     "title": "Data selection",
     "keywords": "Data selection"
   },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
-    "title": "Configure data source",
-    "keywords": "Configure data source"
-  },
-  "V1/main/V1/Troubleshooting/Troubleshooting.html": {
-    "href": "V1/main/V1/Troubleshooting/Troubleshooting.html",
-    "title": "Troubleshooting",
-    "keywords": "Troubleshooting"
+  "README.html": {
+    "href": "README.html",
+    "title": "OSIsoft Adapter DNP3 Docs",
+    "keywords": "OSIsoft Adapter DNP3 Docs"
   },
   "V1/main/V1/Troubleshooting/Data buffering.html": {
     "href": "V1/main/V1/Troubleshooting/Data buffering.html",
@@ -94,89 +164,19 @@
     "title": "OSIsoft Adapter for DNP3 operational overview",
     "keywords": "OSIsoft Adapter for DNP3 operational overview"
   },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
-    "title": "Configure OSIsoft Adapter for DNP3",
-    "keywords": "Configure OSIsoft Adapter for DNP3"
+  "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
+    "title": "Configure data selection",
+    "keywords": "Configure data selection"
   },
-  "V1/OSIsoft Adapter for DNP3 diagnostics.html": {
-    "href": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
-    "title": "OSIsoft Adapter for DNP3 diagnostics",
-    "keywords": "OSIsoft Adapter for DNP3 diagnostics"
-  },
-  "README.html": {
-    "href": "README.html",
-    "title": "OSIsoft Adapter DNP3 Docs",
-    "keywords": "OSIsoft Adapter DNP3 Docs"
-  },
-  "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html": {
-    "href": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html",
-    "title": "Download OSIsoft Adapter",
-    "keywords": "Download OSIsoft Adapter"
-  },
-  "V1/main/V1/Install the adapter/Uninstall the adapter.html": {
-    "href": "V1/main/V1/Install the adapter/Uninstall the adapter.html",
-    "title": "Uninstall the adapter",
-    "keywords": "Uninstall the adapter"
-  },
-  "V1/main/V1/Health/Device status.html": {
-    "href": "V1/main/V1/Health/Device status.html",
-    "title": "Device status",
-    "keywords": "Device status"
-  },
-  "V1/main/V1/Configure the adapter/Configure endpoints.html": {
-    "href": "V1/main/V1/Configure the adapter/Configure endpoints.html",
-    "title": "Configure endpoints",
-    "keywords": "Configure endpoints Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API. An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under Parameters . Note: Some types, and consequently containers and data, cannot be egressed. For more information, see Egress Execution Details . Configuration procedure Note: You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see REST URLs . Complete the following to create new egress endpoints: Using any text editor, create a file that contains one or more egress endpoints in JSON form. For content structure, see Examples . For a table of all available egress parameters, see Parameters . Save the file. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: http://localhost:5590/api/v1/configuration/Egress/dataendpoints/ Example using cURL: Add endpoints curl -v -d \"@Egress_DataEndpoints.config.json\" -H \"Content-Type: application/json\" -X POST \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints\" curl -v -d \"@Egress_DataEndpoints.config.json\" -H \"Content-Type: application/json\" -X PUT \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints\" Delete an endpoint curl -v -X DELETE \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}\" Update an endpoint curl -v -d \"@Egress_DataEndpoint.config.json\" -H \"Content-Type: application/json\" -X UPDATE \"http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}\" View endpoints curl -v -X GET \"http://localhost:5590/api/v1/configuration/Egress/DataEndpoints\" Parameters Parameter Required Type Description Id Required string Unique identifier Endpoint Required string Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. ClientId Required for OCS endpoint string Authentication with the OCS OMF endpoint. ClientSecret Required for OCS endpoint string Authentication with the OCS OMF endpoint. TokenEndpoint Optional for OCS endpoint string Retrieves an OCS token from an alternative endpoint. Username Required for PI endpoint string Basic authentication to the PI Web API OMF endpoint. Password Required for PI endpoint string Basic authentication to the PI Web API OMF endpoint. ValidateEndpointCertificate Optional boolean Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. Examples The following examples are valid egress configurations. Egress data to OCS [{ \"Id\": \"OCS\", \"Endpoint\" : \" https://{IP/FQDN of OCS}/api/Tenants/{tenantId}/Namespaces/{namespaceId}/omf\", \"ClientId\" : \"{clientId}\", \"ClientSecret\" : \"{clientSecret}\" }] Egress data to PI Web API. [{ \"Id\": \"PI WebAPI\", \"Endpoint\" : \" https://{IP/FQDN of WebApi}/piwebapi/omf\", \"userName\" : \"{username}\", \"Password\" : \"{password}\" }] REST URLs Relative URL HTTP verb Action api/v1/configuration/egress/DataEndpoints GET Gets all configured egress endpoints api/v1/configuration/egress/DataEndpoints DELETE Deletes all configured egress endpoints api/v1/configuration/egress/DataEndpoints POST Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists api/v1/configuration/egress/DataEndpoints PUT Replaces all egress endpoints api/v1/configuration/egress/DataEndpoints/{id} GET Gets configured endpoint by id api/v1/configuration/egress/DataEndpoints/{id} DELETE Deletes configured endpoint by id api/v1/configuration/egress/DataEndpoints/{id} PUT Replaces egress endpoint by id . Fails if endpoint doesn't exist api/v1/configuration/egress/DataEndpoints/{id} PATCH Allows partial updating of configured endpoint by id Egress execution details After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data. If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost. Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed."
-  },
-  "V1/main/V1/OSIsoft Adapter diagnostics.html": {
-    "href": "V1/main/V1/OSIsoft Adapter diagnostics.html",
-    "title": "OSIsoft Adapter diagnostics",
-    "keywords": "OSIsoft Adapter diagnostics"
-  },
-  "V1/main/V1/Troubleshooting/Logging.html": {
-    "href": "V1/main/V1/Troubleshooting/Logging.html",
-    "title": "Logging",
-    "keywords": "Logging"
+  "V1/readme.html": {
+    "href": "V1/readme.html",
+    "title": "",
+    "keywords": ""
   },
   "V1/main/V1/Prepare for adapter installation/Software and hardware requirements.html": {
     "href": "V1/main/V1/Prepare for adapter installation/Software and hardware requirements.html",
     "title": "Software and hardware requirements",
     "keywords": "Software and hardware requirements"
-  },
-  "V1/main/V1/AdapterDeletion/DeleteAdapter.html": {
-    "href": "V1/main/V1/AdapterDeletion/DeleteAdapter.html",
-    "title": "Delete an Adapter",
-    "keywords": "Delete an Adapter An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints. File Relocation All configuration and log files will be renamed and moved to a folder called \"Removed\" within the respective directory. Configuration files will be moved to .\\Configuration\\Removed; logs files to .\\Logs\\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss. In the following example, one Modbus Adapter service is installed on a particular Windows node with the name \"ModbusService1\". A Modbus component with the name \"ModbusDeviceX\" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion: REST Command: DELETE An empty DELETE command must be made against the Id of the component to be deleted. Using cURL: curl -v -X DELETE \"http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted\" REST URLs Relative URL HTTP verb Action api/v1/configuration/system/components/{id} DELETE Deletes specified component"
-  },
-  "V1/main/V1/Supported features.html": {
-    "href": "V1/main/V1/Supported features.html",
-    "title": "Supported features",
-    "keywords": "Supported features"
-  },
-  "V1/main/V1/Data buffering.html": {
-    "href": "V1/main/V1/Data buffering.html",
-    "title": "Data buffering",
-    "keywords": "Data buffering"
-  },
-  "V1/main/test.html": {
-    "href": "V1/main/test.html",
-    "title": "",
-    "keywords": ""
-  },
-  "V1/Software requirements.html": {
-    "href": "V1/Software requirements.html",
-    "title": "Software requirements",
-    "keywords": "Software requirements"
-  },
-  "V1/Principles of operation.html": {
-    "href": "V1/Principles of operation.html",
-    "title": "Principles of operation",
-    "keywords": "Principles of operation"
-  },
-  "V1/index.html": {
-    "href": "V1/index.html",
-    "title": "OSIsoft Adapter for DNP3",
-    "keywords": "OSIsoft Adapter for DNP3 ======= Introduction to OSIsoft Adapter for DNP3 OSIsoft Adapter for DNP3 operational overview Supported features Prepare for adapter installation Software requirements Hardware requirements Download OSIsoft Adapter Adapter security Install the adapter Uninstall the adapter Configure OSIsoft Adapter for DNP3 Configuration schemas Data source Data selection Logging Endpoint Configure data source Configure data selection Configure message logging Configure endpoints Data collection and connection Verify connection from data source to the adapter Verify data collection Start or stop the adapter Start or stop the data source Adapter administration Data buffering Adapter to OCS buffering Adapter to PI Server buffering Health Device status Next health message expected Diagnostics OSIsoft Adapter diagnostics OSIsoft Adapter for OPC UA diagnostics Troubleshooting Logging Data buffering"
   }
 }
