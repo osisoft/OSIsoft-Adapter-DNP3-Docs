@@ -1,0 +1,18 @@
+trigger:
+batch: true
+branches:
+  include:
+    - master
+
+pr:
+  branches:
+    include:
+      - master
+
+variables:
+  - group: product-readiness.docfx
+  - name: gitRepo
+    value: OSIsoft-Adapter-DNP3-Docs
+
+jobs:
+  - template: '/V1/main/build_templates/docfx.yml'
