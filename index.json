@@ -1,8 +1,158 @@
 {
-  "V1/OSIsoft Adapter for DNP3 diagnostics.html": {
-    "href": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
-    "title": "OSIsoft Adapter for DNP3 diagnostics",
-    "keywords": "OSIsoft Adapter for DNP3 diagnostics"
+  "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html": {
+    "href": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
+    "title": "Supported Features",
+    "keywords": "Supported Features"
+  },
+  "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html": {
+    "href": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html",
+    "title": "OSIsoft Adapter for DNP3 operational overview",
+    "keywords": "OSIsoft Adapter for DNP3 operational overview"
+  },
+  "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.html": {
+    "href": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.html",
+    "title": "EdgeCmd commands",
+    "keywords": "EdgeCmd commands The following tables provide an overview of available edgecmd commands that you can use with components of Edge Data Store. Every command that you use with the edgecmd utility has to be preceded by edgecmd . Help edgecmd command Description Examples edgecmd Help Display general instructions on how to use the edgecmd utility. edgecmd Help <componentName> Display help for a specific Edge Data Store component. edgecmd Help System edgecmd Help <componentName> <facetName> Display help for a specific facet of an Edge Data store component. edgecmd Help System Port Configuration System edgecmd command Description Examples edgecmd Configuration Display the entire configuration for every Edge Data Store component. edgecmd Configuration System Components Display the components that are currently configured. edgecmd Configuration System Components componentId=<componentId> componentType=<componentType> Add a new component. edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus edgecmd Configuration System Components id=<componentId> delete Delete a component. edgecmd Configuration System Components id=Modbus1 delete Components edgecmd command Description Examples edgecmd Configuration <componentId> Display component specific configuration. edgecmd Configuration System or edgecmd Configuration OpcUa1 edgecmd Configuration <componentId> <facetName> Display facet specific configuration of an Edge Data Store component. edgecmd Configuration Storage Logging edgecmd Configuration <componentId> <facetName> id=<IndexToRetrieve> Display the configuration of specific entry of a facet. edgecmd Configuration Storage PeriodicEgressEndpoints id=Endpoint1 edgecmd Configuration <componentId> DataSource Configure the data source for either the Modbus TCP EDS adapter or the OPC UA EDS adapter. For examples, see OPC UA data source configuration and Modbus TCP data source configuration . edgecmd Configuration <componentId> DataSelection Configure the data selection for either the Modbus TCP EDS adapter or the OPC UA EDS adapter. For examples, see OPC UA data selection configuration and Modbus TCP data selection configuration . edgecmd Configuration <componentId> Logging Configure logging for either the Modbus TCP EDS adapter or the OPC UA EDS adapter. For examples, see Logging configuration . Configuration with JSON files edgecmd command Description Examples edgecmd Configuration file=<PathToJsonFile> Import a bulk configuration through a JSON file. edgecmd Configuration file=\"~/Bulk_Storage_Runtime.json\" edgecmd Configuration <componentId> <facetName> file=<PathToJsonFile> Import a facet specific configuration file for a component. edgecmd Configuration Modbus1 DataSource file=\"~/Modbus_DataSource.json\""
+  },
+  "V1/edgecmd/V1/readme.html": {
+    "href": "V1/edgecmd/V1/readme.html",
+    "title": "",
+    "keywords": ""
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Data source.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Data source.html",
+    "title": "Data source",
+    "keywords": "Data source"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
+    "title": "Configure OSIsoft Adapter for DNP3",
+    "keywords": "Configure OSIsoft Adapter for DNP3"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
+    "title": "Configure data selection",
+    "keywords": "Configure data selection"
+  },
+  "V1/readme.html": {
+    "href": "V1/readme.html",
+    "title": "",
+    "keywords": ""
+  },
+  "README.html": {
+    "href": "README.html",
+    "title": "OSIsoft Adapter DNP3 Docs",
+    "keywords": "OSIsoft Adapter DNP3 Docs"
+  },
+  "V1/main/V1/Installation/Uninstall the adapter.html": {
+    "href": "V1/main/V1/Installation/Uninstall the adapter.html",
+    "title": "Uninstall the adapter",
+    "keywords": "Uninstall the adapter"
+  },
+  "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html": {
+    "href": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
+    "title": "Egress endpoint configuration schema",
+    "keywords": "Egress endpoint configuration schema [{ \"endpoint\": \"https://<pi web api server>/piwebapi/omf/\", \"UserName\": \"<username>\", \"Password\": \"<password>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 }, { \"Endpoint\": \"https://<OCS OMF endpoint>\", \"ClientId\": \"<clientid>\", \"ClientSecret\": \"<clientsecret>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 } ] Abstract Extensible Status Identifiable Custom Properties Additional Properties Defined In Can be instantiated Yes Experimental No Forbidden Forbidden Egress_DataEndpoints_schema.json EgressEndpointConfiguration Properties Property Type Required Nullable Defined by Buffering reference Optional No EgressEndpointConfiguration (this schema) ClientId string Optional Yes EgressEndpointConfiguration (this schema) ClientSecret string Optional Yes EgressEndpointConfiguration (this schema) Endpoint string Required No EgressEndpointConfiguration (this schema) Id string Optional Yes EgressEndpointConfiguration (this schema) MaxBufferSizeMB integer Optional No EgressEndpointConfiguration (this schema) Password string Optional Yes EgressEndpointConfiguration (this schema) TokenEndpoint string Optional Yes EgressEndpointConfiguration (this schema) UserName string Optional Yes EgressEndpointConfiguration (this schema) ValidateEndpointCertificate boolean Optional No EgressEndpointConfiguration (this schema) Buffering Buffering is optional type: reference defined in this schema Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string defined in this schema ClientId Type string , nullable ClientSecret ClientSecret is optional type: string defined in this schema ClientSecret Type string , nullable Endpoint Endpoint is required type: string defined in this schema Endpoint Type string minimum length: 1 characters Id Id is optional type: string defined in this schema Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer defined in this schema MaxBufferSizeMB Type integer Password Password is optional type: string defined in this schema Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string defined in this schema TokenEndpoint Type string , nullable UserName UserName is optional type: string defined in this schema UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean defined in this schema ValidateEndpointCertificate Type boolean All of the following requirements need to be fulfilled. Requirement 1 object with following properties: Property Type Required Buffering reference Optional ClientId string Optional ClientSecret string Optional Endpoint string Required Id string Optional MaxBufferSizeMB integer Optional Password string Optional TokenEndpoint string Optional UserName string Optional ValidateEndpointCertificate boolean Optional Buffering Buffering is optional type: reference Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string ClientId Type string , nullable ClientSecret ClientSecret is optional type: string ClientSecret Type string , nullable Endpoint Endpoint is required type: string Endpoint Type string minimum length: 1 characters Id Id is optional type: string Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer MaxBufferSizeMB Type integer Password Password is optional type: string Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string TokenEndpoint Type string , nullable UserName UserName is optional type: string UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean ValidateEndpointCertificate Type boolean"
+  },
+  "V1/main/V1/Configuration/System components configuration.html": {
+    "href": "V1/main/V1/Configuration/System components configuration.html",
+    "title": "System components configuration",
+    "keywords": "System components configuration OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected. Note: You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call. Configure system components The default System_Components.json file for the System component contains the following information. The Egress component is required for this initial release for adapters to run. [ { \"ComponentId\": \"Egress\", \"ComponentType\": \"OmfEgress\" } ] You can add additional components if you want, but only a single OmfEgress component is supported. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. Note: A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter: { \"ComponentId\": \"Modbus1\", \"ComponentType\": \"Modbus\" } Save the JSON in a file named AddComponent.json . From the same directory where the file exists, run the following curl script: curl -i -d \"@AddComponent.json\" -H \"Content-Type: application/json\" http://localhost:5595/api/v1/configuration/system/components After the curl command completes successfully, you can configure or use the new component. Delete a component To delete an existing component, run the following curl script: curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/ All the logs and configurations files for the deleted components will be moved to the corresponding logs/Removed or Configuration/Removed folder. System components schema The following table defines the basic behavior of the AddComponent.json file. Abstract Extensible Status Identifiable Custom properties Additional properties Can be instantiated Yes Experimental No Forbidden Forbidden Parameters for system components The following parameters are available for configuring system components. Parameters Required Type Nullable Description ComponentId Required string Yes The ID of the component. It can be any alphanumeric string, for example Egress. ComponentType Required string Yes The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. System components example [ { \"componentId\": \"Modbus1\", \"componentType\": \"Modbus\" }, { \"componentId\": \"Modbus2\", \"componentType\": \"Modbus\" }, { \"ComponentId\": \"Egress\", \"ComponentType\": \"OmfEgress\" } ]"
+  },
+  "V1/main/V1/Configuration/Message logging configuration.html": {
+    "href": "V1/main/V1/Configuration/Message logging configuration.html",
+    "title": "Message logging configuration",
+    "keywords": "Message logging configuration Edge Data Store writes daily log messages to flat text files in the following locations: • Windows: %ProgramData%/OSIsoft/EdgeDataStore/Logs • Linux: /usr/share/OSIsoft/EdgeDataStore/Logs Each message in the log displays the message severity level, timestamp, and the message itself. Default logging configuration and schema By default, logging captures Information, Warning, Error, and Critical messages in the message logs. The following logging configuration is the default for a component on install: { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 } The schema file specifies how to formally describe the configuration parameters for message logging. It is located in: • Windows: %ProgramFiles%/OSIsoft/EdgeDataStore/Schema • Linux: /opt/EdgeDataStore/Schema Log levels The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical. Table: General guidelines for setting the log level. Level Description Trace Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages shouldn’t be enabled in production environment. Debug Logs that can be used to troubleshoot data flow issues by recording metrics and detailed flow related information. Information Logs that track the general flow of the application. Any non-repetitive general information (like version information relating to the software at startup, what external services are being used, data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping”, or configuration) can be useful for diagnosing potential application errors. Warning Logs that highlight an abnormal or unexpected event in the application flow, but does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow. Error Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on. Critical Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. Log file count limit The logFileCountLimit controls the number of days the log files are stored before they are deleted. Change logging configuration To change the logging configuration complete the following steps: Update the parameters of the message logging configuration JSON file that you want as needed. For example, the Component_Logging.json file: { \"logLevel\": \"Warning\", \"logFileSizeLimitBytes\": 16777216, \"logFileCountLimit\": 30 } Save the file. Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: http://localhost:5590/api/v1/configuration/<ComponentId>/Logging . Example using curl (run this command from the same directory where the file is located): curl -i -d \"@Component_Logging.json\" -H \"Content-Type: application/json\" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging Note: Replace <ComponentId> with the ComponentId of the adapter or Storage, for example OpcUa1 . On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. Note: Any parameter not specified in the updated configuration file will revert to the default schema value."
+  },
+  "V1/main/V1/Configuration/Health and diagnostics configuration.html": {
+    "href": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
+    "title": "Health and diagnostics configuration",
+    "keywords": "Health and diagnostics configuration"
+  },
+  "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.html": {
+    "href": "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.html",
+    "title": "Configure EdgeCmd utility",
+    "keywords": "Configure EdgeCmd utility The following sections provide instructions for the configuration of EdgeCmd utility for Windows or Linux. Note: The following EdgeCmd utility locations are based on the installation instructions in EdgeCmd utility . Location on Windows: C:\\Program Files\\OSIsoft\\EdgeCmd\\edgecmd.exe Note: Specify the full path when you use EdgeCmd on Windows. Location on Linux: /opt/OSIsoft/EdgeCmd/edgecmd Note: You can access EdgeCmd without using the full path on Linux. Edge Data Store configuration with EdgeCmd Most configuration options that can be done using REST can also be done using the edgecmd utility and command line arguments. Configuration and administrative REST interfaces are generally exposed through the command line. Read/write capabilities to the EDS storage component, OMF ingresss and SDS read/write capabilities are only available using the REST API. Get help The Edgecmd application provides a 'Help' utility. For general instructions on how to use the Edgecmd application, type: edgecmd Help You can also use the utility to get help for any registered component in Edge Data Store. If you add a specific component ID to the end of the previous command, you receive help output for every configuration facet that the component supports, along with examples of commands that you can run to configure the component. Example: View help for the 'System' component: edgecmd Help System --------------------------------------------------------------------------------------------------------- Component System command-line options => 'Logging' --------------------------------------------------------------------------------------------------------- LogLevel [Required] Desired log level settings. Options: Verbose, Information, Warning, Error, Fatal. LogFileSizeLimitBytes [Required] Maximum size in bytes of log files that the service will create for this component. Must be no less than 1000. LogFileCountLimit [Required] Maximum number of log files that the service will create for this component. Must be a positive integer. Example: ./edgecmd Configuration System Logging LogLevel=Warning Example: ./edgecmd Configuration System Logging LogFileSizeLimitBytes=32768 Example: ./edgecmd Configuration System Logging LogFileCountLimit=5 --------------------------------------------------------------------------------------------------------- Component System command-line options => 'HealthEndpoints' --------------------------------------------------------------------------------------------------------- Id [Optional] Id of existing configuration to be edited of removed. Endpoint [Required] URL of OMF destination UserName [Required group 1] User name used for authentication to PI Web API OMF endpoint. Password [Required group 1] Password used for authentication to PI Web API OMF endpoint. ClientId [Required group 2] Client ID used for authentication to OSIsoft Cloud Services. ClientSecret [Required group 2] Client Secret used for authentication to OSIsoft Cloud Services. Buffering [Optional] Set the buffering type for messages to this endpoint. Options are 'memory', 'disk' or 'none'. Defaults to 'none'. MaxBufferSizeMB [Optional] If an integer >0, this is the limit on the maximum megabytes of data to buffer for messages to this endpoint. Useful for limiting memory or disk usage growth in the event of disconnection to the endpoint. If the buffer is full, old messages will be discarded for new messages. Defaults to 0. ValidateEndpointCertificate [Optional] If true, endpoint certificate will be validated (recommended). If false, any endpoint certificate will be accepted. OSIsoft strongly recommends using disabled endpoint certificate validation for testing purposes only. Note: Only one Required group must be specified. Group 1 for PI Web API or Group 2 for OCS. Example: ./edgecmd Configuration System HealthEndpoints Endpoint=endpointURL UserName=UserName Password=Password --------------------------------------------------------------------------------------------------------- Component System command-line options => 'Port' --------------------------------------------------------------------------------------------------------- Port [Required] The tcp port to bind this application host to (Range [1024,65535]) Example: ./edgecmd Configuration System Port Port=5590 --------------------------------------------------------------------------------------------------------- Component System command-line options => 'Components' --------------------------------------------------------------------------------------------------------- ComponentId [Required] ID of the hosted component. ComponentType [Required] Type of the hosted component. Example: ./edgecmd Configuration System Components ComponentId=Modus1 ComponentType=Modbus For help regarding a specific facet within a component, add the facet name after the component ID. Example: Help for the 'Port' facet within the 'System' component: edgecmd Help System Port --------------------------------------------------------------------------------------------------------- Component System command-line options => 'Port' --------------------------------------------------------------------------------------------------------- Port [Required] The tcp port to bind this application host to (Range [1024,65535]) Example: ./edgecmd Configuration System Port Port=5590 Edge Data Store components The EdgeCmd utility enables you to add, configure, and delete Edge Data Store components. Add components With the following command, you can view which components are currently configured on Edge Data Store: edgecmd Configuration System Components To register a new component, use the following command: edgecmd Configuration System Components componentId=<componentId> componentType=<componentType> Valid component types are \"Modbus\" and \"OpcUa\". If you are trying to register a Modbus EDS adapter, use \"Modbus\" and if you are trying to register an OPC UA adapter, use \"OpcUa\". Example: Modbus adapter component registration: edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus Configure components The EDS Modbus adapter and OPC UA adapter each have three configurable facets: data source, data selection, and logging. You can configure these with edgecmd by specifying a component ID and facet name. Example: Configuration of the data source facet of a Modbus adapter: edgecmd Configuration Modbus1 DataSource IpAddress=117.23.45.110 port=502 ConnectTimeout=15000 StreamIdPrefix=\"DataSource1\" For detailed information on how to configure each adapter, see the Modbus and OPC UA schemas. Delete components You can delete components from the Edge Data Store by using the following command: edgecmd Configuration System Components id=<componentId> delete Note: You can't delete the \"Storage\" component because it is required for Edge Data Store to operate. Retrieve existing system configuration You can use the edgecmd utility to view the configuration for each part of Edge Data Store. To view the entire configuration for every system component, run the following command: edgecmd Configuration To retrieve component specific configuration: edgecmd Configuration componentId To retrieve facet specific configuration of an Edge Data Store component: edgecmd Configuration componentId facetName For facets that contain multiple entries, you can retrieve the configuration for a specific entry by its Id: edgecmd Configuration componentId facetName id=IndexToRetrieve Examples View the configuration of Edge Data Store using edgecmd: edgecmd Configuration System { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"HealthEndpoints\": [], \"Port\": { \"port\": 5590 }, \"Components\": [ { \"componentId\": \"OpcUa1\", \"componentType\": \"OpcUa\" }, { \"componentId\": \"Modbus1\", \"componentType\": \"Modbus\" }, { \"componentId\": \"Storage\", \"componentType\": \"EDS.Component\" } ] } View the configuration of the 'System' component edgecmd Configuration System { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"HealthEndpoints\": [], \"Port\": { \"port\": 5590 }, \"Components\": [ { \"componentId\": \"Storage\", \"componentType\": \"EDS.Component\" } ] } View the configuration for the 'Logging' facet within the 'Storage' component edgecmd Configuration Storage Logging { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 } View the configuration of a specific entry in the 'PeriodicEgressEndpoint' facet within the 'Storage' component edgecmd Configuration Storage PeriodicEgressEndpoints id=Endpoint_1 { \"id\": \"Endpoint_1\", \"executionPeriod\": \"2.00:00:00\", \"name\": null, \"description\": null, \"enabled\": true, \"endpoint\": \"http://localhost:5590\", \"clientId\": null, \"clientSecret\": null, \"userName\": \"user_54\", \"password\": \"***************\", \"validateEndpointCertificate\": true, \"tokenEndpoint\": null, \"debugExpiration\": null, \"namespaceId\": \"default\", \"backfill\": false, \"egressFilter\": null, \"streamPrefix\": null, \"typePrefix\": null } Configure Edge Data Store To create a configuration, you must enter the component and facet where the configuration payload should go, followed by key=value pairs to specify which values are to be changed. Example: Change all values in the 'Logging' facet: edgecmd Configuration Storage Logging LogLevel=Warning LogFileSizeLimitBytes=32768 LogFileCountLimit=5 You can use this to configure any number of valid key=value pairs in a facet. Example: Change a single value in the 'Logging' facet: edgecmd Configuration Storage Logging LogFileCountLimit=5 You can also use it to add an entry to a collection configuration, for example, the 'Health Endpoints' facet in the 'System' component: edgecmd Configuration System HealthEndpoints Id=endpoint_1 Endpoint=endpointURL UserName=UserName Password=Password Note: If an entry with the specified id already exists, it will be updated based on the new key=value pairs. Configure with JSON Files You can also configure Edge Data Store by a JSON file input into the edgecmd application. File imports will completely replace the existing configurations that you are attempting to change. Therefore, it cannot be used to change individual values in a facet without modifying others. To import a bulk configuration: edgecmd Configuration file=PathToJsonFile To import a facet specific configuration file for a component: edgecmd Configuration componentId facetName file=PathToJsonFile To import a file with configuration for individual facets, you can use a bulk file import operation. The file must contain just payload for the given component ID. Example command: edgecmd Configuration file=\"~/Bulk_Storage_Runtime.json\" The file 'Bulk_Storage_Runtime.json' contains: { \"Storage\": { \"Runtime\": { \"StreamStorageLimitMb\": 66, \"StreamStorageTargetMb\": 33, \"IngressDebugExpiration\": \"2020-07-08T01:00:00\", \"CheckpointRateInSec\": 6, \"TransactionLogLimitMB\": 350, \"EnableTransactionLog\": true } } } The command will only affect the 'Runtime' facet in the 'Storage' component, it will not change any other components or facets. However, if you import a file containing the following, the 'StreamStorageLimitMb' and 'StreamStorageTargetMb' values would be modified, resetting the remaining values in the facet (IngressDebugExpiration, CheckpointRateInSec, TransactionLogLimitMB, and EnableTransactionLog) to their default values: { \"Storage\": { \"Runtime\": { \"StreamStorageLimitMb\": 66, \"StreamStorageTargetMb\": 33, } } } Delete configuration data You can use the edgecmd application to delete configuration data from Edge Data Store. To delete a configuration entry from a collection configuration (for example, 'HealthEndpoints' facet within the 'System' component), you must specify the component ID, facet, and ID of the entry to remove followed by the 'delete' keyword. Example: edgecmd Configuration System HealthEndpoints Id=endpoint_1 delete To delete an entire configuration file, you must specify the component ID and facet followed by the 'delete' keyword. Example: edgecmd Configuration System HealthEndpoints delete"
+  },
+  "V1/edgecmd/README.html": {
+    "href": "V1/edgecmd/README.html",
+    "title": "Edgecmd",
+    "keywords": "Edgecmd"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Data selection.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Data selection.html",
+    "title": "Data selection",
+    "keywords": "Data selection"
+  },
+  "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html": {
+    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
+    "title": "Configure data source",
+    "keywords": "Configure data source"
+  },
+  "V1/main/V1/Troubleshooting/Logging.html": {
+    "href": "V1/main/V1/Troubleshooting/Logging.html",
+    "title": "Logging",
+    "keywords": "Logging"
+  },
+  "V1/main/V1/Troubleshooting/Data buffering.html": {
+    "href": "V1/main/V1/Troubleshooting/Data buffering.html",
+    "title": "Data buffering",
+    "keywords": "Data buffering"
+  },
+  "V1/main/V1/Installation/Install the adapter.html": {
+    "href": "V1/main/V1/Installation/Install the adapter.html",
+    "title": "Install the adapter",
+    "keywords": "Install the adapter Windows To install an OSIsoft adapter on Windows, complete the following steps: Download the Windows .msi file from the OSIsoft Customer portal , for example Modbus_win10-x64.msi . Open a command prompt. Change to the directory into which you downloaded the .msi file. Run Modbus_win10-x64.msi . Result: The OSIsoft adapter is installed on Windows and you can now configure it. Linux To install an OSIsoft adapter on Linux, complete the following steps: Download the appropriate Linux distribution file from the OSIsoft Customer portal , for example Modbus_linux-x64.deb . As a superuser, open a terminal. Install the OSIsoft adapter with the sudo apt install command. For example, to install the Linux ARM Debian package, run command. sudo apt install ./Modbus_linux-x64.deb . To install the Linux x64 package, run command sudo apt install ./Modbus_linux-arm.deb . Result: The OSIsoft adapter is installed on Linux and you can now configure it."
+  },
+  "V1/main/V1/Administration/Start and stop ingress component.html": {
+    "href": "V1/main/V1/Administration/Start and stop ingress component.html",
+    "title": "Start and stop ingress component",
+    "keywords": "Start and stop ingress component"
+  },
+  "V1/main/V1/readme.html": {
+    "href": "V1/main/V1/readme.html",
+    "title": "",
+    "keywords": ""
+  },
+  "V1/main/test.html": {
+    "href": "V1/main/test.html",
+    "title": "",
+    "keywords": ""
+  },
+  "V1/main/README.html": {
+    "href": "V1/main/README.html",
+    "title": "OSIsoft Adapter Docs",
+    "keywords": "OSIsoft Adapter Docs"
+  },
+  "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html": {
+    "href": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html",
+    "title": "Introduction to OSIsoft Adapter for DNP3",
+    "keywords": "Introduction to OSIsoft Adapter for DNP3"
+  },
+  "V1/index.html": {
+    "href": "V1/index.html",
+    "title": "OSIsoft Adapter for DNP3",
+    "keywords": "OSIsoft Adapter for DNP3 ======= Introduction to OSIsoft Adapter for DNP3 OSIsoft Adapter for DNP3 operational overview Supported features Prepare for adapter installation Software requirements Hardware requirements Download OSIsoft Adapter Adapter security Install the adapter Uninstall the adapter Configure OSIsoft Adapter for DNP3 Configuration schemas Data source Data selection Logging Endpoint Configure data source Configure data selection Configure message logging Configure endpoints Data collection and connection Verify connection from data source to the adapter Verify data collection Start or stop the adapter Start or stop the data source Adapter administration Data buffering Adapter to OCS buffering Adapter to PI Server buffering Health Device status Next health message expected Diagnostics OSIsoft Adapter diagnostics OSIsoft Adapter for OPC UA diagnostics Troubleshooting Logging Data buffering"
+  },
+  "V1/main/V1/Installation/Installation.html": {
+    "href": "V1/main/V1/Installation/Installation.html",
+    "title": "Installation",
+    "keywords": "Installation"
+  },
+  "V1/main/V1/Installation/Installation prerequisites.html": {
+    "href": "V1/main/V1/Installation/Installation prerequisites.html",
+    "title": "Installation prerequisites",
+    "keywords": "Installation prerequisites OSIsoft adapters support .NET Core 3.1., which is supported on the following operating systems: Alpine: 3.10+ Debian: 9+ Ubuntu: 16.04+ Fedora: 29+ centOS: 7+ RHEL: 6+ openSUSE: 15+ SUSE Enterprise Linux (SLES): 12 SP2+ macOS: 10.13+ Windows Client: 7, 8.1, 10 (1607+) Windows Server: 2012 R2+ You can download OSIsoft Adapter for OPC UA from the OSIsoft Customer Portal:"
+  },
+  "V1/main/V1/Health/Next health message expected.html": {
+    "href": "V1/main/V1/Health/Next health message expected.html",
+    "title": "Next Health Message Expected",
+    "keywords": "Next Health Message Expected This property is similar to a heartbeat. A new value for NextHealthMessageExpected will be sent by an individual adapter data component on a periodic basis while it is functioning properly. This value will be a timestamp indicating when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means that there is an issue. It could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, etc. Property Type Description Time string Timestamp of the event. NextHealthMessageExpected string Timestamp when next value is expected."
+  },
+  "V1/main/V1/Health/Health and diagnostics.html": {
+    "href": "V1/main/V1/Health/Health and diagnostics.html",
+    "title": "Health and Diagnostics",
+    "keywords": "Health and Diagnostics"
   },
   "V1/main/V1/Health/Device status.html": {
     "href": "V1/main/V1/Health/Device status.html",
@@ -39,174 +189,49 @@
     "title": "Adapter configuration",
     "keywords": "Adapter configuration You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration. Import configuration REST URLs Relative URL HTTP verb Action api/v1/configuration/ PUT Replaces the configuration for the entire adapter Sample configuration file for OPC UA The following sample includes configuration of System components along with an OPC UA adapter. { \"OpcUa1\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"DataSource\": { \"EndpointUrl\": \"opc.tcp://OPCUAServerEndpoint/OPCUA/Server\", \"UseSecureConnection\": false, \"StreamIdPrefix\": \"OPC_Prefix_\", \"UserName\": null, \"Password\": null, \"RootNodeIds\": null, \"IncomingTimestamp\": \"Source\", \"applyPrefixToStreamId\": true }, \"DataSelection\": [ { \"Selected\": true, \"Name\": \"Sawtooth\", \"NodeId\": \"ns=3;s=Sawtooth\", \"StreamId\": \"SawtoothStream\" } ] }, \"System\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"HealthEndpoints\": [ ], \"Components\": [ { \"componentId\": \"Egress\", \"componentType\": \"OmfEgress\" }, { \"componentId\": \"OpcUa1\", \"componentType\": \"OpcUa\" } ] }, \"Egress\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"DataEndpoints\": [ { \"id\": \"WebAPI EndPoint\", \"endpoint\": \"https://PIWEBAPIServer/piwebapi/omf\", \"userName\": \"USERNAME\", \"password\": \"PASSWORD\" }, { \"id\": \"OCS Endpoint\", \"endpoint\": \"https://OCSEndpoint/omf\", \"clientId\": \"CLIENTID\", \"clientSecret\": \"CLIENTSECRET\" } ], \"Buffering\": { \"onDiskBufferLocation\": \"C:\\\\ProgramData\\\\OSIsoft\\\\Adapters\\\\Buffering\", \"onDiskMaxBufferSizeMB\": -1 } } } Import full adapter configuration using REST client To import the full adapter configuration, run the following command: curl -X http://localhost:5595/api/v1/configuration -d '{ JSON content }' Note: In order for some of the adapter specific configurations to take effect, you have to restart the adapter. Configuration errors If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result."
   },
-  "V1/main/V1/Administration/Start and stop an adapter.html": {
-    "href": "V1/main/V1/Administration/Start and stop an adapter.html",
-    "title": "Start and stop an adapter",
-    "keywords": "Start and stop an adapter By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down. Start an OSIsoft adapter To start an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to start. An HTTP status 204 message indicates success. Stop an OSIsoft adapter To stop an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to stop. An HTTP status 204 message indicates success."
-  },
-  "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html": {
-    "href": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html",
-    "title": "Introduction to OSIsoft Adapter for DNP3",
-    "keywords": "Introduction to OSIsoft Adapter for DNP3"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Data selection.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Data selection.html",
-    "title": "Data selection",
-    "keywords": "Data selection"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
-    "title": "Configure data source",
-    "keywords": "Configure data source"
+  "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.html": {
+    "href": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.html",
+    "title": "EdgeCmd utility",
+    "keywords": "EdgeCmd utility Use the EdgeCmd command line utility to configure and administer Edge Data Store on Linux and Windows. You can accomplish the same operations with EdgeCmd that you can accomplish with REST calls. Install EdgeCmd utility Complete the following to install EdgeCmd utility on Windows or Linux. Windows You must have administrative privileges to run the installer. Copy the EdgeCmd.msi file to the file system of the device. To start the installer, double-click the EdgeCmd.msi file in Windows Explorer. Note: You can choose an install path other than the default path of C:\\Program Files\\OSIsoft\\EdgeCmd by entering the following command from the command prompt. OSIsoft recommends you use the default value. msiexec /i EdgeCmd.msi INSTALLFOLDER=<path_to_desired_location> Note: INSTALLFOLDER must be in all caps as shown in the preceding example. The EdgeCmd utility is installed on your device. Linux You must have administrative privileges to install the software, for example root or sudo privilege. The following examples assume a user with permission to use sudo. Open a terminal window and type the sudo command for the appropriate EdgeCmd deb file for your processor: Debian 9 or later (Intel/AMD 64 bit processors) sudo apt install ./EdgeCmd_linux-x64.deb Debian 9 or later (ARM32, Raspberry PI 2,3,4: Raspbian, BeagleBone) sudo apt install ./EdgeCmd_linux-arm.deb Debian 9 or later (Raspberry PI 3,4: Ubuntu ARM64 Server, Google Coral Dev Board, Nvidia Nano Jetson) sudo apt install ./EdgeCmd_linux-arm64.deb A validation check for prerequisites will be completed. If the Linux OS is up to date, the install will succeed. If the install fails, run the following commands from the terminal window and try the install again: sudo apt update sudo apt upgrade After the check for prerequisites succeeds, you will be prompted if you want to change the default port (5590). The install will complete and the EdgeCmd utility will be running on your device."
   },
   "V1/Software requirements.html": {
     "href": "V1/Software requirements.html",
     "title": "Software requirements",
     "keywords": "Software requirements"
   },
-  "README.html": {
-    "href": "README.html",
-    "title": "OSIsoft Adapter DNP3 Docs",
-    "keywords": "OSIsoft Adapter DNP3 Docs"
-  },
-  "V1/main/V1/Troubleshooting/Logging.html": {
-    "href": "V1/main/V1/Troubleshooting/Logging.html",
-    "title": "Logging",
-    "keywords": "Logging"
-  },
-  "V1/main/V1/Installation/Installation.html": {
-    "href": "V1/main/V1/Installation/Installation.html",
-    "title": "Installation",
-    "keywords": "Installation"
-  },
-  "V1/main/V1/Installation/Installation prerequisites.html": {
-    "href": "V1/main/V1/Installation/Installation prerequisites.html",
-    "title": "Installation prerequisites",
-    "keywords": "Installation prerequisites OSIsoft adapters support .NET Core 3.1. You can download OSIsoft Adapter for OPC UA from the OSIsoft Customer Portal:"
-  },
-  "V1/main/V1/Administration/Administration.html": {
-    "href": "V1/main/V1/Administration/Administration.html",
-    "title": "Administration",
-    "keywords": "Administration"
-  },
-  "V1/main/README.html": {
-    "href": "V1/main/README.html",
-    "title": "OSIsoft Adapter Docs",
-    "keywords": "OSIsoft Adapter Docs"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Data source.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Data source.html",
-    "title": "Data source",
-    "keywords": "Data source"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
-    "title": "Configure OSIsoft Adapter for DNP3",
-    "keywords": "Configure OSIsoft Adapter for DNP3"
-  },
   "V1/Principles of operation.html": {
     "href": "V1/Principles of operation.html",
     "title": "Principles of operation",
     "keywords": "Principles of operation"
+  },
+  "V1/OSIsoft Adapter for DNP3 diagnostics.html": {
+    "href": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
+    "title": "OSIsoft Adapter for DNP3 diagnostics",
+    "keywords": "OSIsoft Adapter for DNP3 diagnostics"
   },
   "V1/main/V1/Troubleshooting/Troubleshooting.html": {
     "href": "V1/main/V1/Troubleshooting/Troubleshooting.html",
     "title": "Troubleshooting",
     "keywords": "Troubleshooting"
   },
-  "V1/main/V1/Installation/Install the adapter.html": {
-    "href": "V1/main/V1/Installation/Install the adapter.html",
-    "title": "Install the adapter",
-    "keywords": "Install the adapter Windows To install an OSIsoft adapter on Windows, complete the following steps: Download the Windows .msi file from the OSIsoft Customer portal , for example Modbus_win10-x64.msi . Open a command prompt. Change to the directory into which you downloaded the .msi file. Run Modbus_win10-x64.msi . Result: The OSIsoft adapter is installed on Windows and you can now configure it. Linux To install an OSIsoft adapter on Linux, complete the following steps: Download the appropriate Linux distribution file from the OSIsoft Customer portal , for example Modbus_linux-x64.deb . As a superuser, open a terminal. Install the OSIsoft adapter with the sudo apt install command. For example, to install the Linux ARM Debian package, run command. sudo apt install ./Modbus_linux-x64.deb . To install the Linux x64 package, run command sudo apt install ./Modbus_linux-arm.deb . Result: The OSIsoft adapter is installed on Linux and you can now configure it."
-  },
-  "V1/main/V1/Health/Next health message expected.html": {
-    "href": "V1/main/V1/Health/Next health message expected.html",
-    "title": "Next Health Message Expected",
-    "keywords": "Next Health Message Expected This property is similar to a heartbeat. A new value for NextHealthMessageExpected will be sent by an individual adapter data component on a periodic basis while it is functioning properly. This value will be a timestamp indicating when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means that there is an issue. It could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, etc. Property Type Description Time string Timestamp of the event. NextHealthMessageExpected string Timestamp when next value is expected."
-  },
-  "V1/main/V1/Health/Health and diagnostics.html": {
-    "href": "V1/main/V1/Health/Health and diagnostics.html",
-    "title": "Health and Diagnostics",
-    "keywords": "Health and Diagnostics"
-  },
-  "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html": {
-    "href": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
-    "title": "Egress endpoint configuration schema",
-    "keywords": "Egress endpoint configuration schema [{ \"endpoint\": \"https://<pi web api server>/piwebapi/omf/\", \"UserName\": \"<username>\", \"Password\": \"<password>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 }, { \"Endpoint\": \"https://<OCS OMF endpoint>\", \"ClientId\": \"<clientid>\", \"ClientSecret\": \"<clientsecret>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 } ] Abstract Extensible Status Identifiable Custom Properties Additional Properties Defined In Can be instantiated Yes Experimental No Forbidden Forbidden Egress_DataEndpoints_schema.json EgressEndpointConfiguration Properties Property Type Required Nullable Defined by Buffering reference Optional No EgressEndpointConfiguration (this schema) ClientId string Optional Yes EgressEndpointConfiguration (this schema) ClientSecret string Optional Yes EgressEndpointConfiguration (this schema) Endpoint string Required No EgressEndpointConfiguration (this schema) Id string Optional Yes EgressEndpointConfiguration (this schema) MaxBufferSizeMB integer Optional No EgressEndpointConfiguration (this schema) Password string Optional Yes EgressEndpointConfiguration (this schema) TokenEndpoint string Optional Yes EgressEndpointConfiguration (this schema) UserName string Optional Yes EgressEndpointConfiguration (this schema) ValidateEndpointCertificate boolean Optional No EgressEndpointConfiguration (this schema) Buffering Buffering is optional type: reference defined in this schema Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string defined in this schema ClientId Type string , nullable ClientSecret ClientSecret is optional type: string defined in this schema ClientSecret Type string , nullable Endpoint Endpoint is required type: string defined in this schema Endpoint Type string minimum length: 1 characters Id Id is optional type: string defined in this schema Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer defined in this schema MaxBufferSizeMB Type integer Password Password is optional type: string defined in this schema Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string defined in this schema TokenEndpoint Type string , nullable UserName UserName is optional type: string defined in this schema UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean defined in this schema ValidateEndpointCertificate Type boolean All of the following requirements need to be fulfilled. Requirement 1 object with following properties: Property Type Required Buffering reference Optional ClientId string Optional ClientSecret string Optional Endpoint string Required Id string Optional MaxBufferSizeMB integer Optional Password string Optional TokenEndpoint string Optional UserName string Optional ValidateEndpointCertificate boolean Optional Buffering Buffering is optional type: reference Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string ClientId Type string , nullable ClientSecret ClientSecret is optional type: string ClientSecret Type string , nullable Endpoint Endpoint is required type: string Endpoint Type string minimum length: 1 characters Id Id is optional type: string Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer MaxBufferSizeMB Type integer Password Password is optional type: string Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string TokenEndpoint Type string , nullable UserName UserName is optional type: string UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean ValidateEndpointCertificate Type boolean"
-  },
-  "V1/main/V1/Configuration/System components configuration.html": {
-    "href": "V1/main/V1/Configuration/System components configuration.html",
-    "title": "System components configuration",
-    "keywords": "System components configuration OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected. Note: You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call. Configure system components The default System_Components.json file for the System component contains the following information. The Egress component is required for this initial release for adapters to run. [ { \"ComponentId\": \"Egress\", \"ComponentType\": \"OmfEgress\" } ] You can add additional components if you want, but only a single OmfEgress component is supported. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. Note: A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter: { \"ComponentId\": \"Modbus1\", \"ComponentType\": \"Modbus\" } Save the JSON in a file named AddComponent.json . From the same directory where the file exists, run the following curl script: curl -i -d \"@AddComponent.json\" -H \"Content-Type: application/json\" http://localhost:5595/api/v1/configuration/system/components After the curl command completes successfully, you can configure or use the new component. Delete a component To delete an existing component, run the following curl script: curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/ All the logs and configurations files for the deleted components will be moved to the corresponding logs/Removed or Configuration/Removed folder. System components schema The following table defines the basic behavior of the AddComponent.json file. Abstract Extensible Status Identifiable Custom properties Additional properties Can be instantiated Yes Experimental No Forbidden Forbidden Parameters for system components The following parameters are available for configuring system components. Parameters Required Type Nullable Description ComponentId Required string Yes The ID of the component. It can be any alphanumeric string, for example Egress. ComponentType Required string Yes The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. System components example [ { \"componentId\": \"Modbus1\", \"componentType\": \"Modbus\" }, { \"componentId\": \"Modbus2\", \"componentType\": \"Modbus\" }, { \"ComponentId\": \"Egress\", \"ComponentType\": \"OmfEgress\" } ]"
-  },
-  "V1/main/V1/Configuration/Message logging configuration.html": {
-    "href": "V1/main/V1/Configuration/Message logging configuration.html",
-    "title": "Message logging configuration",
-    "keywords": "Message logging configuration"
-  },
-  "V1/main/V1/Configuration/Health and diagnostics configuration.html": {
-    "href": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
-    "title": "Health and diagnostics configuration",
-    "keywords": "Health and diagnostics configuration"
+  "V1/main/V1/Administration/Start and stop an adapter.html": {
+    "href": "V1/main/V1/Administration/Start and stop an adapter.html",
+    "title": "Start and stop an adapter",
+    "keywords": "Start and stop an adapter By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down. Start an OSIsoft adapter To start an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to start. An HTTP status 204 message indicates success. Stop an OSIsoft adapter To stop an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to stop. An HTTP status 204 message indicates success."
   },
   "V1/main/V1/Administration/Retrieve product version information.html": {
     "href": "V1/main/V1/Administration/Retrieve product version information.html",
     "title": "Retrieve product version information",
     "keywords": "Retrieve product version information In order to get the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on, you can make requests against the Diagnostics endpoint. Run the following command: GET http://localhost:5595/api/v1/Diagnostics/ProductInformation Result example: { \"Application Version\": \"1.1.0.0\", \".Net Core Version\": \".NET Core 3.1.0\", \"Operating System\": \"Microsoft Windows 10.0.18362\" }"
   },
-  "V1/main/V1/readme.html": {
-    "href": "V1/main/V1/readme.html",
-    "title": "",
-    "keywords": ""
-  },
-  "V1/main/test.html": {
-    "href": "V1/main/test.html",
-    "title": "",
-    "keywords": ""
-  },
-  "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html": {
-    "href": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
-    "title": "Supported Features",
-    "keywords": "Supported Features"
-  },
-  "V1/readme.html": {
-    "href": "V1/readme.html",
-    "title": "",
-    "keywords": ""
-  },
-  "V1/index.html": {
-    "href": "V1/index.html",
-    "title": "OSIsoft Adapter for DNP3",
-    "keywords": "OSIsoft Adapter for DNP3 ======= Introduction to OSIsoft Adapter for DNP3 OSIsoft Adapter for DNP3 operational overview Supported features Prepare for adapter installation Software requirements Hardware requirements Download OSIsoft Adapter Adapter security Install the adapter Uninstall the adapter Configure OSIsoft Adapter for DNP3 Configuration schemas Data source Data selection Logging Endpoint Configure data source Configure data selection Configure message logging Configure endpoints Data collection and connection Verify connection from data source to the adapter Verify data collection Start or stop the adapter Start or stop the data source Adapter administration Data buffering Adapter to OCS buffering Adapter to PI Server buffering Health Device status Next health message expected Diagnostics OSIsoft Adapter diagnostics OSIsoft Adapter for OPC UA diagnostics Troubleshooting Logging Data buffering"
-  },
-  "V1/main/V1/Troubleshooting/Data buffering.html": {
-    "href": "V1/main/V1/Troubleshooting/Data buffering.html",
-    "title": "Data buffering",
-    "keywords": "Data buffering"
-  },
-  "V1/main/V1/Installation/Uninstall the adapter.html": {
-    "href": "V1/main/V1/Installation/Uninstall the adapter.html",
-    "title": "Uninstall the adapter",
-    "keywords": "Uninstall the adapter"
-  },
-  "V1/main/V1/Administration/Start and stop ingress component.html": {
-    "href": "V1/main/V1/Administration/Start and stop ingress component.html",
-    "title": "Start and stop ingress component",
-    "keywords": "Start and stop ingress component"
-  },
   "V1/main/V1/Administration/Delete an adapter component.html": {
     "href": "V1/main/V1/Administration/Delete an adapter component.html",
     "title": "Delete an adapter component",
     "keywords": "Delete an adapter component An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints. File Relocation All configuration and log files will be renamed and moved to a folder called \"Removed\" within the respective directory. Configuration files will be moved to .\\Configuration\\Removed; logs files to .\\Logs\\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss. In the following example, one Modbus Adapter service is installed on a particular Windows node with the name \"ModbusService1\". A Modbus component with the name \"ModbusDeviceX\" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion: REST Command: DELETE An empty DELETE command must be made against the Id of the component to be deleted. Using cURL: curl -v -X DELETE \"http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted\" REST URLs Relative URL HTTP verb Action api/v1/configuration/system/components/{id} DELETE Deletes specified component"
   },
-  "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html": {
-    "href": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html",
-    "title": "OSIsoft Adapter for DNP3 operational overview",
-    "keywords": "OSIsoft Adapter for DNP3 operational overview"
-  },
-  "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html": {
-    "href": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
-    "title": "Configure data selection",
-    "keywords": "Configure data selection"
+  "V1/main/V1/Administration/Administration.html": {
+    "href": "V1/main/V1/Administration/Administration.html",
+    "title": "Administration",
+    "keywords": "Administration"
   }
 }

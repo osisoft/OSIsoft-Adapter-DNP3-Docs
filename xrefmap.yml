@@ -22,6 +22,9 @@ references:
 - uid: ConfigureDataSourceDNP3
   name: Configure data source
   href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Configure%20data%20source.html
+- uid: ConfigureEdgeCmdUtility
+  name: Configure EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20EdgeCmd%20utility.html
 - uid: ConfigureOSIsoftAdapterForDNP3
   name: Configure OSIsoft Adapter for DNP3
   href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Configure%20OSIsoft%20Adapter%20for%20DNP3.html
@@ -37,6 +40,12 @@ references:
 - uid: DeviceStatus
   name: Device Status
   href: V1/main/V1/Health/Device%20status.html
+- uid: Edgecmd commands
+  name: EdgeCmd commands
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
+- uid: EdgecmdUtility
+  name: EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20utility.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html
