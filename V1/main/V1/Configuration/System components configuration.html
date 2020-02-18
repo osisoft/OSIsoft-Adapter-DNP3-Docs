@@ -8,7 +8,7 @@
     <title>System components configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System components configuration ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -71,65 +71,53 @@
             <article class="content wrap" id="_content" data-uid="SystemComponentsConfiguration">
 <h1 id="system-components-configuration">System components configuration</h1>
 
-<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
+<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. </p>
+<p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The default <em>System_Components.json</em> file for the System component contains the following information. The Egress component is required for this initial release for adapters to run.</p>
-<pre><code class="lang-json">[
-  {
-    &quot;ComponentId&quot;: &quot;Egress&quot;,
-    &quot;ComponentType&quot;: &quot;OmfEgress&quot;
-  }
-]
-</code></pre><p> You can add additional components if you want, but only a single OmfEgress component is supported. </p>
+<p>Configuration of system components includes adding, updating and deleting components.</p>
+<h3 id="add-a-system-component">Add a system component</h3>
+<p>Complete the following procedure to add a new component to the system:</p>
 <ol>
-<li><p>To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. </p>
-<p> <strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
-<pre><code class="lang-json">  {
-    &quot;ComponentId&quot;: &quot;Modbus1&quot;,
-    &quot;ComponentType&quot;: &quot;Modbus&quot;
-  }
-</code></pre></li>
-<li><p>Save the JSON in a file named <em>AddComponent.json</em>. </p>
-</li>
-<li><p>From the same directory where the file exists, run the following curl script:</p>
-<pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5595/api/v1/configuration/system/components
-</code></pre></li>
-</ol>
-<p>After the curl command completes successfully, you can configure or use the new component.</p>
-<h3 id="delete-a-component">Delete a component</h3>
+<li><p>Using any text editor, create a file that contains the component to be added to the system in JSON form.</p>
 <ul>
-<li><p>To delete an existing component, run the following curl script:</p>
-<pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
-</code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
+<li>For content structure, see <a href="#default-system-components-configuration">Default system components configuration</a>.</li>
+<li><p>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
+<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported.</p>
+<p>The following example adds a Modbus TCP adapter. </p>
+<pre><code class="lang-json">{
+  &quot;ComponentId&quot;: &quot;Modbus1&quot;,
+  &quot;ComponentType&quot;: &quot;Modbus&quot;
+}
+</code></pre><p><strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
 </li>
 </ul>
+</li>
+<li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
+</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
+<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
+</code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
+</li>
+</ol>
+<h3 id="delete-a-system-component">Delete a system component</h3>
+<p>Complete the following procedure to delete an existing component:</p>
+<ol>
+<li>Start any tool capable of making HTTP requests.</li>
+<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
+<p> Example using curl - Delete OpcUa1 component</p>
+<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
+</code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
+</li>
+</ol>
 <h2 id="system-components-schema">System components schema</h2>
-<p>The following table defines the basic behavior of the <em>AddComponent.json</em> file.</p>
-<table>
-<thead>
-<tr>
-<th>Abstract</th>
-<th>Extensible</th>
-<th>Status</th>
-<th>Identifiable</th>
-<th>Custom properties</th>
-<th>Additional properties</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Can be instantiated</td>
-<td>Yes</td>
-<td>Experimental</td>
-<td>No</td>
-<td>Forbidden</td>
-<td>Forbidden</td>
-</tr>
-</tbody>
-</table>
-<h2 id="parameters-for-system-components">Parameters for system components</h2>
-<p>The following parameters are available for configuring system components.</p>
+<p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> located here:</p>
+<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h2 id="system-components-parameters">System components parameters</h2>
+<p>The following parameters are available for configuring system components:</p>
 <table>
 <thead>
 <tr>
@@ -142,14 +130,14 @@
 </thead>
 <tbody>
 <tr>
-<td>ComponentId</td>
+<td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
 <td>Yes</td>
-<td>The ID of the component. It can be any alphanumeric string, for example Egress.</td>
+<td>The ID of the component. It can be any alphanumeric string, for example OmfEgress.</td>
 </tr>
 <tr>
-<td>ComponentType</td>
+<td><strong>ComponentType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
 <td>Yes</td>
@@ -157,7 +145,15 @@
 </tr>
 </tbody>
 </table>
-<h2 id="system-components-example">System components example</h2>
+<h2 id="default-system-components-configuration">Default system components configuration</h2>
+<p>The default <em>System_Components.json</em> file for the System component contains the following information. </p>
+<pre><code class="lang-json">[
+  {
+    &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
+    &quot;ComponentType&quot;: &quot;OmfEgress&quot;
+  }
+]
+</code></pre><h2 id="example-system-components-configuration">Example system components configuration</h2>
 <pre><code class="lang-json">[
   {
                 &quot;componentId&quot;: &quot;Modbus1&quot;,
@@ -168,11 +164,43 @@
                 &quot;componentType&quot;: &quot;Modbus&quot;
             },
             {
-                &quot;ComponentId&quot;: &quot;Egress&quot;,
+                &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
                 &quot;ComponentType&quot;: &quot;OmfEgress&quot;
    }
 ]
-</code></pre></article>
+</code></pre><h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>GET</td>
+<td>Retrieves  the system components configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>POST</td>
+<td>Adds a new component to the system configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>PUT</td>
+<td>Updates the system components configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components/<em>componentId</em></td>
+<td>DELETE</td>
+<td>Deletes a specific component from the system components configuration</td>
+</tr>
+</tbody>
+</table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

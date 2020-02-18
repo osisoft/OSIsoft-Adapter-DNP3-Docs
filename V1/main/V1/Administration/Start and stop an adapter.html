@@ -8,7 +8,7 @@
     <title>Start and stop an adapter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Start and stop an adapter ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,31 +78,29 @@
             <article class="content wrap" id="_content" data-uid="StartAndStopAnAdapter">
 <h1 id="start-and-stop-an-adapter">Start and stop an adapter</h1>
 
-<p>By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down.</p>
-<h2 id="start-an-osisoft-adapter">Start an OSIsoft adapter</h2>
-<ul>
-<li><p>To start an individual OSIsoft adapter, use any REST client and make a request using the following:</p>
-<pre><code class="lang-http">Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start
-Header: Content-Type application/json
-</code></pre><p>  Example using cURL:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start
-</code></pre><p>  <strong>Note:</strong> Replace <em>OSIsoft adapterId</em> with the ID of the OSIsoft adapter you want to start.</p>
-<p>  An HTTP status 204 message indicates success.</p>
+<p>Complete one of the following procedures for your operating system to start or stop an adapter service:</p>
+<h2 id="windows">Windows</h2>
+<ol>
+<li><p>Open Windows services.</p>
 </li>
-</ul>
-<h2 id="stop-an-osisoft-adapter">Stop an OSIsoft adapter</h2>
-<ul>
-<li><p>To stop an individual OSIsoft adapter, use any REST client and make a request using the following:</p>
-<pre><code class="lang-http">Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop
-Header: Content-Type application/json
-</code></pre><p>  Example using cURL:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop
-</code></pre><p>  <strong>Note:</strong> Replace <em>OSIsoft adapterId</em> with the ID of the OSIsoft adapter you want to stop.</p>
-<p>  An HTTP status 204 message indicates success.</p>
+<li><p>Select <strong>OSIsoft Adapter for <em>AdapterName</em></strong>, for example OSIsoft Adapter for Modbus.</p>
 </li>
-</ul>
+<li><p>Depending on whether your adapter is running or not, click either <strong>Start</strong> or <strong>Stop</strong>.</p>
+</li>
+</ol>
+<h2 id="linux">Linux</h2>
+<ol>
+<li><p>Open command line.</p>
+</li>
+<li><p>Depending on whether your adapter is running or not, type one of the following:</p>
+<p> Example: <strong>Start</strong> OSIsoft Adapter for OPC UA</p>
+<pre><code class="lang-cmdline">systemctl start OSIsoft Adapter for OPC UA
+</code></pre><p> Example: <strong>Stop</strong> OSIsoft Adapter for Modbus TCP</p>
+<pre><code class="lang-cmdline">systemctl stop OSIsoft Adapter for Modbus
+</code></pre></li>
+<li><p>Press Enter.</p>
+</li>
+</ol>
 </article>
           </div>
           

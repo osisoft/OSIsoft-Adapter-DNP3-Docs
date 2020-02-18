@@ -8,14 +8,14 @@
     <title>Adapter diagnostics </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adapter diagnostics ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:tocrel" content="../Health/toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
@@ -78,84 +78,25 @@
             <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
 <h1 id="adapter-diagnostics">Adapter diagnostics</h1>
 
-<p>OSIsoft adapters produce diagnostic data which you can use to find more information about a particular adapter instance. This data lives alongside the health data and you can egress it using a Health Endpoint and setting EnableDiagnostics = true. </p>
-<p>For configuration of health endpoints, see &lt;/Health/Health.md&gt;.</p>
-<h2 id="af-hierarchy">AF hierarchy</h2>
-<p>When you use PI Web API as a health endpoint, an AF hierarchy is created containing both the diagnostics and health data and metadata. Currently, OSIsoft Cloud Services does not provide a way to store static metadata and only contains the dynamic streams. For more information or to see an example of this hierarchy, see &lt;/Health/Health.md&gt;.</p>
-<h3 id="stream-count">Stream count</h3>
-<p>The stream count indicates the number of streams and associated types being produced and sent data for a particular adapter instance.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td>int</td>
-<td>StreamCount</td>
-<td>Overall number of streams created by the adapter instance</td>
-</tr>
-<tr>
-<td>int</td>
-<td>TypeCount</td>
-<td>Overall number of types created by the adapter instance</td>
-</tr>
-</tbody>
-</table>
-<h3 id="io-rate">IO rate</h3>
-<p>The IO rate indicates the running average number of streams per second being produced by an adapter instance.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td>double</td>
-<td>IORate</td>
-<td>Average data rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="error-rate">Error rate</h3>
-<p>The error rate indicates the average number of errors per second occurring for a particular adapter instance.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td>double</td>
-<td>ErrorRate</td>
-<td>Average error rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
+<p>The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. </p>
+<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/Health%20endpoint%20configuration.html">Health endpoint configuration</a>.</p>
+<h2 id="available-diagnostics-data">Available diagnostics data</h2>
+<p>Dynamic data is sent every minute to configured health endpoints.</p>
+<p>The following diagnostics data are available:</p>
+<ul>
+<li><a class="xref" href="System.html">System</a></li>
+<li><a class="xref" href="Stream%20count.html">Stream count</a></li>
+<li><a class="xref" href="IO%20rate.html">IO rate</a></li>
+<li><a class="xref" href="Error%20rate.html">Error rate</a></li>
+</ul>
+<h2 id="af-structure">AF structure</h2>
+<p>After running diagnostics with a health endpoint configured to a PI server, you can use <em><strong>PI System Explorer</strong></em> to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. </p>
+<p><img src="../images/Diagnostics_System.jpg" alt="System.Diagnostics"></p>
+<ul>
+<li>The_<strong>Elements</strong><em> root contains a link to an </em><strong>Adapters</strong>_ node. This is the root note for all adapter instances.</li>
+<li>Below <em><strong>Adapters</strong></em> there will be one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>_**{ComputerName}.{ServiceName}**_</code>. For example, in the following image, <strong><em>RGRALAK5530</em></strong> is the computer name, and <em><strong>SignalGenerator</strong></em> is the service name.</li>
+<li>To see the <strong>System.Diagnostics</strong> values, clicking on an adapter node and set the tab to <em><strong>Attributes</strong></em>. Example values are shown in the image.</li>
+</ul>
 </article>
           </div>
           
@@ -164,7 +105,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Health/Adapter diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/Adapter diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
