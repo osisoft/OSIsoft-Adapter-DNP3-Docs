@@ -5,7 +5,7 @@ uid: index
 # OSIsoft Adapter for DNP3
 
 =======
-- [Introduction to OSIsoft Adapter for DNP3](xref:IntroductionToOSIsoftAdapterForDNP3)
+- [Introduction to OSIsoft Adapter for DNP3](xref:OSIsoftAdapterForDNP3Overview)
   - [OSIsoft Adapter for DNP3 operational overview](xref:OSIsoftAdapterForDNP3OperationalOverview)
   - [Supported features](xref:SupportedFeaturesDNP3)
 - [Prepare for adapter installation](xref:PrepareForAdapterInstallation)
