@@ -1,1 +1,4 @@
-
+- name: OSIsoft Adapter for DNP3 principles of operation
+  href: OSIsoft Adapter for DNP3 principles of operation.md
+- name: OSIsoft Adapter for DNP3 supported features
+  href: OSIsoft Adapter for DNP3 supported features.md
