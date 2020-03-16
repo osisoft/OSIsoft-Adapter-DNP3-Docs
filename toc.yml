@@ -1,4 +1,3 @@
-- name: Home
-  href: V1/index.md
-  homepage: V1/index.md
--
+- name: Docs
+  href: V1/
+  homepage: V1/OSIsoft_Adapter_for_DNP3_overview.md
