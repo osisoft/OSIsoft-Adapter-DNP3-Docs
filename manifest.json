@@ -26,6 +26,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data source configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data source configuration.html",
+          "hash": "3WaeQ/3Tr57ggXpnbuqFBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.md",
       "output": {
         ".html": {
@@ -43,18 +55,6 @@
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
           "hash": "o1qoepxB6Rf7x1qnYnlCdQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data source.html",
-          "hash": "aiUkavDuAiIuvd/1k5TG2Q=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "xRHBHemo6/E3VHoVMo92eQ=="
+          "hash": "BCcAmqHDkdbGim1HOPkhGA=="
         }
       },
       "is_incremental": false,
