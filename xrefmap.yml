@@ -28,12 +28,6 @@ references:
 - uid: ConfigureOSIsoftAdapterForDNP3
   name: Configure OSIsoft Adapter for DNP3
   href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Configure%20OSIsoft%20Adapter%20for%20DNP3.html
-- uid: DataSelectionDNP3
-  name: Data selection
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Data%20selection.html
-- uid: DataSourceDNP3
-  name: Data source
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Data%20source.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
