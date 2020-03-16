@@ -73,9 +73,6 @@ references:
 - uid: OSIsoftAdapterForDNP3DataSourceConfiguration
   name: OSIsoft Adapter for DNP3 data source configuration
   href: V1/Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20source%20configuration.html
-- uid: OSIsoftAdapterForDNP3Diagnostics
-  name: OSIsoft Adapter for DNP3 diagnostics
-  href: V1/OSIsoft%20Adapter%20for%20DNP3%20diagnostics.html
 - uid: OSIsoftAdapterForDNP3OperationalOverview
   name: OSIsoft Adapter for DNP3 operational overview
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20DNP3/OSIsoft%20Adapter%20for%20DNP3%20operational%20overview.html
@@ -85,12 +82,12 @@ references:
 - uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
   name: OSIsoft Adapter for DNP3 principles of operation
   href: V1/OSIsoft%20Adapter%20for%20DNP3%20overview/OSIsoft%20Adapter%20for%20DNP3%20principles%20of%20operation.html
+- uid: OSIsoftAdapterForDNP3SupportedFeatures
+  name: OSIsoft Adapter for DNP3 supported features
+  href: V1/OSIsoft%20Adapter%20for%20DNP3%20overview/OSIsoft%20Adapter%20for%20DNP3%20supported%20features.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
-- uid: SoftwareRequirementsDNP3
-  name: Software requirements
-  href: V1/Software%20requirements.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
   href: V1/main/V1/Administration/Start%20and%20stop%20an%20adapter.html
@@ -100,9 +97,6 @@ references:
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html
-- uid: SupportedFeaturesDNP3
-  name: Supported Features
-  href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20DNP3/Supported%20features.html
 - uid: System
   name: System
   href: V1/main/V1/Diagnostics/System.html

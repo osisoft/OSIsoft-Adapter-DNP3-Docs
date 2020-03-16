@@ -86,30 +86,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
-          "hash": "fseFgqtdZGkjcH7BBkf8+A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
-          "hash": "2DcObX0dmNMA7jCVppWn9A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.md",
       "output": {
         ".html": {
@@ -122,11 +98,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Software requirements.md",
+      "source_relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 supported features.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Software requirements.html",
-          "hash": "gZiGnbMA2e3AYWBASuzHkA=="
+          "relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 supported features.html",
+          "hash": "3KFui1tXTBvncL78MJO7Cw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "jvgTAa74GuMZmA0900EL6g=="
+          "hash": "fG1ME8Z2ptuszDdiasKhsA=="
         }
       },
       "is_incremental": false,
@@ -725,7 +701,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 46,
+          "total_file_count": 44,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

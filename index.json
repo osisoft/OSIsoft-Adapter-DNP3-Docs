@@ -34,11 +34,6 @@
     "title": "OSIsoft Adapter for DNP3 operational overview",
     "keywords": "OSIsoft Adapter for DNP3 operational overview"
   },
-  "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html": {
-    "href": "V1/Introduction to OSIsoft Adapter for DNP3/Supported features.html",
-    "title": "Supported Features",
-    "keywords": "Supported Features"
-  },
   "V1/main/README.html": {
     "href": "V1/main/README.html",
     "title": "OSIsoft Adapter Docs",
@@ -209,24 +204,19 @@
     "title": "Troubleshooting",
     "keywords": "Troubleshooting"
   },
-  "V1/OSIsoft Adapter for DNP3 diagnostics.html": {
-    "href": "V1/OSIsoft Adapter for DNP3 diagnostics.html",
-    "title": "OSIsoft Adapter for DNP3 diagnostics",
-    "keywords": "OSIsoft Adapter for DNP3 diagnostics"
-  },
   "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.html": {
     "href": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.html",
     "title": "OSIsoft Adapter for DNP3 principles of operation",
     "keywords": "OSIsoft Adapter for DNP3 principles of operation"
   },
+  "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 supported features.html": {
+    "href": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 supported features.html",
+    "title": "OSIsoft Adapter for DNP3 supported features",
+    "keywords": "OSIsoft Adapter for DNP3 supported features"
+  },
   "V1/readme.html": {
     "href": "V1/readme.html",
     "title": "",
     "keywords": ""
-  },
-  "V1/Software requirements.html": {
-    "href": "V1/Software requirements.html",
-    "title": "Software requirements",
-    "keywords": "Software requirements"
   }
 }
