@@ -110,11 +110,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Principles of operation.md",
+      "source_relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Principles of operation.html",
-          "hash": "b4sYWbVSdOSUtYkso/Z8Tg=="
+          "relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.html",
+          "hash": "yXQWUmBY9dAtfvC+ZpXdQA=="
         }
       },
       "is_incremental": false,
