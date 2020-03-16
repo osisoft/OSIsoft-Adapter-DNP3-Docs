@@ -1,1 +1,15 @@
-
+- name: OSIsoft Adapter for DNP3 overview
+  href: OSIsoft Adapter for DNP3 overview/toc.yml
+  topicHref: OSIsoft_Adapter_for_DNP3_overview.md
+- name: Installation
+  href: main/V1/Installation/toc.yml
+  topicHref: main/V1/Installation/Installation.md
+- name: Configuration
+  href: Configuration/toc.yml
+  topicHref: Configuration/Configuration.md
+- name: Administration
+  href: main/V1/Administration/toc.yml
+  topicHref: main/V1/Administration/Administration.md
+- name: Health and diagnostics
+  href: main/V1/Health/toc.yml
+  topicHref: main/V1/Health/Health and diagnostics.md
