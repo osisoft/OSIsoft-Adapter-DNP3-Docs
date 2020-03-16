@@ -19,12 +19,6 @@ references:
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
-- uid: ConfigureDataSelectionDNP3
-  name: Configure data selection
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Configure%20data%20selection.html
-- uid: ConfigureOSIsoftAdapterForDNP3
-  name: Configure OSIsoft Adapter for DNP3
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20DNP3/Configure%20OSIsoft%20Adapter%20for%20DNP3.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
@@ -34,6 +28,9 @@ references:
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/Configuration/Diagnostics%20configuration.html
+- uid: DNP3Configuration
+  name: Configuration
+  href: V1/Configuration/Configuration.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html
@@ -70,6 +67,9 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
+- uid: OSIsoftAdapterForDNP3DataSelectionConfiguration
+  name: OSIsoft Adapter for DNP3 data selection configuration
+  href: V1/Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20selection%20configuration.html
 - uid: OSIsoftAdapterForDNP3DataSourceConfiguration
   name: OSIsoft Adapter for DNP3 data source configuration
   href: V1/Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20source%20configuration.html

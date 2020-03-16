@@ -26,35 +26,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/Configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/Configuration.html",
+          "hash": "vw2FgtwdR7sLAWPw4YT83g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data selection configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data selection configuration.html",
+          "hash": "xEXhVR8JsvzRpwVebbd8Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data source configuration.md",
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for DNP3 data source configuration.html",
           "hash": "3WaeQ/3Tr57ggXpnbuqFBw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure OSIsoft Adapter for DNP3.html",
-          "hash": "JYraLQFkF+FuPbhS1nhn6A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for DNP3/Configure data selection.html",
-          "hash": "o1qoepxB6Rf7x1qnYnlCdQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "BCcAmqHDkdbGim1HOPkhGA=="
+          "hash": "jvgTAa74GuMZmA0900EL6g=="
         }
       },
       "is_incremental": false,
