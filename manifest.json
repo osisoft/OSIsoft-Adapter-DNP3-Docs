@@ -62,18 +62,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/Introduction to OSIsoft Adapter for DNP3.html",
-          "hash": "yp0D4XJKsRa6py64XLyVkA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.md",
       "output": {
         ".html": {
@@ -109,6 +97,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/OSIsoft_Adapter_for_DNP3_overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/OSIsoft_Adapter_for_DNP3_overview.html",
+          "hash": "sgM/6BcLaTIm+wlqq1Rw2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "UidNotFound"
       ],
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "fG1ME8Z2ptuszDdiasKhsA=="
+          "hash": "gCegm3QHR2JUaj41yIXUpA=="
         }
       },
       "is_incremental": false,
