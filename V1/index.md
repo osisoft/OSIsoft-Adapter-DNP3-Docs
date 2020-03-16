@@ -6,17 +6,17 @@ uid: index
 
 =======
 
-- [OSIsoft Adapter for OPC UA overview](xref:OSIsoftAdapterForOPCUAOverview)
-  - [OSIsoft Adapter for OPC UA principles of operation](xref:OSIsoftAdapterForOPCUAPrinciplesOfOperation)
-  - [OSIsoft Adapter for Modbus TCP supported features](xref:OSIsoftAdapterForModbusTCPSupportedFeatures)
+- [OSIsoft Adapter for DNP3 overview](xref:OSIsoftAdapterForDNP3Overview)
+  - [OSIsoft Adapter for DNP3 principles of operation](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation)
+  - [OSIsoft Adapter for DNP3 supported features](xref:OSIsoftAdapterForDNP3SupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:ModbusConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
   - [System components configuration](xref:SystemComponentsConfiguration)
-  - [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration)
-  - [OSIsoft Adapter for Modbus TCP data selection configuration](xref:OSIsoftAdapterForModbusTCPDataSelectionConfiguration)
+  - [OSIsoft Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration)
+  - [OSIsoft Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration)
   - [Egress endpoints configuration](xref:EgressEndpointsConfiguration)
   - [Health endpoint configuration](xref:HealthEndpointConfiguration)
   - [Diagnostics configuration](xref:DiagnosticsConfiguration)
@@ -38,3 +38,4 @@ uid: index
     - [IO rate](xref:IORate)
     - [Error rate](xref:ErrorRate)
   - [Egress diagnostics](xref:EgressDiagnostics)
+
