@@ -62,18 +62,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Introduction to OSIsoft Adapter for DNP3/OSIsoft Adapter for DNP3 operational overview.html",
-          "hash": "scKd6LCwza20YzYXyPJ6vw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.md",
       "output": {
         ".html": {
@@ -109,6 +97,17 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "V1/images/atlas_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/atlas_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "UidNotFound"
       ],
@@ -117,7 +116,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "gCegm3QHR2JUaj41yIXUpA=="
+          "hash": "F9NOhQfU8VhqJY/TYBFc0w=="
         }
       },
       "is_incremental": false,
@@ -701,7 +700,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 44,
+          "total_file_count": 43,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
