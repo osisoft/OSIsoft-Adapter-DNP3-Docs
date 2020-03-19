@@ -11,6 +11,7 @@ uid: index
   - [OSIsoft Adapter for DNP3 supported features](xref:OSIsoftAdapterForDNP3SupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
+  - [Install OSIsoft Adapter for DNP3 using Docker](xref:InstallOSIsoftAdapterForDNP3UsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:ModbusConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
