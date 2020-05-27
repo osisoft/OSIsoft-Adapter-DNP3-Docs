@@ -15,7 +15,7 @@ Complete the following procedure to configure the DNP3 data source:
 1. Save the file, for example, as *DataSource.config.json*. 
 1. Use any of the [Configuration tools](./Configuration%20tools.html) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:\<port>/api/v1/configuration/\<adapterId>/DataSource/`.
 
-**Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components congiguration](./System%20components%20configuration.html). The example also assumes that the default port number, 5590, is used. If you selected a different port number, replace it with that value. 
+**Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](./System%20components%20configuration.html). The example also assumes that the default port number, 5590, is used. If you selected a different port number, replace it with that value. 
 
 > curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
 
@@ -77,7 +77,7 @@ The following parameters may be used to configure each Thannel in the TCPChannel
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 HostnameOrIpAddress | Required | string | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter will establish a connection to this address.
-Port | Required | number | TCP port that the outstations are listening on. 
+Port | Optional | number | TCP port that the outstations are listening on. Default is 20000.
 MasterStationBehaviorId | Required | string | Must match the Id of one of the configurations in the MasterStationBehaviors list.
 Outstations | Required | array | List of outstations that the adapter will connect to on the TCPChannel.
 
@@ -89,3 +89,145 @@ Parameter | Required | Type | Description
 Id | Required | string | Friendly identifier of the outstation. Must be unique among all Channels and Outstations. May be referenced by a data selection item. 
 DNPAddress | Required | number | Address of the Outstation on the Channel. This is a 2 byte, unsigned integer. 
 OutstationBehaviorId | Required | string | Must match the Id of one of the configurations in the OutstationBehaviors array.
+
+## DNP3 data source examples
+
+### Minimum configuration for a single outstation
+The following example is a configuration for a single outstation on a single TCP channel. 
+The optional configuration parameters have been omitted, so the default values will be used. 
+With the default configuration, the adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](../OSIsoft%20Adapter%20for%20DNP3%20overview/OSIsoft%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery).  
+For more information about the default configuration, reference the tables above. 
+```json
+{
+    "masterStationBehaviors": [
+        {
+            "id": "masterBehavior1",
+            "masterAddress": 1
+        }
+    ],
+    "outstationBehaviors": [
+        {
+            "id": "outstationBehavior1"
+        }
+    ],
+    "tcpChannels": [
+        {
+            "masterStationBehaviorId": "masterBehavior1",
+            "hostNameOrIpAddress": "outstation1.scadanetwork.int",
+            "outstations": [
+                {
+                    "id": "Outstation1",
+                    "dnpAddress": 10,
+                    "outstationBehaviorId": "outstationBehavior1"
+                }
+            ]
+        }        
+    ]
+}
+```
+
+### Example configuration for multiple outstations
+The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. 
+Rather than using the default configurations, many configuration options are expressed here. 
+
+There are two MasterStationBehaviors, one of which increases the data link layer timeout and retry count. 
+This may be needed when operating with network conditions that are less than ideal. 
+Any TCPChannel that references the master station behavior "poorNetworkConditions" will use these settings, while TCPChannels that reference "defaultMasterBehavior" will use the default settings. 
+
+There are three OutstationBehaviors defined: "eventScans-integrityScan-noUnsolicited", "busyOutstation", and "class1Events". 
+
+The behavior "eventScans-integrityScan-noUnsolicited" deviates from the default configuration options by disabling unsolicited responses and scanning for events every ten minutes. 
+This type of configuration is useful if the outstation does not support unsolicited events, or maybe it is more efficient to scan for events periodically. 
+
+The behavior "busyOutstation" deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans. 
+Please note that the disabling the integrity scan will prevent discovery and event scans are disabled by default. 
+With this configuration, the adapter will only collect data if it is configured to collect [static data](../OSIsoft%20Adapter%20for%20DNP3%20overview/OSIsoft%20Adapter%20for%20DNP3%20principles%20of%20operation.html#static-data).
+This type of configuration is useful if the outstation is very busy. 
+For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. 
+In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.
+
+The behavior "class1Events" deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1.
+This configuration may be useful if the user is not interested in collecting data for points assigned to class 2 or class 3. 
+
+There are two TCPChannels configured. One channel has two outstations configured. 
+This channel might represent a connection to a DNP3 gateway at a substation. 
+The other TCPChannel only contains one configured outstation. 
+This might represent a DNP3 device that is in a remote location.
+
+```json
+{
+    "masterStationBehaviors": [
+        {
+            "id": "poorNetworkConditions",
+            "masterAddress": 1,
+            "dataLinkLayerTimeout": "00:00:05",
+            "dataLinkLayerRetries": 5
+        },
+        {
+            "id": "defaultMasterBehavior",
+            "masterAddress": 1
+        }
+    ],
+    "outstationBehaviors": [
+        {
+            "id": "eventScans-integrityScan-noUnsolicited",
+            "enableUnsolicited": false,
+            "EventClasses": [
+                1,
+                2,
+                3
+            ],
+            "eventScanPeriod": "00:10:00"
+        },
+        {
+            "id": "busyOutstation",
+            "applicationLayerTimeout": "00:00:30",
+            "enableTimeSync": false,
+            "integrityScanOnStartup": false,
+            "integrityScanOnEventBufferOverflow": false,
+            "integrityScanPeriod": "00:00:00"
+        },
+        {
+            "id": "class1Events",
+            "applicationLayerTimeout": "00:00:03",
+            "enableUnsolicited": false,
+            "integrityScanOnStartup": true,
+            "integrityScanOnEventBufferOverflow": false,
+            "integrityScanPeriod": "00:00:00",
+            "EventClasses": [ 1 ],
+            "eventScanPeriod": "00:10:00"
+        }
+    ],
+    "tcpChannels": [
+        {
+            "masterStationBehaviorId": "defaultMasterBehavior",
+            "hostNameOrIpAddress": "substation1.scadanetwork.int",
+            "outstations": [
+                {
+                    "id": "outstation10",
+                    "dnpAddress": 10,
+                    "outstationBehaviorId": "eventScans-integrityScan-noUnsolicited"
+                },
+                {
+                    "id": "outstation100",
+                    "dnpAddress": 100,
+                    "outstationBehaviorId": "busyOutstation"
+                }
+            ]
+        },
+        {
+            "masterStationBehaviorId": "poorNetworkConditions",
+            "hostNameOrIpAddress": "outstation11.scadanetwork.int",
+            "port": 20001,
+            "outstations": [
+                {
+                    "id": "Outstation11",
+                    "dnpAddress": 11,
+                    "outstationBehaviorId": "class1Events"
+                }
+            ]
+        }
+    ]
+}
+```
+
