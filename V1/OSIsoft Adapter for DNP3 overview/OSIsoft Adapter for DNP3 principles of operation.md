@@ -7,7 +7,10 @@ uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
 ## Connectivity and Interoperability
 The DNP3 Adapter may connect to one or more DNP3 compliant outstations via TCP/IP connections. The total number of outstations that the DNP3 Adapter may connect to will vary across different installation environments.  
 
-The DNP3 Adapter is designed to operate with Level 1 (DNP3–L1) compliance, which defines minimum requirements for all DNP3 compliant devices. However, the adapter does make use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices may not support these same features.  Any functionality described in the documentation that is not required for Level 1 compliance will be noted as such. Please check the outstation documentation prior to using these features, as the adapter will need to be configured to only use the supported features of the outstation.  
+The DNP3 Adapter is designed to operate with Level 1 (DNP3–L1) compliance, which defines minimum requirements for all DNP3 compliant devices. 
+However, the adapter does make use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices may not support these same features.  
+Any functionality described in this documentation that is not required for Level 1 compliance will be noted as such. 
+Please check the outstation documentation prior to using these features, as the adapter will need to be configured to only use the supported features of the outstation.  
 
 ## Adapter Configuration
 
@@ -20,10 +23,32 @@ In order for the DNP3 Adapter to start data collection, you need to configure th
 For more infomation, see [OSIsoft Adapter for DNP3 data source configuration](../configuration/OSIsoft%20Adapter%20for%20DNP3%20data%source%20configuration.html) and [OSIsoft Adapter for DNP3 data selection configuration](../configuration/OSIsoft%20Adapter%20for%20DNP3%20data%selection%20configuration.html).
 
 ## Stream creation
-The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. 
+The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:
+
+| Property name | Data type | Description
+| ------------- | --------- | -----------
+| Timestamp | DateTime | Timestamp of the value update for the DNP point. 
+| Value | Depenent on the data selection configuration | Value of the DNP point
+
+Each stream will have a unique identifier, called a Stream ID, which is can be specified by the user in the data selection configuration. 
+If the Stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the Stream ID. 
 
 ### Discovery
-//TODO
+The DNP3 adapter can discover points on your DNP3 outstation by performing an [*integrity scan*](#Integrity-scan). 
+Discovery will populate your data selection configuration with items that represent points on the outstation. 
+These items will default as unselected, so the user may make changes to these items before selecting them. 
+The adapter can only discover points that are assigned to Class 0, Class 1, Class 2, or Class 3 on the outstation.
+Discovery may be expensive in terms of bandwidth and outstation resources, so the adapter will only perform discovery for an outstation when the following criteria is met: 
+
+- The outstation is configured in the data source configuration.
+- The adapter is configured to perform an integrity scan for that outstation. 
+- The data selection configuration contains no items that correlate to that outstation, selected or unselected.
+
+To discover a new outstation, simply add the outstation to the data source configuration and configure an integrity scan to run periodically or on startup. 
+The adapter will use the first integrity scan as a means for discovery. 
+To configure a new outstation without triggering a discovery, you can add one or more selection items to correspond with the outstation. 
+The items may be selected or unselected. 
+Alternatively, you can configure the outstation behavior so that no integrity scan will be performed. Without an integrity scan, discovery will not be possible. 
 
 ## Data collection
 The DNP3 adapter can collect two different types of data from DNP3 compliant outstations: *static* data and *event* data.
@@ -92,5 +117,7 @@ The DNP3 adapter can be configured to perform an *integrity scan* on startup,
  when the outstation's event buffer overflows, and/or at a defined interval.
 During an *integrity scan*, the adapter will poll the outstation(s) for events,
  then the current value of all points that are assigned to one of the event classes (or class 0).
-The adapter performns an integrity scan by polling Object Group 60.
+The adapter performs an integrity scan by polling Object Group 60.
+If bandwidth or outstation performance is a concern, carefully consider the value of an integrity scan, as the outstation may respond with data for many more points than the adapter is configured to collect data for. 
+The adapter will simply discard any data that it receives without a corresponding data selection item. 
 To retrieve the current value of any points not assigned to an event class, the adapter will need to perform a *static scan*.
