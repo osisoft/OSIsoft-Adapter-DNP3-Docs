@@ -19,6 +19,9 @@ references:
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
+- uid: DataFiltersConfiguration
+  name: Data filters configuration
+  href: V1/main/V1/Configuration/Data%20filters%20configuration.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
@@ -109,15 +112,12 @@ references:
 - uid: SystemComponentsConfiguration
   name: System components configuration
   href: V1/main/V1/Configuration/System%20components%20configuration.html
+- uid: TechnicalSupportAndFeedback
+  name: Technical support and feedback
+  href: V1/main/V1/Technical%20support%20and%20feedback.html
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/Troubleshooting.html
-- uid: TroubleshootingDataBuffering
-  name: Data buffering
-  href: V1/main/V1/Troubleshooting/Data%20buffering.html
-- uid: TroubleshootingLogging
-  name: Logging
-  href: V1/main/V1/Troubleshooting/Logging.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Installation/Uninstall%20the%20adapter.html
