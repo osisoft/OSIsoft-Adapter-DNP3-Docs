@@ -76,10 +76,12 @@ The following parameters may be used to configure each Thannel in the TCPChannel
 
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
-HostnameOrIpAddress | Required | string | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter will establish a connection to this address.
-Port | Optional | number | TCP port that the outstations are listening on. Default is 20000.
+HostNameOrIpAddress* | Required | string | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter will establish a connection to this address.
+Port* | Optional | number | TCP port that the outstations are listening on. Default is 20000.
 MasterStationBehaviorId | Required | string | Must match the Id of one of the configurations in the MasterStationBehaviors list.
 Outstations | Required | array | List of outstations that the adapter will connect to on the TCPChannel.
+
+__Note:__ A TCPChannel is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each TCPChannel must have a unique combination of these properties. 
 
 ### Outstation Parameters
 The following parameters may be used to configure each Outstation in the Outstations array within a TCP channel: 
