@@ -7,7 +7,7 @@ uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
 ## Connectivity and Interoperability
 The DNP3 Adapter may connect to one or more DNP3 compliant outstations via TCP/IP connections. The total number of outstations that the DNP3 Adapter may connect to will vary across different installation environments.  
 
-The DNP3 Adapter is designed to operate with Level 1 (DNP3–L1) compliance, which defines minimum requirements for all DNP3 compliant devices. 
+The DNP3 Adapter is designed to operate with Level 1 (DNP3â€“L1) compliance, which defines minimum requirements for all DNP3 compliant devices. 
 However, the adapter does make use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices may not support these same features.  
 Any functionality described in this documentation that is not required for Level 1 compliance will be noted as such. 
 Please check the outstation documentation prior to using these features, as the adapter will need to be configured to only use the supported features of the outstation.  
@@ -20,7 +20,7 @@ In order for the DNP3 Adapter to start data collection, you need to configure th
 - Data selection: Select the DNP points on the outstations you want the adapter to collect data from.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more infomation, see [OSIsoft Adapter for DNP3 data source configuration](../configuration/OSIsoft%20Adapter%20for%20DNP3%20data%source%20configuration.html) and [OSIsoft Adapter for DNP3 data selection configuration](../configuration/OSIsoft%20Adapter%20for%20DNP3%20data%selection%20configuration.html).
+For more infomation, see [OSIsoft Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration) and [OSIsoft Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration).
 
 ## Stream creation
 The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:
@@ -30,7 +30,7 @@ The DNP3 adapter creates types at startup. One stream is created for every selec
 | Timestamp | DateTime | Timestamp of the value update for the DNP point. 
 | Value | Depenent on the data selection configuration | Value of the DNP point
 
-Each stream will have a unique identifier, called a Stream ID, which is can be specified by the user in the data selection configuration. 
+Each stream will have a unique identifier, called a Stream ID, which can be specified by the user in the data selection configuration. 
 If the Stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the Stream ID. 
 
 ### Discovery
@@ -88,12 +88,12 @@ DNP3 events belong to one of three different classes of data: *Class 1*, *Class 
 These event classes may be used to group events by priority,
  though neither the DNP3 adapter nor the DNP3 specification assign significance to the three event classes. 
 
-According to the DNP3 specification, all DNP3 – L1 compliant outstations shall accept read requests for event class data.  
+According to the DNP3 specification, all DNP3 â€“ L1 compliant outstations shall accept read requests for event class data.  
 
 #### Event Scans
 The adapter may be configured to request event data via an *event scan*. 
 During an *event scan*, the adapter will poll the outstation(s) for the event data from each of the configured event classes. 
-The event classes and the polling interval may be configured in the [data source configuration](../configuration/OSIsoft%20Adapter%20for%20DNP3%20data%source%20configuration.html#OutstationBehavior-Parameters).
+The event classes and the polling interval may be configured in the [data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration#OutstationBehavior-Parameters).
 
 *Event scans* offer several advantages over polling for static data. 
 When polling for static data, it is possible to miss value changes for points on the outstation;
@@ -101,12 +101,12 @@ When polling for static data, it is possible to miss value changes for points on
 Similarly, even when polling quickly, some events could be missed if they do not change the value of the DNP point. 
 If bandwidth is a concern, the adapter may make efficient use of the network by only requesting event data. 
 When polling for static data, the outstation may report unchanging data unnecessarily, whereas *event scans* should only return new events. 
-It is important to configure the adapter to perform Event Scans at an interval that is not long enough to allow the outstations’ event buffers to become full. 
+It is important to configure the adapter to perform Event Scans at an interval that is not long enough to allow the outstationsâ€™ event buffers to become full. 
 Refer to the documentation for each specific outstation to determine what constitutes an event and how much time it will take before the buffer becomes full. 
 
 #### Unsolicited Events
 In addition to the *event scans* above, the adapter may be configured to receive *unsolicited* responses containing event data. 
-An unsolicited response is a message sent from an outstation that the adapter did not explicitly request. 
+An unsolicited response is a message sent from an outstation that the adapter did not explicitly request.Â 
 
 If the adapter is configured to receive unsolicited data, outstations that support sending unsolicited data should report event data to the adapter as it occurs. 
 This could eliminate the need for the adapter to poll the outstation(s) for data. 
