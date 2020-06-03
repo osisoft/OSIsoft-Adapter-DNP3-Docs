@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -76,16 +76,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="index">
-<h1 id="osisoft-adapter-for-dnp3-overview">OSIsoft Adapter for DNP3 overview</h1>
+<h1 id="osisoft-adapter-for-dnp3-overview" sourcefile="V1/index.md" sourcestartlinenumber="5" sourceendlinenumber="5">OSIsoft Adapter for DNP3 overview</h1>
 
-<p>The OSIsoft Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol commonly used in SCADA networks. The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,  which may communicate with compliant outstations by TCP/IP.</p>
-<p><img src="images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png" alt="OSIsoft Adapter for DNP3 architecture"></p>
-<p>The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.</p>
-<p>All functions of the adapter are configured using REST API. The configurations are stored in JSON files.
+<p sourcefile="V1/index.md" sourcestartlinenumber="7" sourceendlinenumber="7">The OSIsoft Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol commonly used in SCADA networks. The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,  which may communicate with compliant outstations by TCP/IP.</p>
+<p sourcefile="V1/index.md" sourcestartlinenumber="9" sourceendlinenumber="9"><img src="images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png" alt="OSIsoft Adapter for DNP3 architecture" sourcefile="V1/index.md" sourcestartlinenumber="9" sourceendlinenumber="9"></p>
+<p sourcefile="V1/index.md" sourcestartlinenumber="11" sourceendlinenumber="11">The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.</p>
+<p sourcefile="V1/index.md" sourcestartlinenumber="13" sourceendlinenumber="15">All functions of the adapter are configured using REST API. The configurations are stored in JSON files.
 For data ingress, an adapter component must be defined in the system components configuration for each device to which the adapter will connect. Each adapter component is then configured with the connection information for the device and the data to collect.
 For data egress, configuration is needed to specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.</p>
-<p>Once the adapter is configured and sending data, administration functions are used to manage the adapter or individual ingress components of the adapter. Health and diagnostics functions monitor the status of connected devices, adapter system functions, the number of active data streams, the rate of data ingress, the rate of errors, and the rate of data egress.</p>
-<p>The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to configure and administer an adapter on both Linux and Windows operating systems. It is installed separately from the adapter.</p>
+<p sourcefile="V1/index.md" sourcestartlinenumber="17" sourceendlinenumber="17">Once the adapter is configured and sending data, administration functions are used to manage the adapter or individual ingress components of the adapter. Health and diagnostics functions monitor the status of connected devices, adapter system functions, the number of active data streams, the rate of data ingress, the rate of errors, and the rate of data egress.</p>
+<p sourcefile="V1/index.md" sourcestartlinenumber="19" sourceendlinenumber="19">The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to configure and administer an adapter on both Linux and Windows operating systems. It is installed separately from the adapter.</p>
 <!--
 # OSIsoft Adapter for DNP3
 
