@@ -4,11 +4,9 @@ uid: index
 
 # OSIsoft Adapter for DNP3 overview
 
-The OSIsoft Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. 
-DNP3 is a communication protocol commonly used in SCADA networks.
-The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. 
-The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,
- which may communicate with compliant outstations via TCP/IP.
+The OSIsoft Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol commonly used in SCADA networks. The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,  which may communicate with compliant outstations by TCP/IP.
+
+![OSIsoft Adapter for DNP3 architecture](images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png)
 
 The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
 
