@@ -103,19 +103,24 @@ Please check the outstation documentation prior to using these features, as the 
 </thead>
 <tbody>
 <tr>
-<td>Timestamp</td>
+<td><code>Timestamp</code></td>
 <td>DateTime</td>
 <td>Timestamp of the value update for the DNP point.</td>
 </tr>
 <tr>
-<td>Value</td>
-<td>Depenent on the data selection configuration</td>
-<td>Value of the DNP point</td>
+<td><code>Value</code></td>
+<td>Specified on the data selection configuration</td>
+<td>Value of the DNP point.</td>
 </tr>
 </tbody>
 </table>
-<p>Each stream will have a unique identifier, called a Stream ID, which can be specified by the user in the data selection configuration. 
-If the Stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the Stream ID. </p>
+<p>Certain metadata are sent with each stream created. Metadata common for every adapter type are</p>
+<ul>
+<li><strong>ComponentId</strong>: Specifies the type of adapter, for example <em>DNP3</em></li>
+<li><strong>ComponentType</strong>: Specifies the data source, for example <em>DNP3_1</em></li>
+</ul>
+<p>Each stream created for a given DNP point has a unique identifier or &quot;Stream ID&quot;. If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream. 
+If the stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the stream ID. </p>
 <h3 id="discovery">Discovery</h3>
 <p>The DNP3 adapter can discover points on your DNP3 outstation by performing an <a href="#Integrity-scan"><em>integrity scan</em></a>. 
 Discovery will populate your data selection configuration with items that represent points on the outstation. 
