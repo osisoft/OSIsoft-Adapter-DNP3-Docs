@@ -27,11 +27,16 @@ The DNP3 adapter creates types at startup. One stream is created for every selec
 
 | Property name | Data type | Description
 | ------------- | --------- | -----------
-| Timestamp | DateTime | Timestamp of the value update for the DNP point. 
-| Value | Depenent on the data selection configuration | Value of the DNP point
+| `Timestamp` | DateTime | Timestamp of the value update for the DNP point. 
+| `Value` | Specified on the data selection configuration | Value of the DNP point.
 
-Each stream will have a unique identifier, called a Stream ID, which can be specified by the user in the data selection configuration. 
-If the Stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the Stream ID. 
+Certain metadata are sent with each stream created. Metadata common for every adapter type are
+
+- **ComponentId**: Specifies the type of adapter, for example _DNP3_
+- **ComponentType**: Specifies the data source, for example _DNP3_1_
+
+Each stream created for a given DNP point has a unique identifier or "Stream ID". If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream. 
+If the stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the stream ID. 
 
 ### Discovery
 The DNP3 adapter can discover points on your DNP3 outstation by performing an [*integrity scan*](#Integrity-scan). 
