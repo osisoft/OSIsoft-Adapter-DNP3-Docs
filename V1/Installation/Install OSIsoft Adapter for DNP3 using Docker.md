@@ -135,7 +135,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 
 	**Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
 
-	**ARM32**
+	### ARM32
 
 	```bash
 	FROM ubuntu
@@ -146,7 +146,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	ADD ./DNP3_linux-arm.tar.gz .
 	ENTRYPOINT ["/dnp3dockerstart.sh"]
 	```
-	**ARM64**
+	### ARM64
 
 	```bash
 	FROM ubuntu
@@ -158,7 +158,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	ENTRYPOINT ["/dnp3dockerstart.sh"]
 	```
 
-	**AMD64 (x64)**
+	### AMD64 (x64)
 
 	```bash
 	FROM ubuntu
