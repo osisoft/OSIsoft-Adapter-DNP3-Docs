@@ -197,7 +197,7 @@ Port `5590` is accessible from the host and you can make REST calls to DNP3 Adap
 
 Complete the following to run the container:
 
-1. Use the docker container image `dnp3adapter` previously created.
+1. Use the docker container image `dnp3adapter` created previously.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
