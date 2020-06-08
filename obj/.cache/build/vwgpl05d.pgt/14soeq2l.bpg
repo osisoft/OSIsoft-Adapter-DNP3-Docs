@@ -237,7 +237,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 <h3 id="provide-persistent-storage-for-the-docker-container" sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="196" sourceendlinenumber="196">Provide persistent storage for the Docker container</h3>
 <p sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="198" sourceendlinenumber="198">Complete the following to run the container:</p>
 <ol sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="200" sourceendlinenumber="205">
-<li sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="200" sourceendlinenumber="200">Use the docker container image <code>dnp3adapter</code> previously created.</li>
+<li sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="200" sourceendlinenumber="200">Use the docker container image <code>dnp3adapter</code> created previously.</li>
 <li sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="201" sourceendlinenumber="205"><p sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="201" sourceendlinenumber="201">Type the following in the command line (<code>sudo</code> may be necessary):</p>
 <pre sourcefile="V1/Installation/Install OSIsoft Adapter for DNP3 using Docker.md" sourcestartlinenumber="203" sourceendlinenumber="205"><code class="lang-bash">docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 </code></pre></li>
