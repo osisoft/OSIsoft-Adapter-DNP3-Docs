@@ -12,7 +12,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 
 ## Create a startup script for the adapter
 
-1. Using any text editor, create a script similar to the following.
+1. Using any text editor, create a script similar to one of the following.
 
 	**Note:** The script varies slightly by processor.
 
@@ -46,7 +46,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-    			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3/DNP3"
+    			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3"
 			}
 	}
 	EOF
@@ -83,7 +83,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3/DNP3"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3"
 			}
 	}
 	EOF
@@ -120,7 +120,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3/DNP3"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/DNP3"
 			}
 	}
 	EOF
@@ -146,6 +146,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	ADD ./DNP3_linux-arm.tar.gz .
 	ENTRYPOINT ["/dnp3dockerstart.sh"]
 	```
+	
 	### ARM64
 
 	```bash
@@ -171,7 +172,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	```
 
 2. Copy the `DNP3_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
-3. Copy the `dnp3dockerstart.sh` script to the same directory.
+3. Copy the `dnp3dockerstart.sh` script to the same directory as the `Dockerfile`.
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
 	```bash
@@ -184,7 +185,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 
 Complete the following to run the container:
 
-1. Use the docker container `dnp3adapter` created previously.
+1. Use the docker container image `dnp3adapter` previously created.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
@@ -197,18 +198,18 @@ Port `5590` is accessible from the host and you can make REST calls to DNP3 Adap
 
 Complete the following to run the container:
 
-1. Use the docker container image `dnp3adapter` created previously.
+1. Use the docker container image `dnp3adapter` previously created.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
 	docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to DNP3 Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory. In this example, the host directory is a directory on the local machine, `/dnp3`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the DNP3 Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/dnp3`. You can specify any directory.
 
 ### Port number change
 
-To use a different port other than `5590` you can specify a `portnum` variable on the `docker run` command line. For example, to start the adapter using port `6000` instead of `5590`, you use the command line:
+To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the adapter using port `6000` instead of `5590`, use the command line:
 
 ```bash
 docker run -d -e portnum=6000 --network host dnp3adapter
