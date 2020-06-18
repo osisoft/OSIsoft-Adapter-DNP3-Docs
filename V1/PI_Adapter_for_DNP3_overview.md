@@ -1,5 +1,5 @@
 ---
-uid: OSIsoftAdapterForDNP3Overview
+uid: PIAdapterForDNP3Overview
 ---
 
 # PI Adapter for DNP3 overview

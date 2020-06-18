@@ -1,5 +1,5 @@
 ---
-uid: OSIsoftAdapterForDNP3DataSourceConfiguration
+uid: PIAdapterForDNP3DataSourceConfiguration
 ---
 
 # PI Adapter for DNP3 data source configuration
@@ -19,7 +19,7 @@ Complete the following procedure to configure the DNP3 data source:
 
 > curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
 
-**Note:** After you have completed data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation#discovery).
+**Note:** After you have completed data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## DNP3 data source schema
 The full schema definition for the DNP3 data source configuration is in the DNP3_DataSource_schema.json file which is located:
@@ -97,7 +97,7 @@ OutstationBehaviorId | Required | string | Must match the Id of one of the confi
 ### Minimum configuration for a single outstation
 The following example is a configuration for a single outstation on a single TCP channel. 
 The optional configuration parameters have been omitted, so the default values will be used. 
-With the default configuration, the adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation#discovery).  
+With the default configuration, the adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).  
 For more information about the default configuration, reference the tables above. 
 ```json
 {
@@ -143,7 +143,7 @@ This type of configuration is useful if the outstation does not support unsolici
 
 The behavior "busyOutstation" deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans. 
 Please note that the disabling the integrity scan will prevent discovery and event scans are disabled by default. 
-With this configuration, the adapter will only collect data if it is configured to collect [static data](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation#static-data).
+With this configuration, the adapter will only collect data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data).
 This type of configuration is useful if the outstation is very busy. 
 For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. 
 In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.

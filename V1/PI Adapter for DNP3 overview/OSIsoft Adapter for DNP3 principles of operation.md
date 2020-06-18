@@ -1,5 +1,5 @@
 ---
-uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
+uid: PIAdapterForDNP3PrinciplesOfOperation
 ---
 
 # PI Adapter for DNP3 principles of operation
@@ -20,7 +20,7 @@ In order for the DNP3 Adapter to start data collection, you need to configure th
 - Data selection: Select the DNP points on the outstations you want the adapter to collect data from.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more infomation, see [PI Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration) and [PI Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration).
+For more infomation, see [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration).
 
 ## Stream creation
 The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:
@@ -98,7 +98,7 @@ According to the DNP3 specification, all DNP3 – L1 compliant outstations shall
 #### Event Scans
 The adapter may be configured to request event data via an *event scan*. 
 During an *event scan*, the adapter will poll the outstation(s) for the event data from each of the configured event classes. 
-The event classes and the polling interval may be configured in the [data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration#OutstationBehavior-Parameters).
+The event classes and the polling interval may be configured in the [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#OutstationBehavior-Parameters).
 
 *Event scans* offer several advantages over polling for static data. 
 When polling for static data, it is possible to miss value changes for points on the outstation;
