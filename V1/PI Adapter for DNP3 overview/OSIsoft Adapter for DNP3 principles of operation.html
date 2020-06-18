@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     
     <meta property="docfx:rel" content="../../">
     
@@ -90,7 +90,7 @@ Please check the outstation documentation prior to using these features, as the 
 <li>Data selection: Select the DNP points on the outstations you want the adapter to collect data from.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more infomation, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a>.</p>
+<p>For more infomation, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../Configuration/PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a>.</p>
 <h2 id="stream-creation">Stream creation</h2>
 <p>The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:</p>
 <table>
@@ -172,7 +172,7 @@ These event classes may be used to group events by priority,
 <h4 id="event-scans">Event Scans</h4>
 <p>The adapter may be configured to request event data via an <em>event scan</em>. 
 During an <em>event scan</em>, the adapter will poll the outstation(s) for the event data from each of the configured event classes. 
-The event classes and the polling interval may be configured in the <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20DNP3%20data%20source%20configuration.html#OutstationBehavior-Parameters">data source configuration</a>.</p>
+The event classes and the polling interval may be configured in the <a class="xref" href="../Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html#OutstationBehavior-Parameters">data source configuration</a>.</p>
 <p><em>Event scans</em> offer several advantages over polling for static data. 
 When polling for static data, it is possible to miss value changes for points on the outstation;
  however, <em>event scans</em> will ensure that each outstation reports every event to the adapter. 
@@ -204,7 +204,7 @@ To retrieve the current value of any points not assigned to an event class, the 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter-DNP3-Docs/blob/master/V1/OSIsoft Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter-DNP3-Docs/blob/master/V1/PI Adapter for DNP3 overview/OSIsoft Adapter for DNP3 principles of operation.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
