@@ -64,7 +64,7 @@ references:
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
-- uid: InstallOSIsoftAdapterForDNP3UsingDocker
+- uid: InstallPIAdapterForDNP3UsingDocker
   name: Install PI Adapter for DNP3 using Docker
   href: V1/Installation/Install%20PI%20Adapter%20for%20DNP3%20using%20Docker.html
 - uid: InstallTheAdapter
@@ -79,19 +79,19 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
-- uid: OSIsoftAdapterForDNP3DataSelectionConfiguration
+- uid: PIAdapterForDNP3DataSelectionConfiguration
   name: PI Adapter for DNP3 data selection configuration
   href: V1/Configuration/PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html
-- uid: OSIsoftAdapterForDNP3DataSourceConfiguration
+- uid: PIAdapterForDNP3DataSourceConfiguration
   name: PI Adapter for DNP3 data source configuration
   href: V1/Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html
-- uid: OSIsoftAdapterForDNP3Overview
+- uid: PIAdapterForDNP3Overview
   name: PI Adapter for DNP3 overview
   href: V1/PI_Adapter_for_DNP3_overview.html
-- uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
+- uid: PIAdapterForDNP3PrinciplesOfOperation
   name: PI Adapter for DNP3 principles of operation
   href: V1/PI%20Adapter%20for%20DNP3%20overview/OSIsoft%20Adapter%20for%20DNP3%20principles%20of%20operation.html
-- uid: OSIsoftAdapterForDNP3SupportedFeatures
+- uid: PIAdapterForDNP3SupportedFeatures
   name: PI Adapter for DNP3 supported features
   href: V1/PI%20Adapter%20for%20DNP3%20overview/z%20(Placeholder)%20OSIsoft%20Adapter%20for%20DNP3%20supported%20features.html
 - uid: RetrieveProductVersionInformation
