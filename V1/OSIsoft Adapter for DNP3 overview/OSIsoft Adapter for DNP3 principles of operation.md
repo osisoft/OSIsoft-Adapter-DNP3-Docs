@@ -2,7 +2,7 @@
 uid: OSIsoftAdapterForDNP3PrinciplesOfOperation
 ---
 
-# OSIsoft Adapter for DNP3 principles of operation
+# PI Adapter for DNP3 principles of operation
 
 ## Connectivity and Interoperability
 The DNP3 Adapter may connect to one or more DNP3 compliant outstations via TCP/IP connections. The total number of outstations that the DNP3 Adapter may connect to will vary across different installation environments.  
@@ -20,7 +20,7 @@ In order for the DNP3 Adapter to start data collection, you need to configure th
 - Data selection: Select the DNP points on the outstations you want the adapter to collect data from.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more infomation, see [OSIsoft Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration) and [OSIsoft Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration).
+For more infomation, see [PI Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration) and [PI Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration).
 
 ## Stream creation
 The DNP3 adapter creates types at startup. One stream is created for every selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:

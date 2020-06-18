@@ -2,7 +2,7 @@
 uid: InstallOSIsoftAdapterForDNP3UsingDocker
 ---
 
-# Install OSIsoft Adapter for DNP3 using Docker
+# Install PI Adapter for DNP3 using Docker
 
 Docker is a set of tools that can be used on Linux to manage application deployments.
 

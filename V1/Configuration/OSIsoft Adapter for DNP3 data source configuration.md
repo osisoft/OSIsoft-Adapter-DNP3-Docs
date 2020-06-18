@@ -2,7 +2,7 @@
 uid: OSIsoftAdapterForDNP3DataSourceConfiguration
 ---
 
-# OSIsoft Adapter for DNP3 data source configuration
+# PI Adapter for DNP3 data source configuration
 To use the DNP3 adapter, you must configure the adapter to collect data from one or more DNP3 compliant outstations. The adapter may make many TCP connections, by defining multiple TCP channels, and many connections to outstations, by defining multiple outstation configurations. 
 
 ## Configure DNP3 data source 
@@ -19,7 +19,7 @@ Complete the following procedure to configure the DNP3 data source:
 
 > curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
 
-**Note:** After you have completed data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [OSIsoft Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation#discovery).
+**Note:** After you have completed data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## DNP3 data source schema
 The full schema definition for the DNP3 data source configuration is in the DNP3_DataSource_schema.json file which is located:

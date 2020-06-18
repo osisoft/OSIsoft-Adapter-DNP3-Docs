@@ -2,11 +2,11 @@
 uid: index
 ---
 
-# OSIsoft Adapter for DNP3 overview
+# PI Adapter for DNP3 overview
 
-The OSIsoft Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol commonly used in SCADA networks. The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,  which may communicate with compliant outstations by TCP/IP.
+The PI Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OSIsoft OMF endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol commonly used in SCADA networks. The protocol is maintained by the DNP Users Group, and it is defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station,  which may communicate with compliant outstations by TCP/IP.
 
-![OSIsoft Adapter for DNP3 architecture](images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png)
+![PI Adapter for DNP3 architecture](images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png)
 
 The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
 
@@ -19,22 +19,22 @@ Once the adapter is configured and sending data, administration functions are us
 The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to configure and administer an adapter on both Linux and Windows operating systems. It is installed separately from the adapter.
 
 <!--
-# OSIsoft Adapter for DNP3
+# PI Adapter for DNP3
 
 =======
 
-- [OSIsoft Adapter for DNP3 overview](xref:OSIsoftAdapterForDNP3Overview)
-  - [OSIsoft Adapter for DNP3 principles of operation](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation)
-  - [OSIsoft Adapter for DNP3 supported features](xref:OSIsoftAdapterForDNP3SupportedFeatures)
+- [PI Adapter for DNP3 overview](xref:OSIsoftAdapterForDNP3Overview)
+  - [PI Adapter for DNP3 principles of operation](xref:OSIsoftAdapterForDNP3PrinciplesOfOperation)
+  - [PI Adapter for DNP3 supported features](xref:OSIsoftAdapterForDNP3SupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
-  - [Install OSIsoft Adapter for DNP3 using Docker](xref:InstallOSIsoftAdapterForDNP3UsingDocker)
+  - [Install PI Adapter for DNP3 using Docker](xref:InstallOSIsoftAdapterForDNP3UsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:ModbusConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
   - [System components configuration](xref:SystemComponentsConfiguration)
-  - [OSIsoft Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration)
-  - [OSIsoft Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration)
+  - [PI Adapter for DNP3 data source configuration](xref:OSIsoftAdapterForDNP3DataSourceConfiguration)
+  - [PI Adapter for DNP3 data selection configuration](xref:OSIsoftAdapterForDNP3DataSelectionConfiguration)
   - [Egress endpoints configuration](xref:EgressEndpointsConfiguration)
   - [Health endpoint configuration](xref:HealthEndpointConfiguration)
   - [Diagnostics configuration](xref:DiagnosticsConfiguration)

@@ -1,5 +1,5 @@
-- name: OSIsoft Adapter for DNP3 overview
-  href: OSIsoft Adapter for DNP3 overview/toc.yml
+- name: PI Adapter for DNP3 overview
+  href: PI Adapter for DNP3 overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Installation

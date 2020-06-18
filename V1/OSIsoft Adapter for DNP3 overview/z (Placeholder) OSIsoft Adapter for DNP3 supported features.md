@@ -2,4 +2,4 @@
 uid: OSIsoftAdapterForDNP3SupportedFeatures
 ---
 
-# OSIsoft Adapter for DNP3 supported features
+# PI Adapter for DNP3 supported features

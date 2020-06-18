@@ -2,10 +2,10 @@
   href: ../main/V1/Configuration/Configuration tools.md
 - name: System components configuration
   href: ../main/V1/Configuration/System components configuration.md
-- name: OSIsoft Adapter for DNP3 data source configuration 
-  href: OSIsoft Adapter for DNP3 data source configuration.md
-- name: OSIsoft Adapter for DNP3 data selection configuration
-  href: OSIsoft Adapter for DNP3 data selection configuration.md
+- name: PI Adapter for DNP3 data source configuration 
+  href: PI Adapter for DNP3 data source configuration.md
+- name: PI Adapter for DNP3 data selection configuration
+  href: PI Adapter for DNP3 data selection configuration.md
 - name: Egress endpoints configuration
   href: ../main/V1/Configuration/Egress endpoints configuration.md
 - name: Health endpoint configuration
