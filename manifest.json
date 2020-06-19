@@ -122,10 +122,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "V1/images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png",
+      "source_relative_path": "V1/images/PI_Adapter_for_DNP3_architecture_diagram.png",
       "output": {
         "resource": {
-          "relative_path": "V1/images/OSIsoft_Adapter_for_DNP3_architecture_diagram.png"
+          "relative_path": "V1/images/PI_Adapter_for_DNP3_architecture_diagram.png"
         }
       },
       "is_incremental": false,
@@ -148,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "7kNxGmW1grSeCV1iZjXk4Q=="
+          "hash": "XjRL8Y85rksVJDjLM8Z5pg=="
         }
       },
       "is_incremental": false,
