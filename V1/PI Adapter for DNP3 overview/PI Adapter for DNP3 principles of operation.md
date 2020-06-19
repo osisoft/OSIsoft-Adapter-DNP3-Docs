@@ -39,7 +39,7 @@ Each stream created for a given DNP point has a unique identifier or "Stream ID"
 If the stream ID is not specified, the adapter will use the DefaultStreamIdPattern in the data source configuration to determine the stream ID. 
 
 ### Discovery
-The DNP3 adapter can discover points on your DNP3 outstation by performing an [*integrity scan*](#Integrity-scan). 
+The DNP3 adapter can discover points on your DNP3 outstation by performing an [*integrity scan*](#Integrity-scans). 
 Discovery will populate your data selection configuration with items that represent points on the outstation. 
 These items will default as unselected, so the user may make changes to these items before selecting them. 
 The adapter can only discover points that are assigned to Class 0, Class 1, Class 2, or Class 3 on the outstation.
