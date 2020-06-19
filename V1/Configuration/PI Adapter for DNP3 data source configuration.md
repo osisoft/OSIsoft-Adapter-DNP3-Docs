@@ -10,7 +10,7 @@ To use the DNP3 adapter, you must configure the adapter to collect data from one
 
 Complete the following procedure to configure the DNP3 data source: 
 1. Using any text editor, create a file that contains a DNP3 data source in JSON form.
-    * For content structure, see [DNP3 data source Example](#dnp3-data-source-example).
+    * For content structure, see [DNP3 data source Example](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters). 
 1. Save the file, for example, as *DataSource.config.json*. 
 1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:\<port>/api/v1/configuration/\<adapterId>/DataSource/`.
