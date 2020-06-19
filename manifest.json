@@ -741,15 +741,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "1cSrzlvpD+H+WAQoElcf5g=="
+          "hash": "959lkSppwaA+PGU/hgpsIA=="
         }
       },
       "is_incremental": false,
