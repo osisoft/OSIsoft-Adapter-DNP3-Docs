@@ -34,8 +34,8 @@ Certain metadata are sent with each stream created. Metadata common for every ad
 - **ComponentType**: Specifies the type of adapter, for example _DNP3_
 - **ComponentId**: Specifies the data source, for example _DNP3_1_
 
-Each stream created for a given DNP point has a unique identifier or "Stream ID". If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream. 
-If the stream ID is not specified, the adapter will use the `DefaultStreamIdPattern` in the data source configuration to determine the stream ID. 
+Each stream created for a given DNP point has a unique identifier or "Stream ID". If you specify a custom Stream ID for the DNP point in data selection configuration, the adapter uses that Stream ID to create the stream. 
+If the Stream ID is not specified, the adapter will use the `DefaultStreamIdPattern` in the data source configuration to determine the Stream ID. 
 
 ### Discovery
 
@@ -62,19 +62,20 @@ The outstation should report the current value of each point, but the outstation
 Support for requesting static data for DNP3 points via a range scan is at least a Level 2 function, and some groups and variations may be considered Level 3 or Level 4 functionality. Because of this, it is important to verify that your outstation supports this functionality before configuring the adapter to collect data in this manner. Some DNP3-L1 compliant outstations may optionally support this type of scan. 
 
 ### Event data
+
 The DNP3 specification defines event data as the information that is retained regarding an event. An event is defined by the DNP3 specification as the occurrence of something significant happening. What constitutes an event may vary depending on the implementation of the outstation. Typically, an event will result in a value change for a DNP point, although it is possible for an event to occur that does not change the value of any point on the outstation. Event data is saved at the outstation(s) and should be kept until the adapter confirms that it has received the event object. The event object is the description of the event that the adapter should receive from the outstation(s). The event object may contain the value, time, and status code relating to the event and corresponding point. The exact information contained in the object will be dependent on both the point type and variation defined in the DNP3 specification.  
 
 DNP3 events belong to one of three different classes of data: Class 1, Class 2, or Class 3. These event classes may be used to group events by priority, though neither the DNP3 adapter nor the DNP3 specification assign significance to the three event classes. According to the DNP3 specification, all DNP3 – Level 1 compliant outstations will accept read requests for event class data.  
 
-#### Event scans
+    #### Event scans
 
-The DNP3 adapter may be configured to request event data through an event scan. During an event scan, the adapter will poll the outstation(s) for the event data from each of the configured event classes. The event classes and the polling interval may be configured in the [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#OutstationBehavior-Parameters).
+    The DNP3 adapter may be configured to request event data through an event scan. During an event scan, the adapter will poll the outstation(s) for the event data from each of the configured event classes. The event classes and the polling interval may be configured in the [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#OutstationBehavior-Parameters).
 
-Event scans offer several advantages over polling for static data. When polling for static data, it is possible to miss value changes for points on the outstation; however, event scans will ensure that each outstation reports every event to the adapter. Similarly, even when polling quickly, some events could be missed if they do not change the value of the DNP point. If bandwidth is a concern, the adapter may make efficient use of the network by only requesting event data. When polling for static data, the outstation may report unchanging data unnecessarily, whereas event scans should only return new events. It is important you configure the adapter to perform event scans at an interval that is not long enough to allow the outstations’ event buffers to become full. Refer to the documentation for a specific outstation to determine what constitutes an event and how much time it will take before the buffer becomes full. 
+    Event scans offer several advantages over polling for static data. When polling for static data, it is possible to miss value changes for points on the outstation; however, event scans will ensure that each outstation reports every event to the adapter. Similarly, even when polling quickly, some events could be missed if they do not change the value of the DNP point. If bandwidth is a concern, the adapter may make efficient use of the network by only requesting event data. When polling for static data, the outstation may report unchanging data unnecessarily, whereas event scans should only return new events. It is important you configure the adapter to perform event scans at an interval that is not long enough to allow the outstations’ event buffers to become full. Refer to the documentation for a specific outstation to determine what constitutes an event and how much time it will take before the buffer becomes full. 
 
-#### Unsolicited events
+    #### Unsolicited events
 
-In addition to the event scans above, the DNP3 adapter may be configured to receive unsolicited responses containing event data. An unsolicited response is a message sent from an outstation that the adapter did not explicitly request. If the adapter is configured to receive unsolicited data, outstations that support sending unsolicited data should report event data to the adapter as it occurs. This could eliminate the need for the adapter to poll the outstation(s) for data. The decision to configure the adapter to receive unsolicited data, or to perform event scans should be carefully considered.  
+    In addition to the event scans above, the DNP3 adapter may be configured to receive unsolicited responses containing event data. An unsolicited response is a message sent from an outstation that the adapter did not explicitly request. If the adapter is configured to receive unsolicited data, outstations that support sending unsolicited data should report event data to the adapter as it occurs. This could eliminate the need for the adapter to poll the outstation(s) for data. The decision to configure the adapter to receive unsolicited data, or to perform event scans should be carefully considered.  
 
 ### Integrity scans
 
