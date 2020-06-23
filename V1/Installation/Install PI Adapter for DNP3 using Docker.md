@@ -6,13 +6,13 @@ uid: InstallPIAdapterForDNP3UsingDocker
 
 Docker is a set of tools that can be used on Linux to manage application deployments.
 
-**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 Adapter. Docker is not a requirement to use the adapter.
+**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 adapter. Docker is not a requirement to use the adapter.
 
-This topic provides examples of how to create a Docker container with the DNP3 Adapter. 
+Below are steps and examples of how to create a Docker container with the DNP3 adapter.
 
 ## Create a startup script for the adapter
 
-1. Using any text editor, create a script similar to one of the following.
+1. Use any text editor and create a script similar to one of the following examples:
 
 	**Note:** The script varies slightly by processor.
 
@@ -129,7 +129,7 @@ This topic provides examples of how to create a Docker container with the DNP3 A
 	
 2. Name the script *dnp3dockerstart.sh* and save it to the directory where you plan to create the container.
 
-## Create a Docker container containing the DNP3 Adapter
+## Create a Docker container containing the DNP3 adapter
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container. 
 
@@ -192,7 +192,7 @@ Complete the following to run the container:
 	docker run -d --network host dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to DNP3 Adapter from applications on the local host computer. In this example, all data stored by the DNP3 Adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
+Port `5590` is accessible from the host and you can make REST calls to DNP3 adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
 
 ### Provide persistent storage for the Docker container
 
@@ -205,11 +205,11 @@ Complete the following to run the container:
 	docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to the DNP3 Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/dnp3`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/dnp3`. You can specify any directory.
 
 ### Port number change
 
-To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the adapter using port `6000` instead of `5590`, use the command line:
+To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the DNP3 adapter using port `6000` instead of `5590`, use the command line:
 
 ```bash
 docker run -d -e portnum=6000 --network host dnp3adapter
@@ -223,4 +223,4 @@ curl http://localhost:6000/api/v1/configuration
 
 ### Remove REST access to the Docker container
 
-If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as the DNP3 Adapter, but do not want to have external REST access enabled.
+If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as the DNP3 adapter, but do not want to have external REST access enabled.
