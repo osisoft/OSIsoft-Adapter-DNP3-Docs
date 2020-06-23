@@ -78,7 +78,160 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3DataSelectionConfiguration">
 <h1 id="pi-adapter-for-dnp3-data-selection-configuration">PI Adapter for DNP3 data selection configuration</h1>
 
-</article>
+<p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the DNP3 adapter to collect from your your outstations.</p>
+<p>Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
+<h2 id="configure-dnp3-data-selection">Configure DNP3 data selection</h2>
+<p>You cannot modify DNP3 data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
+<p>Complete the following steps to configure the DNP3 data selection:</p>
+<ol>
+<li>Using any text editor, create a file that contains a DNP3 data selection in the JSON format.<ul>
+<li>For content structure, see <a href="#dnp3-data-selection-examples">DNP3 data selection examples</a>.</li>
+<li>For a table of all available parameters, see DNP3 data selection parameters.</li>
+</ul>
+</li>
+<li>Save the file. For example, DataSelection.config.json.</li>
+<li>Use any of the Configuration tools capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:</li>
+</ol>
+<p><strong>Note:</strong> The following examples use DNP3-1 as the adapter component name. For more information on how to add a component, see System components configuration.</p>
+<p>5590 is the default port number. If you selected a different port number, replace it with that value.</p>
+<p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentID&gt;/DataSelection/</code></p>
+<p>Example using <code>curl</code>:</p>
+<p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre><code class="lang-bash">curl -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection&quot;
+</code></pre><h2 id="dnp3-data-selection-schema">DNP3 data selection schema</h2>
+<p>The full schema definition for the DNP3 data selection configuration is in the DNP3_DataSelection_schema.json here:</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Directory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>/opt/OSIsoft/Adapters/DNP3/Schemas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dnp3-data-selection-parameters">DNP3 data selection parameters</h2>
+<p>The following parameters can be used to configure DNP3 data selection: </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Optional</td>
+<td>boolean</td>
+<td>If true, data for this item will be collected and sent to the configured OMF endpoint(s). Default is <code>true</code>.</td>
+</tr>
+<tr>
+<td>StreamId</td>
+<td>Optional</td>
+<td>string</td>
+<td>The custom identifier used to create the streams. If not specified, the DNP3 adapter will generate a default value based on the <code>DefaultStreamIdPattern</code> in the <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">data source configuration</a>.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Optional</td>
+<td>string</td>
+<td>The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id.</td>
+</tr>
+<tr>
+<td>OutstationId</td>
+<td>Required</td>
+<td>string</td>
+<td>The Id of the outstation where the DNP point data should be collected from. Must match the <code>Id</code> of one of the configured outstations in the <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">data source configuration</a>.</td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Required</td>
+<td>number</td>
+<td>The DNP3 object group number for the point. For a list of supported objects, see <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20supported%20features.html">DNP3 supported features</a>.</td>
+</tr>
+<tr>
+<td>Variation</td>
+<td>Optional</td>
+<td>number</td>
+<td>The DNP3 object variation to be requested for the point during a static scan. The default is <code>0</code>. For a list of supported objects, see <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20supported%20features.html">DNP3 supported features</a>.</td>
+</tr>
+<tr>
+<td>Index</td>
+<td>Required</td>
+<td>number</td>
+<td>The index of the point on the outstation.</td>
+</tr>
+<tr>
+<td>StaticScanScheduleId</td>
+<td>Optional</td>
+<td>string</td>
+<td>The Id of a schedule defined in the <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">Schedules Configuration</a>. By default, no static scan will be configured. For more information, see the <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#StaticData">principles of operation</a> section.</td>
+</tr>
+<tr>
+<td>DataFilterId</td>
+<td>Optional</td>
+<td>string</td>
+<td>The Id of a data filter defined in the <a class="xref" href="../main/V1/Configuration/Data%20filters%20configuration.html">data filters configuration</a>. By default, no filter will be applied.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dnp3-data-selection-example">DNP3 data selection example</h2>
+<p>The following is an example of valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a Counter Input point, the second item is an example of how an Analog Input point may be configured by <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">discovery</a>, and the last three items show an example of some custom configurations for different DNP3 points. 
+You&#39;ll notice that the second item is not selected, discovered items are not selected by default. </p>
+<pre><code class="lang-json">[
+    {
+        &quot;outstationId&quot;: &quot;Outstation1&quot;,
+        &quot;group&quot;: 20,
+        &quot;index&quot;: 0
+    },
+    {
+        &quot;selected&quot;: false,
+        &quot;streamId&quot;: &quot;Outstation1.AnalogInput.7&quot;,
+        &quot;name&quot;: null,
+        &quot;outstationId&quot;: &quot;Outstation1&quot;,
+        &quot;group&quot;: 30,
+        &quot;variation&quot;: 0,
+        &quot;index&quot;: 7,
+        &quot;StaticScanScheduleId&quot;: null,
+        &quot;dataFilterId&quot;: null
+    },
+    {
+        &quot;streamId&quot;: &quot;Outstation1.BinaryInput.Variation2.3&quot;,
+        &quot;name&quot;: &quot;MyBinaryInputPoint&quot;,
+        &quot;outstationId&quot;: &quot;Outstation1&quot;,
+        &quot;group&quot;: 1,
+        &quot;variation&quot;: 2,
+        &quot;index&quot;: 3,
+        &quot;StaticScanScheduleId&quot;: &quot;schedule1&quot;,
+        &quot;dataFilterId&quot;: &quot;DuplicateData&quot;
+    },
+    {
+        &quot;name&quot;: &quot;MyDoubleBitBinaryInputPoint&quot;,
+        &quot;outstationId&quot;: &quot;Outstation1&quot;,
+        &quot;group&quot;: 3,
+        &quot;index&quot;: 2,
+        &quot;StaticScanScheduleId&quot;: &quot;schedule1&quot;,
+        &quot;dataFilterId&quot;: &quot;DuplicateData&quot;
+    },
+    {
+        &quot;name&quot;: &quot;MyOctetStringPoint&quot;,
+        &quot;outstationId&quot;: &quot;Outstation1&quot;,
+        &quot;group&quot;: 110,
+        &quot;index&quot;: 1
+    }
+]
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
