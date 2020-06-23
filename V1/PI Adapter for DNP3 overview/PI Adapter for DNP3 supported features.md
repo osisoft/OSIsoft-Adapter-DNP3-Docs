@@ -6,7 +6,7 @@ uid: PIAdapterForDNP3SupportedFeatures
 
 ## Supported DNP point types
 
-You may configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.
+You can configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.
 
 **Note:** Do not configure the adapter to request data for point types that are unsupported by your outstation. 
 
