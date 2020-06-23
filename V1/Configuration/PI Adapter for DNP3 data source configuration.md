@@ -18,7 +18,9 @@ Complete the following procedure to configure the DNP3 data source:
 
 **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). The example also assumes that the default port number, `5590`, is used. If you selected a different port number, replace it with that value. 
 
-> curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
+```bash
+ curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
+```
 
 **Note:** After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
