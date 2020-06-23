@@ -16,7 +16,7 @@ Complete the following steps to configure the DNP3 data selection:
 
 1. Using any text editor, create a file that contains a DNP3 data selection in the JSON format.
     - For content structure, see [DNP3 data selection examples](#dnp3-data-selection-examples).
-    - For a table of all available parameters, see DNP3 data selection parameters.
+    - For a table of all available parameters, see [DNP3 data selection parameters](#dnp3-data-selection-parameters).
 1. Save the file. For example, `DataSelection.config.json`.
 1. Use any of the configuration tools capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
 
