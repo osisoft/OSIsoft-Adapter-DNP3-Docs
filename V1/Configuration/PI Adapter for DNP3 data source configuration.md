@@ -136,19 +136,19 @@ The following example is a configuration for a single outstation on a single TCP
 
 The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. Rather than using the default configurations, many configuration options are expressed here. 
 
-There are two MasterStationBehaviors, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any **TCPChannel** that references the master station behavior `poorNetworkConditions` will use these settings, while **TCPChannels** that reference `defaultMasterBehavior` will use the default settings. 
+There are two **MasterStationBehaviors**, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any **TCPChannel** that references the master station behavior `poorNetworkConditions` will use these settings, while **TCPChannels** that reference `defaultMasterBehavior` will use the default settings. 
 
-There are three **OutstationBehaviors** defined: `eventScans-integrityScan-noUnsolicited`, `busyOutstation`, and `class1Events`. 
+There are three **OutstationBehaviors** defined: `eventScans-integrityScan-noUnsolicited`, `busyOutstation`, and `class1Events`:
 
-The behavior `eventScans-integrityScan-noUnsolicited` deviates from the default configuration options by disabling unsolicited responses and scanning for events every 10 minutes. This type of configuration is useful if the outstation does not support unsolicited events, or maybe it is more efficient to scan for events periodically. 
+    The behavior `eventScans-integrityScan-noUnsolicited` deviates from the default configuration options by disabling unsolicited responses and scanning for events every 10 minutes. This type of configuration is useful if the outstation does not support unsolicited events, or maybe it is more efficient to scan for events periodically. 
 
-The behavior `busyOutstation` deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans. 
+    The behavior `busyOutstation` deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans. 
 
-**Note:** Disabling the integrity scan will prevent discovery and event scans are disabled by default. 
+        **Note:** Disabling the integrity scan will prevent discovery and event scans are disabled by default. 
 
-With this configuration, the DNP3 adapter will only collect data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). This type of configuration is useful if the outstation is very busy. For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.
+    With this configuration, the DNP3 adapter will only collect data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). This type of configuration is useful if the outstation is very busy. For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.
 
-The behavior `class1Events` deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration may be useful if you are not interested in collecting data for points assigned to class 2 or class 3. 
+    The behavior `class1Events` deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration may be useful if you are not interested in collecting data for points assigned to class 2 or class 3. 
 
 There are two **TCPChannels** configured. One channel has two outstations configured. This channel might represent a connection to a DNP3 gateway at a substation. The other **TCPChannel** only contains one configured outstation. This might represent a DNP3 device that is in a remote location.
 
