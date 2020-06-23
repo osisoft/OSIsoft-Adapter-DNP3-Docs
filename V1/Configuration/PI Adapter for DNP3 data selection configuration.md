@@ -59,7 +59,7 @@ The following parameters can be used to configure DNP3 data selection:
 | StaticScanScheduleId | Optional | `string` | The identifier of a schedule defined in the [Schedules Configuration](xref:SchedulesConfiguration). By default, no static scan will be configured. For more information, see the [principles of operation](xref:PIAdapterForDNP3PrinciplesOfOperation#StaticData) section. |
 | DataFilterId | Optional | `string` | The identifier of a data filter defined in the [data filters configuration](xref:DataFiltersConfiguration). By default, no filter will be applied. |
 
-## DNP3 data selection example
+## DNP3 data selection examples
 
 The following is an example of valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point may be configured by [discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. You will notice that the second item is not selected, discovered items are not selected by default. 
 
