@@ -3,6 +3,7 @@ uid: PIAdapterForDNP3DataSourceConfiguration
 ---
 
 # PI Adapter for DNP3 data source configuration
+
 To use the DNP3 adapter, you must configure the adapter to collect data from one or more DNP3 compliant outstations. The adapter may make many TCP connections, by defining multiple TCP channels, and many connections to outstations, by defining multiple outstation configurations. 
 
 ## Configure DNP3 data source
@@ -29,6 +30,7 @@ Complete the following procedure to configure the DNP3 data source:
 The full schema definition for the DNP3 data source configuration is in the `DNP3_DataSource_schema.json` file located in one of the folders listed below:
  
 Windows: `%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas`
+
 Linux: `/opt/OSIsoft/Adapters/DNP3/Schemas`
 
 ## DNP3 data source parameters
