@@ -39,7 +39,7 @@ If the Stream ID is not specified, the adapter will use the `DefaultStreamIdPatt
 
 ### Discovery
 
-The DNP3 adapter can discover points on your DNP3 outstation by performing an [integrity scan](#Integrity-scans). 
+The DNP3 adapter can discover points on your DNP3 outstation by performing an [integrity scan](#integrity-scans). 
 Discovery will populate your data selection configuration with items that represent points on the outstation. These items will default as unselected, so you may make changes to these items before selecting them. The adapter can only discover points that are assigned to Class 0, Class 1, Class 2, or Class 3 on the outstation. Discovery may be expensive in terms of bandwidth and outstation resources, so the adapter will only perform discovery for an outstation when the following criteria is met: 
 
 - The outstation is configured in the data source configuration.
