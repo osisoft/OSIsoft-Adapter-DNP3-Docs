@@ -133,7 +133,7 @@ Below are steps and examples of how to create a Docker container with the DNP3 a
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container. 
 
-	**Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
+	**Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system.
 
 	### ARM32
 
