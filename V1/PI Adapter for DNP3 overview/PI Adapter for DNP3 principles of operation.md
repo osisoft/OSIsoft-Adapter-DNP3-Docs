@@ -18,7 +18,7 @@ For the DNP3 adapter to start data collection, you will need to configure the ad
 - Data selection: Select the DNP points on the outstations you want the adapter to collect data from.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more infomation, see [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration).
+For more infomation, see [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration).
 
 ## Stream creation
 

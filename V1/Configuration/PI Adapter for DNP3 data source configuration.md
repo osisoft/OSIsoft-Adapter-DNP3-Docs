@@ -23,7 +23,7 @@ Complete the following procedure to configure the DNP3 data source:
  curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"` 
 ```
 
-**Note:** After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+**Note:** After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## DNP3 data source schema
 
@@ -103,7 +103,7 @@ Parameter | Required | Type | Description
 
 ### Minimum configuration for a single outstation
 
-The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).  For more information about the default configuration, reference the tables above. 
+The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).  For more information about the default configuration, reference the tables above. 
 
 ```json
 {
