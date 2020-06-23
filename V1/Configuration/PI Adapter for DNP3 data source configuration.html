@@ -295,11 +295,10 @@
 <td><strong>Outstations</strong></td>
 <td>Required</td>
 <td><code>array</code></td>
-<td>List of outstations that the adapter will connect to on the <strong>TCPChannel</strong>.</td>
+<td>List of outstations that the adapter will connect to on the <strong>TCPChannel</strong>. <strong>Note:</strong> A <strong>TCPChannel</strong> is uniquely identified by the combination of its <code>HostNameOrIPAddress</code> and <code>Port</code> properties. For valid configuration, each <strong>TCPChannel</strong> must have a unique combination of these properties.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> A <strong>TCPChannel</strong> is uniquely identified by the combination of its <code>HostNameOrIPAddress</code> and <code>Port</code> properties. For valid configuration, each <strong>TCPChannel</strong> must have a unique combination of these properties. </p>
 <h3 id="outstation-parameters">Outstation parameters</h3>
 <p>The following parameters may be used to configure each <strong>Outstation</strong> in the <strong>Outstations</strong> array within a <strong>TCPChannel</strong>: </p>
 <table>
