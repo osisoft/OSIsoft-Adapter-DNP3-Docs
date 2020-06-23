@@ -85,9 +85,6 @@ references:
 - uid: PIAdapterForDNP3DataSourceConfiguration
   name: PI Adapter for DNP3 data source configuration
   href: V1/Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html
-- uid: PIAdapterForDNP3Overview
-  name: PI Adapter for DNP3 overview
-  href: V1/PI_Adapter_for_DNP3_overview.html
 - uid: PIAdapterForDNP3PrinciplesOfOperation
   name: PI Adapter for DNP3 principles of operation
   href: V1/PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html
