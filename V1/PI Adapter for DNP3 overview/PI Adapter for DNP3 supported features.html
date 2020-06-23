@@ -78,24 +78,23 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3SupportedFeatures">
 <h1 id="pi-adapter-for-dnp3-supported-features">PI Adapter for DNP3 supported features</h1>
 
-<h2 id="supported-dnp-point-types">Supported DNP Point Types</h2>
-<p>The PI Adapter for DNP3 may be configured to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. 
-Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.</p>
+<h2 id="supported-dnp-point-types">Supported DNP point types</h2>
+<p>You may configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.</p>
 <p><strong>Note:</strong> It is important that you do not configure the adapter to request data for point types that are unsupported by your outstation. </p>
 <table>
 <thead>
 <tr>
-<th>DNP3 Point Type</th>
-<th>Static Object Group</th>
-<th>Static Object Variations</th>
-<th>Event Object Group</th>
-<th>Event Object Group Variations</th>
-<th>DNP3 Conformance Level</th>
+<th>DNP3 point type</th>
+<th>Static object group</th>
+<th>Static object variations</th>
+<th>Event object group</th>
+<th>Event object group variations</th>
+<th>DNP3 conformance level</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Binary Input</td>
+<td><code>Binary Input</code></td>
 <td>0, 1</td>
 <td>0, 1, 2</td>
 <td>2</td>
@@ -103,7 +102,7 @@ Responses may be considered a different conformance level. Refer to the DNP3 spe
 <td>Level 1</td>
 </tr>
 <tr>
-<td>Double-bit Binary Input</td>
+<td><code>Double-bit Binary Input</code></td>
 <td>3</td>
 <td>0, 1, 2, 3</td>
 <td>4</td>
@@ -111,7 +110,7 @@ Responses may be considered a different conformance level. Refer to the DNP3 spe
 <td>Level 4</td>
 </tr>
 <tr>
-<td>Counter</td>
+<td><code>Counter</code></td>
 <td>20</td>
 <td>0, 1, 2, 3, 4, 5, 6, 7, 8</td>
 <td>22</td>
@@ -119,7 +118,7 @@ Responses may be considered a different conformance level. Refer to the DNP3 spe
 <td>Level 1</td>
 </tr>
 <tr>
-<td>Analog Input</td>
+<td><code>Analog Input</code></td>
 <td>30</td>
 <td>0, 1, 2, 3, 4, 5, 6</td>
 <td>32</td>
@@ -127,20 +126,17 @@ Responses may be considered a different conformance level. Refer to the DNP3 spe
 <td>Level 2</td>
 </tr>
 <tr>
-<td>Octet String*</td>
+<td><code>Octet String</code><sup>1</sup></td>
 <td>110</td>
-<td>0 through 255</td>
+<td>0 - 255</td>
 <td>111</td>
-<td>1 through 255</td>
+<td>1 - 255</td>
 <td>Not required for any conformance level.</td>
 </tr>
 </tbody>
 </table>
-<p>Please note that some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. 
-In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers.
-The outstation is not allowed to specify variation zero in its response. 
-The adapter will not request a specific variation for event data, but it will be able to parse any of the variations listed above. </p>
-<p>*<strong>Note:</strong> Although the Octet String point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (i.e. ASCII <code>0x00</code>), the string will be truncated at the first <code>null</code> character.</p>
+<p>Note that some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it will be able to parse any of the variations listed above. </p>
+<p><strong><sup>1</sup>Note:</strong> Although the Octet String point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (for example, ASCII <code>0x00</code>), the string will be truncated at the first <code>null</code> character.</p>
 </article>
           </div>
           
