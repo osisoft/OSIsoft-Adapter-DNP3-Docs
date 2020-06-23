@@ -8,7 +8,7 @@ uid: PIAdapterForDNP3SupportedFeatures
 
 You may configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.
 
-**Note:** It is important that you do not configure the adapter to request data for point types that are unsupported by your outstation. 
+**Note:** Do not configure the adapter to request data for point types that are unsupported by your outstation. 
 
 | DNP3 point type | Static object group | Static object variations | Event object group | Event object group variations | DNP3 conformance level | 
 | --------------- | ------------------- | ------------------------ | ------------------ | ----------------------------- | ---------------------- |
