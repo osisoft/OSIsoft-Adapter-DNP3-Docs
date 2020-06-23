@@ -54,9 +54,9 @@ The following parameters can be used to configure DNP3 data selection:
 | Name | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the Stream ID. |
 | OutstationId | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
 | Group | Required | `number` | The DNP3 object group number for the point. For a list of supported objects, see [DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).  |
-| Variation | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
+| Variation | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
 | Index | Required | `number` | The index of the point on the outstation. 
-| StaticScanScheduleId | Optional | `string` | The identifier of a schedule defined in the [Schedules Configuration](xref:SchedulesConfiguration). By default, no static scan will be configured. For more information, see the [principles of operation](xref:PIAdapterForDNP3PrinciplesOfOperation#StaticData) section. |
+| StaticScanScheduleId | Optional | `string` | The identifier of a schedule defined in the [Schedules Configuration](xref:SchedulesConfiguration). By default, no static scan will be configured. For more information, see the [Static Data section in the PI Adapter for DNP principles of operation](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). |
 | DataFilterId | Optional | `string` | The identifier of a data filter defined in the [data filters configuration](xref:DataFiltersConfiguration). By default, no filter will be applied. |
 
 ## DNP3 data selection examples
