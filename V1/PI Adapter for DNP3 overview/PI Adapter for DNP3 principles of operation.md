@@ -4,6 +4,8 @@ uid: PIAdapterForDNP3PrinciplesOfOperation
 
 # PI Adapter for DNP3 principles of operation
 
+This adapter's operations focus on data collection and stream creation.
+
 ## Connectivity and interoperability
 
 The DNP3 adapter may connect to one or more DNP3 compliant outstations through TCP/IP connections. The total number of outstations that the adapter may connect to will vary across different installation environments.  
