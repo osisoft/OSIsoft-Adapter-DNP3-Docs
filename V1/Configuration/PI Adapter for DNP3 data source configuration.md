@@ -88,9 +88,7 @@ Parameter | Required | Type | Description
 **HostNameOrIpAddress** | Required | `string` | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter will establish a connection to this address.
 **Port** | Optional | `number` | TCP port that the outstations are listening on. Default is `20000`.
 **MasterStationBehaviorId** | Required | `string` | Must match the **Id** of one of the configurations in the **MasterStationBehaviors** list.
-**Outstations** | Required | `array` | List of outstations that the adapter will connect to on the **TCPChannel**.
-
-**Note:** A **TCPChannel** is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each **TCPChannel** must have a unique combination of these properties. 
+**Outstations** | Required | `array` | List of outstations that the adapter will connect to on the **TCPChannel**. **Note:** A **TCPChannel** is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each **TCPChannel** must have a unique combination of these properties. 
 
 ### Outstation parameters
 
