@@ -93,7 +93,7 @@
 </ol>
 <p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. The example also assumes that the default port number, <code>5590</code>, is used. If you selected a different port number, replace it with that value. </p>
 <pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.config.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;` 
-</code></pre><p><strong>Note:</strong> After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
+</code></pre><p><strong>Note:</strong> After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">data selection configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">discovery</a>.</p>
 <h2 id="dnp3-data-source-schema">DNP3 data source schema</h2>
 <p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the folders listed below:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>
@@ -327,7 +327,7 @@
 </table>
 <h2 id="dnp3-data-source-examples">DNP3 data source examples</h2>
 <h3 id="minimum-configuration-for-a-single-outstation">Minimum configuration for a single outstation</h3>
-<p>The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.  For more information about the default configuration, reference the tables above. </p>
+<p>The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">discovery</a>.  For more information about the default configuration, reference the tables above. </p>
 <pre><code class="lang-json">{
     &quot;masterStationBehaviors&quot;: [
         {
