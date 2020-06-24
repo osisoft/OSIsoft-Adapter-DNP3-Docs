@@ -4,11 +4,9 @@ uid: InstallPIAdapterForDNP3UsingDocker
 
 # Install PI Adapter for DNP3 using Docker
 
-Docker is a set of tools that can be used on Linux to manage application deployments.
+Docker is a set of tools that can be used on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the DNP3 adapter.
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 adapter. Docker is not a requirement to use the adapter.
-
-Below are steps and examples of how to create a Docker container with the DNP3 adapter.
 
 ## Create a startup script for the adapter
 
@@ -209,7 +207,7 @@ Port `5590` is accessible from the host and you can make REST calls to the DNP3 
 
 ### Port number change
 
-To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the DNP3 adapter using port `6000` instead of `5590`, use the command line:
+To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the DNP3 adapter using port `6000` instead of `5590`, use the following command:
 
 ```bash
 docker run -d -e portnum=6000 --network host dnp3adapter
