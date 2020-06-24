@@ -78,35 +78,38 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3DataSourceConfiguration">
 <h1 id="pi-adapter-for-dnp3-data-source-configuration">PI Adapter for DNP3 data source configuration</h1>
 
-<p>To use the DNP3 adapter, you must configure the adapter to collect data from one or more DNP3 compliant outstations. The adapter may make many TCP connections, by defining multiple TCP channels, and many connections to outstations, by defining multiple outstation configurations. </p>
+<p>To use the DNP3 adapter, you must configure the adapter to collect data from one or more DNP3 compliant outstations. The adapter may make many TCP connections by defining multiple TCP channels, and many connections to outstations by defining multiple outstation configurations.</p>
 <h2 id="configure-dnp3-data-source">Configure DNP3 data source</h2>
 <p><strong>Note:</strong> You cannot modify DNP3 data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following procedure to configure the DNP3 data source: </p>
+<p>Complete the following steps to configure the DNP3 data source:</p>
 <ol>
-<li>Using any text editor and create a file that contains a DNP3 data source in JSON form.<ul>
-<li>For content structure, see the <a href="#dnp3-data-source-examples">DNP3 data source examples</a>.</li>
-<li>For a table of all available parameters, see <a href="#dnp3-data-source-parameters">DNP3 data source parameters</a>. </li>
+<li>Using any text editor, create a file that contains a DNP3 data source in the JSON format.<ul>
+<li>For content structure, see <a href="#dnp3-data-source-examples">DNP3 data source examples</a>.</li>
+<li>For a table of all available parameters, see <a href="#dnp3-data-source-parameters">DNP3 data source parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example, as <code>DataSource.config.json</code>. </li>
+<li>Save the file. For example, <code>DataSource.config.json</code>.</li>
 <li>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:\&lt;port&gt;/api/v1/configuration/\&lt;adapterId&gt;/DataSource/</code>.</li>
 </ol>
-<p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. The example also assumes that the default port number, <code>5590</code>, is used. If you selected a different port number, replace it with that value. </p>
-<pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.config.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;` 
-</code></pre><p><strong>Note:</strong> After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">data selection configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">discovery</a>.</p>
+<p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
+<p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using <code>curl</code>:</p>
+<p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.config.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
+</code></pre><p><strong>Note:</strong> After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
 <h2 id="dnp3-data-source-schema">DNP3 data source schema</h2>
-<p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the folders listed below:</p>
+<p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>
 <p>Linux: <code>/opt/OSIsoft/Adapters/DNP3/Schemas</code></p>
 <h2 id="dnp3-data-source-parameters">DNP3 data source parameters</h2>
-<p>Many of the data source configuration parameters are split into four categories: </p>
+<p>Many of the data source configuration parameters are split into four categories:</p>
 <ul>
 <li>Parameters that define the adapter&#39;s behavior as a DNP3 master station are defined as <strong>MasterStationBehaviors</strong></li>
 <li>Parameters that define the general behaviors of the DNP3 outstations are defined as <strong>OutstationBehaviors</strong></li>
 <li>Parameters that define the connection information for a TCP channel are defined as <strong>TCPChannels</strong></li>
 <li>Parameters that define the connection information for a specific outstation are defined as <strong>Outstations</strong></li>
 </ul>
-<p>The following parameters may be used to configure a DNP3 data source: </p>
+<p>The following parameters may be used to configure a DNP3 data source:</p>
 <table>
 <thead>
 <tr>
@@ -121,25 +124,25 @@
 <td><strong>MasterStationBehaviors</strong></td>
 <td>Required</td>
 <td><code>array</code></td>
-<td>List of <strong>MasterStationBehavior</strong> objects that define the adapter&#39;s behavior as a DNP3 master station. For additional information, see <a href="#masterstationbehavior-parameters">MasterStationBehavior Parameters</a>.</td>
+<td>List of <strong>MasterStationBehavior</strong> objects that define the adapter&#39;s behavior as a DNP3 master station. <br><br> For additional information, see <a href="#masterstationbehavior-parameters">MasterStationBehavior Parameters</a>.</td>
 </tr>
 <tr>
 <td><strong>OutstationBehaviors</strong></td>
 <td>Required</td>
 <td><code>array</code></td>
-<td>List of <strong>OutstationBehavior</strong> objects that define general behaviors for DNP3 outstations. For additional information, see <a href="#outstationbehavior-parameters">OutstationBehavior Parameters</a>.</td>
+<td>List of <strong>OutstationBehavior</strong> objects that define general behaviors for DNP3 outstations. <br><br> For additional information, see <a href="#outstationbehavior-parameters">OutstationBehavior Parameters</a>.</td>
 </tr>
 <tr>
 <td><strong>TCPChannels</strong></td>
 <td>Required</td>
 <td><code>array</code></td>
-<td>List of <strong>TCPChannel</strong> objects that define TCP connection information. For additional information, see <a href="#tcpchannel-parameters">TCPChannel Parameters</a>.</td>
+<td>List of <strong>TCPChannel</strong> objects that define TCP connection information. <br><br> For additional information, see <a href="#tcpchannel-parameters">TCPChannel Parameters</a>.</td>
 </tr>
 <tr>
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. Specifying <code>null</code> or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. <strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs.</td>
+<td>Specifies what prefix is used for Stream IDs. Specifying <code>null</code> or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. <br><strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
@@ -177,7 +180,7 @@
 <td><strong>DataLinkLayerTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Period that should be long enough for a Data Link Layer frame to be transmitted. &quot;HH:MM:SS.##&quot; format. The default value is <code>3</code> seconds.</td>
+<td>Period long enough for a Data Link Layer frame to be transmitted. &quot;HH:MM:SS.##&quot; format. The default value is <code>3</code> seconds.</td>
 </tr>
 <tr>
 <td><strong>DataLinkLayerRetries</strong></td>
@@ -209,7 +212,7 @@
 <td><strong>ApplicationLayerTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Period that should be long enough for an entire Application Layer message to be transmitted. <code>HH:MM:SS.##</code> format. The default value is <code>3</code> seconds.</td>
+<td>Period long enough for an entire Application Layer message to be transmitted. <code>HH:MM:SS.##</code> format. The default value is <code>3</code> seconds.</td>
 </tr>
 <tr>
 <td><strong>EnableUnsolicited</strong></td>
@@ -221,7 +224,7 @@
 <td><strong>EnableTimeSync</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, the adapter will write the current time to an outstation that indicates &quot;NeedTime&quot; via the internal indication bits. The default value is <code>true</code>.</td>
+<td>If true, the adapter will write the current time to an outstation that indicates &quot;NeedTime&quot; through the internal indication bits. The default value is <code>true</code>.</td>
 </tr>
 <tr>
 <td><strong>IntegrityScanOnStartup</strong></td>
@@ -256,7 +259,7 @@
 </tbody>
 </table>
 <h3 id="tcpchannel-parameters">TCPChannel parameters</h3>
-<p>The following parameters may be used to configure each channel in the <strong>TCPChannels</strong> array: </p>
+<p>The following parameters may be used to configure each channel in the <strong>TCPChannels</strong> array:</p>
 <table>
 <thead>
 <tr>
@@ -289,12 +292,12 @@
 <td><strong>Outstations</strong></td>
 <td>Required</td>
 <td><code>array</code></td>
-<td>List of outstations that the adapter will connect to on the <strong>TCPChannel</strong>. <strong>Note:</strong> A <strong>TCPChannel</strong> is uniquely identified by the combination of its <code>HostNameOrIPAddress</code> and <code>Port</code> properties. For valid configuration, each <strong>TCPChannel</strong> must have a unique combination of these properties.</td>
+<td>List of outstations that the adapter will connect to on the <strong>TCPChannel</strong>. <br> <strong>Note:</strong> A <strong>TCPChannel</strong> is uniquely identified by the combination of its <code>HostNameOrIPAddress</code> and <code>Port</code> properties. For valid configuration, each <strong>TCPChannel</strong> must have a unique combination of these properties.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="outstation-parameters">Outstation parameters</h3>
-<p>The following parameters may be used to configure each <strong>Outstation</strong> in the <strong>Outstations</strong> array within a <strong>TCPChannel</strong>: </p>
+<p>The following parameters may be used to configure each <strong>Outstation</strong> in the <strong>Outstations</strong> array within a <strong>TCPChannel</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -327,7 +330,7 @@
 </table>
 <h2 id="dnp3-data-source-examples">DNP3 data source examples</h2>
 <h3 id="minimum-configuration-for-a-single-outstation">Minimum configuration for a single outstation</h3>
-<p>The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">discovery</a>.  For more information about the default configuration, reference the tables above. </p>
+<p>The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.  For more information about the default configuration, reference the tables above.</p>
 <pre><code class="lang-json">{
     &quot;masterStationBehaviors&quot;: [
         {
@@ -351,18 +354,18 @@
                     &quot;outstationBehaviorId&quot;: &quot;outstationBehavior1&quot;
                 }
             ]
-        }        
+        }
     ]
 }
 </code></pre><h3 id="example-configuration-for-multiple-outstations">Example configuration for multiple outstations</h3>
-<p>The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. Rather than using the default configurations, many configuration options are expressed here. </p>
-<p>There are two <strong>MasterStationBehaviors</strong>, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any <strong>TCPChannel</strong> that references the master station behavior <code>poorNetworkConditions</code> will use these settings, while <strong>TCPChannels</strong> that reference <code>defaultMasterBehavior</code> will use the default settings. </p>
-<p>There are three <strong>OutstationBehaviors</strong> defined: <code>eventScans-integrityScan-noUnsolicited</code>, <code>busyOutstation</code>, and <code>class1Events</code>:</p>
-<p>The behavior <code>eventScans-integrityScan-noUnsolicited</code> deviates from the default configuration options by disabling unsolicited responses and scanning for events every 10 minutes. This type of configuration is useful if the outstation does not support unsolicited events, or maybe it is more efficient to scan for events periodically. </p>
-<p>The behavior <code>busyOutstation</code> deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans. </p>
-<p><strong>Note:</strong> Disabling the integrity scan will prevent discovery and event scans are disabled by default. </p>
+<p>The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. Rather than using the default configurations, many configuration options are expressed here.</p>
+<p>There are two <strong>MasterStationBehaviors</strong>, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any <strong>TCPChannel</strong> that references the master station behavior <code>poorNetworkConditions</code> will use these settings, while <strong>TCPChannels</strong> that reference <code>defaultMasterBehavior</code> will use the default settings.</p>
+<p>There are three <strong>OutstationBehaviors</strong>: <code>eventScans-integrityScan-noUnsolicited</code>, <code>busyOutstation</code>, and <code>class1Events</code>:</p>
+<p>The behavior <code>eventScans-integrityScan-noUnsolicited</code> deviates from the default configuration options by disabling unsolicited responses and scanning for events every 10 minutes. This type of configuration is useful if the outstation does not support unsolicited events, or maybe it is more efficient to scan for events periodically.</p>
+<p>The behavior <code>busyOutstation</code> deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans.</p>
+<p><strong>Note:</strong> Disabling the integrity scan will prevent discovery and event scans are disabled by default.</p>
 <p>With this configuration, the DNP3 adapter will only collect data if it is configured to collect <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#static-data">static data</a>. This type of configuration is useful if the outstation is very busy. For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation&#39;s time and polling for events. In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.</p>
-<p>The behavior <code>class1Events</code> deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration may be useful if you are not interested in collecting data for points assigned to class 2 or class 3. </p>
+<p>The behavior <code>class1Events</code> deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration may be useful if you are not interested in collecting data for points assigned to class 2 or class 3.</p>
 <p>There are two <strong>TCPChannels</strong> configured. One channel has two outstations configured. This channel might represent a connection to a DNP3 gateway at a substation. The other <strong>TCPChannel</strong> only contains one configured outstation. This might represent a DNP3 device that is in a remote location.</p>
 <pre><code class="lang-json">{
     &quot;masterStationBehaviors&quot;: [

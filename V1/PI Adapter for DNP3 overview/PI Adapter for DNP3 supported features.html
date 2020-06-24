@@ -80,8 +80,8 @@
 
 <p>The adapter supports specific DNP3 point types.</p>
 <h2 id="supported-dnp-point-types">Supported DNP point types</h2>
-<p>You can configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. Refer to the DNP3 specification for more details.</p>
-<p><strong>Note:</strong> Do not configure the adapter to request data for point types that are unsupported by your outstation. </p>
+<p>You can configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses may be considered a different conformance level. For more details, refer to the DNP3 specification.</p>
+<p><strong>Note:</strong> Do not configure the adapter to request data for point types that are unsupported by your outstation.</p>
 <table>
 <thead>
 <tr>
@@ -132,11 +132,11 @@
 <td>0 - 255</td>
 <td>111</td>
 <td>1 - 255</td>
-<td>Not required for any conformance level.</td>
+<td>Not required for any conformance level</td>
 </tr>
 </tbody>
 </table>
-<p>Note that some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it will be able to parse any of the variations listed above. </p>
+<p><strong>Note:</strong> Some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it will be able to parse any of the variations listed above.</p>
 <p><strong><sup>1</sup>Note:</strong> Although the <code>Octet String</code> point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (for example, ASCII <code>0x00</code>), the string will be truncated at the first <code>null</code> character.</p>
 </article>
           </div>

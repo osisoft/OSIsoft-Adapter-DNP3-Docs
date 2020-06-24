@@ -78,9 +78,8 @@
             <article class="content wrap" id="_content" data-uid="InstallPIAdapterForDNP3UsingDocker">
 <h1 id="install-pi-adapter-for-dnp3-using-docker">Install PI Adapter for DNP3 using Docker</h1>
 
-<p>Docker is a set of tools that can be used on Linux to manage application deployments.</p>
+<p>Docker is a set of tools that can be used on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the DNP3 adapter.</p>
 <p><strong>Note:</strong> If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 adapter. Docker is not a requirement to use the adapter.</p>
-<p>Below are steps and examples of how to create a Docker container with the DNP3 adapter.</p>
 <h2 id="create-a-startup-script-for-the-adapter">Create a startup script for the adapter</h2>
 <ol>
 <li><p>Use any text editor and create a script similar to one of the following examples:</p>
@@ -244,7 +243,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </ol>
 <p>Port <code>5590</code> is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, <code>/dnp3</code>. You can specify any directory.</p>
 <h3 id="port-number-change">Port number change</h3>
-<p>To use a different port other than <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the DNP3 adapter using port <code>6000</code> instead of <code>5590</code>, use the command line:</p>
+<p>To use a different port other than <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the DNP3 adapter using port <code>6000</code> instead of <code>5590</code>, use the following command:</p>
 <pre><code class="lang-bash">docker run -d -e portnum=6000 --network host dnp3adapter
 </code></pre><p>This command accesses the REST API with port <code>6000</code> instead of port <code>5590</code>. The following <code>curl</code> command returns the configuration for the container.</p>
 <pre><code class="lang-bash">curl http://localhost:6000/api/v1/configuration
