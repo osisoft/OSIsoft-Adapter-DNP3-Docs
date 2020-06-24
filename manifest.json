@@ -73,12 +73,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "V1/Installation/Install the adapter.md",
+      "source_relative_path": "V1/Installation/Installation.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Installation/Install the adapter.html",
-          "hash": "Of2q4zntcf4vtPylSu9+8g=="
+          "relative_path": "V1/Installation/Installation.html",
+          "hash": "94p72noHeKOuJO62480N4g=="
         }
       },
       "is_incremental": false,
@@ -523,16 +526,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Install the adapter.html",
-          "hash": "6MYO1LutzpXUz4eBsty3AA=="
+          "hash": "YlL2asdo6omN2UltsKV7rg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
@@ -737,7 +737,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "wxIreCJqxt4u38FhFTq8Mg=="
+          "hash": "PFKHPr2nTlQzmqElwqwqOg=="
         }
       },
       "is_incremental": false,
