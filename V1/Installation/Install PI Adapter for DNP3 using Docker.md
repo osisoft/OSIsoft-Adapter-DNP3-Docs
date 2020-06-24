@@ -4,11 +4,9 @@ uid: InstallPIAdapterForDNP3UsingDocker
 
 # Install PI Adapter for DNP3 using Docker
 
-Docker is a set of tools that can be used on Linux to manage application deployments.
+Docker is a set of tools that can be used on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the DNP3 adapter.
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 adapter. Docker is not a requirement to use the adapter.
-
-This topic provides examples of how to create a Docker container with the DNP3 adapter.
 
 ## Create a startup script for the adapter
 
