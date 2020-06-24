@@ -8,7 +8,7 @@ PI Adapter for DNP3 is a data-collection component that transfers time-series da
 
 ![PI Adapter for DNP3 architecture](images/PI_Adapter_for_DNP3_architecture_diagram.png)
 
-You can install the adapter with a download kit that you can obtain from the OSIsoft Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
+You can install the adapter with a download kit from the OSIsoft Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
 
 Using the REST API, you can configure all functions of the adapter. The configurations are stored in JSON files. For data ingress, you must define an adapter component in the system components configuration for each device to which the adapter will connect. You configure each adapter component with the connection information for the device and the data to collect. For data egress, you must specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
 
