@@ -194,7 +194,7 @@ exec /DNP3_linux-x64/OSIsoft.Data.System.Host
 <h3 id="arm32">ARM32</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-arm.tar.gz .
@@ -202,7 +202,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </code></pre><h3 id="arm64">ARM64</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-arm64.tar.gz .
@@ -210,7 +210,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </code></pre><h3 id="amd64-x64">AMD64 (x64)</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-x64.tar.gz .
