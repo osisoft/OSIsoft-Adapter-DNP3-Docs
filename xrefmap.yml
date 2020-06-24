@@ -63,7 +63,7 @@ references:
   href: V1/index.html
 - uid: Installation
   name: Installation
-  href: V1/main/V1/Installation/Installation.html
+  href: V1/Installation/Install%20the%20adapter.html
 - uid: InstallPIAdapterForDNP3UsingDocker
   name: Install PI Adapter for DNP3 using Docker
   href: V1/Installation/Install%20PI%20Adapter%20for%20DNP3%20using%20Docker.html
