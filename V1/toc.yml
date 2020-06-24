@@ -4,7 +4,7 @@
   homepage: index.md
 - name: Installation
   href: Installation/toc.yml
-  topicHref: main/V1/Installation/Installation.md
+  topicHref: Installation/Installation.md
 - name: Configuration
   href: Configuration/toc.yml
   topicHref: Configuration/Configuration.md
