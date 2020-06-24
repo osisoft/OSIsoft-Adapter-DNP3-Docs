@@ -138,7 +138,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libicu60 libssl1.1
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 	COPY dnp3dockerstart.sh /
 	RUN chmod +x /dnp3dockerstart.sh
 	ADD ./DNP3_linux-arm.tar.gz .
@@ -150,7 +150,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libicu60 libssl1.1
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 	COPY dnp3dockerstart.sh /
 	RUN chmod +x /dnp3dockerstart.sh
 	ADD ./DNP3_linux-arm64.tar.gz .
@@ -162,7 +162,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libicu60 libssl1.1
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
 	COPY dnp3dockerstart.sh /
 	RUN chmod +x /dnp3dockerstart.sh
 	ADD ./DNP3_linux-x64.tar.gz .
