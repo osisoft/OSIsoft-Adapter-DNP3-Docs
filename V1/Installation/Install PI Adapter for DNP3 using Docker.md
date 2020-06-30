@@ -47,9 +47,9 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	fi
 	```
 	
-2. Name the script *dnp3dockerstart.sh* and save it to the directory where you plan to create the container.
+2. Name the script `dnp3dockerstart.sh` and save it to the directory where you plan to create the container.
 
-## Create a Docker container containing the DNP3 adapter
+## Create a Docker container containing the adapter
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container. 
 
@@ -92,14 +92,16 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	```
 
 2. Copy the `DNP3_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+
 3. Copy the `dnp3dockerstart.sh` script to the same directory as the `Dockerfile`.
+
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
 	```bash
 	docker build -t dnp3adapter .
 	```
 
-## Run the DNP3 Adapter Docker container
+## Run the adapter Docker container
 
 ### REST access from the local host to the Docker container
 
@@ -125,7 +127,7 @@ Complete the following to run the container:
 	docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/dnp3`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, `/dnp3` rather than the container. You can specify any directory.
 
 ### Port number change
 
