@@ -86,115 +86,37 @@
 <p> <strong>Note:</strong> The script varies slightly by processor.</p>
 <p> <strong>ARM32</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
-#local variables
-defaultPort=5590
-#regexp to only accept numerals
-re=&#39;^[0-9]+$&#39;
-
-portConfigFile=&quot;/DNP3_linux-arm/appsettings.json&quot;
-
-#validate the port number input
 if [ -z $portnum ] ; then
-        portnum=${defaultPort} 
-        echo &quot;Default value selected.&quot; ;
+        exec /DNP3_linux-arm/OSIsoft.Data.System.Host
 else
-        echo $portnum | grep -q -E $re
-        isNum=$?
-        if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
-                portnum=${defaultPort} ;
-        fi
+        exec /DNP3_linux-arm/OSIsoft.Data.System.Host --port:$portnum
 fi
-
-echo &quot;configuring port ${portnum}&quot;
-#write out the port config file
-cat &gt; ${portConfigFile} &lt;&lt; EOF
-{
-&quot;ApplicationSettings&quot;: {
-        &quot;Port&quot;: ${portnum},
-            &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/DNP3&quot;
-        }
-}
-EOF
-exec /DNP3_linux-arm/OSIsoft.Data.System.Host
 </code></pre><p> <strong>ARM64</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
-#local variables
-defaultPort=5590
-#regexp to only accept numerals
-re=&#39;^[0-9]+$&#39;
-
-portConfigFile=&quot;/DNP3_linux-arm64/appsettings.json&quot;
-
-#validate the port number input
 if [ -z $portnum ] ; then
-        portnum=${defaultPort} 
-        echo &quot;Default value selected.&quot; ;
+        exec /DNP3_linux-arm64/OSIsoft.Data.System.Host
 else
-        echo $portnum | grep -q -E $re
-        isNum=$?
-        if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
-                portnum=${defaultPort} ;
-        fi
+        exec /DNP3_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
 fi
-
-echo &quot;configuring port ${portnum}&quot;
-#write out the port config file
-cat &gt; ${portConfigFile} &lt;&lt; EOF
-{
-&quot;ApplicationSettings&quot;: {
-        &quot;Port&quot;: ${portnum},
-        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/DNP3&quot;
-        }
-}
-EOF
-exec /DNP3_linux-arm64/OSIsoft.Data.System.Host
 </code></pre><p> <strong>AMD64</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
-#local variables
-defaultPort=5590
-#regexp to only accept numerals
-re=&#39;^[0-9]+$&#39;
-
-portConfigFile=&quot;/DNP3_linux-x64/appsettings.json&quot;
-
-#validate the port number input
 if [ -z $portnum ] ; then
-        portnum=${defaultPort} 
-        echo &quot;Default value selected.&quot; ;
+        exec /DNP3_linux-x63/OSIsoft.Data.System.Host
 else
-        echo $portnum | grep -q -E $re
-        isNum=$?
-        if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
-                portnum=${defaultPort} ;
-        fi
+        exec /DNP3_linux-x64/OSIsoft.Data.System.Host --port:$portnum
 fi
-
-echo &quot;configuring port ${portnum}&quot;
-#write out the port config file
-cat &gt; ${portConfigFile} &lt;&lt; EOF
-{
-&quot;ApplicationSettings&quot;: {
-        &quot;Port&quot;: ${portnum},
-        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/DNP3&quot;
-        }
-}
-EOF
-exec /DNP3_linux-x64/OSIsoft.Data.System.Host
 </code></pre></li>
-<li><p>Name the script <em>dnp3dockerstart.sh</em> and save it to the directory where you plan to create the container.</p>
+<li><p>Name the script <code>dnp3dockerstart.sh</code> and save it to the directory where you plan to create the container.</p>
 </li>
 </ol>
-<h2 id="create-a-docker-container-containing-the-dnp3-adapter">Create a Docker container containing the DNP3 adapter</h2>
+<h2 id="create-a-docker-container-containing-the-adapter">Create a Docker container containing the adapter</h2>
 <ol>
 <li><p>Create the following <code>Dockerfile</code> in the directory where you want to create and run the container. </p>
 <p> <strong>Note:</strong> <code>Dockerfile</code> is the required name of the file. Use the variation according to your operating system.</p>
 <h3 id="arm32">ARM32</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-arm.tar.gz .
@@ -202,7 +124,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </code></pre><h3 id="arm64">ARM64</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-arm64.tar.gz .
@@ -210,7 +132,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </code></pre><h3 id="amd64-x64">AMD64 (x64)</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.1
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 COPY dnp3dockerstart.sh /
 RUN chmod +x /dnp3dockerstart.sh
 ADD ./DNP3_linux-x64.tar.gz .
@@ -218,12 +140,13 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </code></pre></li>
 <li><p>Copy the <code>DNP3_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
 </li>
-<li>Copy the <code>dnp3dockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</li>
+<li><p>Copy the <code>dnp3dockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</p>
+</li>
 <li><p>Run the following command line in the same directory (<code>sudo</code> may be necessary):</p>
 <pre><code class="lang-bash">docker build -t dnp3adapter .
 </code></pre></li>
 </ol>
-<h2 id="run-the-dnp3-adapter-docker-container">Run the DNP3 Adapter Docker container</h2>
+<h2 id="run-the-adapter-docker-container">Run the adapter Docker container</h2>
 <h3 id="rest-access-from-the-local-host-to-the-docker-container">REST access from the local host to the Docker container</h3>
 <p>Complete the following to run the container:</p>
 <ol>
@@ -241,7 +164,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 <pre><code class="lang-bash">docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 </code></pre></li>
 </ol>
-<p>Port <code>5590</code> is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, <code>/dnp3</code>. You can specify any directory.</p>
+<p>Port <code>5590</code> is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, <code>/dnp3</code> rather than the container. You can specify any directory.</p>
 <h3 id="port-number-change">Port number change</h3>
 <p>To use a different port other than <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the DNP3 adapter using port <code>6000</code> instead of <code>5590</code>, use the following command:</p>
 <pre><code class="lang-bash">docker run -d -e portnum=6000 --network host dnp3adapter
