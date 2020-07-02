@@ -19,14 +19,7 @@ There are no known issues at this time.
 
 ### Operating Systems and Distribution Kit Files
 
-| Operating System | Installation Kit | Processor(s) |
-|-------------------|----------------------------------|-------------|
-| Windows 10 x64 (any version)| `DNP3_win10-x64.msi`     | Intel/AMD 64-bit processors |
-| Debian 9 or later x64 | `DNP3_linux-x64.deb`     | Intel/AMD 64-bit processors |
-| Debian 9 or later arm32 | `DNP3_linux-arm.deb`  | Arm 32-bit processors |
-| Debian 9 or later arm64 | `DNP3_linux-arm64.deb`  | Arm 64-bit processors |
-
-No additional executable files (.msi, .exe, etc.) are included within the setup. For more information, see [System Requirements](xref:SystemRequirements).
+Refer to the [System Requirements](xref:SystemRequirements).
 
 ### Installation
 
