@@ -4,8 +4,8 @@ uid: releaseNotes
 
 # Release Notes
 
-PI Adapter for DNP3<br>
-© 2020 OSIsoft, LLC. All rights reserved. <!--*This section may be removed if this note is part of a broader manual.*-->
+PI Adapter for DNP3
+© 2020 OSIsoft, LLC. All rights reserved.
 
 ## Overview
 
@@ -55,17 +55,4 @@ No security-related information is applicable to this release.
 
 ## Technical Support and Resources
 
-<!--*This section may be removed if the information is  captured within a separate topic in the same manual.*-->
-
-For technical assistance, contact OSIsoft Technical Support at +1 510-297-5828 or log a case through the OSIsoft Customer Portal. Additionally, the Contact Us page on the portal offers contact options for customers outside of the United States.
-
-When you contact OSIsoft Technical Support, be prepared to provide this information:
-
-* Product name, version, and build numbers
-* Computer platform (CPU type, operating system, and version number)
-* Time that the difficulty started
-* Log files at that time
-* Details of any environment changes prior to the start of the issue
-* Summary of the issue, including any relevant log files during the time the issue occurred
-
-The PI Square community has resources to help you with your technical questions. PI Developers Club program offers specific services to developers and system integrators.
+Refer to [Technical support and feedback](xref:TechnicalSupportAndFeedback).
