@@ -1,5 +1,5 @@
 ---
-uid: index
+uid: PIAdapterforDNP3Overview
 ---
 
 # PI Adapter for DNP3 overview
