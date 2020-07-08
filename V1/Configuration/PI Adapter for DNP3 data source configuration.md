@@ -56,8 +56,8 @@ The following parameters may be used to configure a DNP3 data source:
 | **MasterStationBehaviors** | Required | `array` | List of **MasterStationBehavior** objects that define the adapter's behavior as a DNP3 master station. <br><br> For additional information, see [MasterStationBehavior Parameters](#masterstationbehavior-parameters). |
 | **OutstationBehaviors** | Required | `array` | List of **OutstationBehavior** objects that define general behaviors for DNP3 outstations. <br><br> For additional information, see [OutstationBehavior Parameters](#outstationbehavior-parameters). |
 | **TCPChannels** | Required | `array` | List of **TCPChannel** objects that define TCP connection information. <br><br> For additional information, see [TCPChannel Parameters](#tcpchannel-parameters).|
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for Stream IDs. Specifying `null` or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. <br>**Note:** An empty string means no prefix will be added to the Stream IDs. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`. An empty or `null` value will result in `{OutstationId}.{DNPPointType}.{Index}`. |
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the stream IDs. <br>**Note:** An empty string means no prefix will be added to the stream IDs. |
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`. An empty or `null` value will result in `{OutstationId}.{DNPPointType}.{Index}`. |
 
 ### MasterStationBehavior parameters
 

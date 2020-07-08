@@ -50,7 +50,7 @@ The following parameters can be used to configure DNP3 data selection:
 | --------- | -------- | ---- | ----------- |
 | Selected | Optional | `boolean` | If true, data for this item will be collected and sent to the configured OMF endpoint(s). Default is `true`. |
 | StreamId | Optional | `string` | The custom identifier used to create the streams. If not specified, the DNP3 adapter will generate a default value based on the `DefaultStreamIdPattern` in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
-| Name | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the Stream ID. |
+| Name | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
 | OutstationId | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
 | Group | Required | `number` | The DNP3 object group number for the point. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).  |
 | Variation | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
