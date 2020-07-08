@@ -118,8 +118,8 @@
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example <em>DNP3</em></li>
 <li><strong>ComponentId</strong>: Specifies the data source, for example <em>DNP3_1</em></li>
 </ul>
-<p>Each stream created for a given DNP point has a unique identifier or &quot;Stream ID&quot;. If you specify a custom Stream ID for the DNP point in data selection configuration, the adapter uses that Stream ID to create the stream.
-If the Stream ID is not specified, the adapter will use the <code>DefaultStreamIdPattern</code> in the data source configuration to determine the Stream ID.</p>
+<p>Each stream created for a given DNP point has a unique identifier or &quot;stream ID&quot;. If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
+If the stream ID is not specified, the adapter will use the <code>DefaultStreamIdPattern</code> in the data source configuration to determine the stream ID.</p>
 <h3 id="discovery">Discovery</h3>
 <p>The DNP3 adapter can discover points on your DNP3 outstation by performing an integrity scan. For more information, see <a href="#integrity-scans">Integrity scans</a>.
 Discovery will populate your data selection configuration with items that represent points on the outstation. These items will default as unselected, so you can make changes to these items before you select them. The adapter can only discover points that are assigned to Class 0, Class 1, Class 2, or Class 3 on the outstation. Discovery may be resource expensive in terms of bandwidth and outstation resources, so the adapter will only perform discovery for an outstation when the following criteria are met:</p>
