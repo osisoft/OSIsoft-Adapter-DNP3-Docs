@@ -57,7 +57,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 	### ARM32
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
@@ -69,7 +69,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	
 	### ARM64
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
@@ -81,7 +81,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 	### AMD64 (x64)
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
