@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/PI Adapter for DNP3 data source configuration.html",
-          "hash": "E1jxc8ftxoI6iTUgtlIvvQ=="
+          "hash": "QJ5m/WZw9TnrXhHMomkXnA=="
         }
       },
       "is_incremental": false,
@@ -73,9 +73,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -124,9 +121,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Release Notes/Release Notes.md",
       "output": {
@@ -185,6 +179,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/Templates/Release Notes Template.md",
       "output": {
@@ -548,6 +545,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
