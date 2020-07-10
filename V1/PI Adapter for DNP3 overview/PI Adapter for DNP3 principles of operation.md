@@ -4,7 +4,7 @@ uid: PIAdapterForDNP3PrinciplesOfOperation
 
 # PI Adapter for DNP3 principles of operation
 
-This adapter's operations focus on data collection and stream creation.
+The DNP3 adapter's operations focus on data collection and stream creation.
 
 ## Connectivity and interoperability
 
@@ -14,10 +14,10 @@ The DNP3 adapter is designed to operate with Level 1 (DNP3–L1) compliance, whi
 
 ## Adapter configuration
 
-For the DNP3 adapter to start data collection, you will need to configure the adapter by defining the following:
+For the DNP3 adapter to start data collection, you need to configure the adapter by defining the following:
 
 - Data source: Provide the information required to connect to your DNP3 compliant outstations.
-- Data selection: Select the DNP points on the outstations you want the adapter to collect data from.
+- Data selection: Select the DNP points on the outstations you want the adapter to collect for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
 For more information, see [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration).
@@ -31,12 +31,12 @@ The DNP3 adapter creates types at startup. One stream is created for every selec
 | `Timestamp` | DateTime | Timestamp of the value update for the DNP point
 | `Value` | Specified in the data selection configuration | Value of the DNP point
 
-Certain metadata are sent with each stream created. Metadata common for every adapter type are:
+Certain metadata are sent with each stream created. Metadata common for every adapter type:
 
 - **ComponentType**: Specifies the type of adapter, for example _DNP3_
 - **ComponentId**: Specifies the data source, for example _DNP3_1_
 
-Each stream created for a given DNP point has a unique identifier or "stream ID". If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
+Each stream created for a given DNP point has a unique identifier (stream ID). If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
 If the stream ID is not specified, the adapter will use the `DefaultStreamIdPattern` in the data source configuration to determine the stream ID.
 
 ### Discovery
