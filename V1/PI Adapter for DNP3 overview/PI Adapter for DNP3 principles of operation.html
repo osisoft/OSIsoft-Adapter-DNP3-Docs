@@ -78,15 +78,15 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3PrinciplesOfOperation">
 <h1 id="pi-adapter-for-dnp3-principles-of-operation">PI Adapter for DNP3 principles of operation</h1>
 
-<p>This adapter&#39;s operations focus on data collection and stream creation.</p>
+<p>The DNP3 adapter&#39;s operations focus on data collection and stream creation.</p>
 <h2 id="connectivity-and-interoperability">Connectivity and interoperability</h2>
 <p>The DNP3 adapter may connect to one or more DNP3 compliant outstations through TCP/IP connections. The total number of outstations that the adapter may connect to will vary across different installation environments.  </p>
 <p>The DNP3 adapter is designed to operate with Level 1 (DNP3–L1) compliance, which defines minimum requirements for all DNP3 compliant devices. However, the adapter makes use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices may not support these same features. Any functionality described in this documentation that is not required for Level 1 compliance will be noted as such. Refer to the outstation documentation prior to using these features, as the adapter will need to be configured to only use the supported features of the outstation.  </p>
 <h2 id="adapter-configuration">Adapter configuration</h2>
-<p>For the DNP3 adapter to start data collection, you will need to configure the adapter by defining the following:</p>
+<p>For the DNP3 adapter to start data collection, you need to configure the adapter by defining the following:</p>
 <ul>
 <li>Data source: Provide the information required to connect to your DNP3 compliant outstations.</li>
-<li>Data selection: Select the DNP points on the outstations you want the adapter to collect data from.</li>
+<li>Data selection: Select the DNP points on the outstations you want the adapter to collect for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
 <p>For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../Configuration/PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a>.</p>
@@ -113,12 +113,12 @@
 </tr>
 </tbody>
 </table>
-<p>Certain metadata are sent with each stream created. Metadata common for every adapter type are:</p>
+<p>Certain metadata are sent with each stream created. Metadata common for every adapter type:</p>
 <ul>
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example <em>DNP3</em></li>
 <li><strong>ComponentId</strong>: Specifies the data source, for example <em>DNP3_1</em></li>
 </ul>
-<p>Each stream created for a given DNP point has a unique identifier or &quot;stream ID&quot;. If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
+<p>Each stream created for a given DNP point has a unique identifier (stream ID). If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
 If the stream ID is not specified, the adapter will use the <code>DefaultStreamIdPattern</code> in the data source configuration to determine the stream ID.</p>
 <h3 id="discovery">Discovery</h3>
 <p>The DNP3 adapter can discover points on your DNP3 outstation by performing an integrity scan. For more information, see <a href="#integrity-scans">Integrity scans</a>.
