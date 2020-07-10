@@ -41,7 +41,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-			exec /DNP3_linux-x63/OSIsoft.Data.System.Host
+			exec /DNP3_linux-x64/OSIsoft.Data.System.Host
 	else
 			exec /DNP3_linux-x64/OSIsoft.Data.System.Host --port:$portnum
 	fi
@@ -57,7 +57,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 	### ARM32
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
@@ -69,10 +69,10 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 	
 	### ARM64
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY dnp3dockerstart.sh /
 	RUN chmod +x /dnp3dockerstart.sh
 	ADD ./DNP3_linux-arm64.tar.gz .
@@ -81,10 +81,10 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 	### AMD64 (x64)
 
-	```bash
+	```dockerfile
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY dnp3dockerstart.sh /
 	RUN chmod +x /dnp3dockerstart.sh
 	ADD ./DNP3_linux-x64.tar.gz .
