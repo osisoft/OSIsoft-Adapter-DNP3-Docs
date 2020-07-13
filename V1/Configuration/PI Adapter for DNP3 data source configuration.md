@@ -12,7 +12,7 @@ To use the DNP3 adapter, you must configure the adapter to collect data from one
 
 Complete the following steps to configure the DNP3 data source:
 
-1. Using any text editor, create a file that contains a DNP3 data source in the JSON format.
+1. Use a text editor to create a file that contains a DNP3 data source in JSON format.
     * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
 1. Save the file. For example, `DataSource.config.json`.
@@ -56,8 +56,8 @@ The following parameters may be used to configure a DNP3 data source:
 | **MasterStationBehaviors** | Required | `array` | List of **MasterStationBehavior** objects that define the adapter's behavior as a DNP3 master station. <br><br> For additional information, see [MasterStationBehavior Parameters](#masterstationbehavior-parameters). |
 | **OutstationBehaviors** | Required | `array` | List of **OutstationBehavior** objects that define general behaviors for DNP3 outstations. <br><br> For additional information, see [OutstationBehavior Parameters](#outstationbehavior-parameters). |
 | **TCPChannels** | Required | `array` | List of **TCPChannel** objects that define TCP connection information. <br><br> For additional information, see [TCPChannel Parameters](#tcpchannel-parameters).|
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the stream IDs. <br>**Note:** An empty string means no prefix will be added to the stream IDs. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`. An empty or `null` value will result in `{OutstationId}.{DNPPointType}.{Index}`. |
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter results in the **ComponentID** followed by a dot character being used to prefix the stream IDs. <br>**Note:** An empty string means no prefix is added to the stream IDs. |
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`. An empty or `null` value results in `{OutstationId}.{DNPPointType}.{Index}`. |
 
 ### MasterStationBehavior parameters
 
@@ -66,9 +66,9 @@ The following parameters may be used to configure each **MasterStationBehavior**
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 **Id** | Required | `string` | Friendly identifier for the configuration. Must be unique among all **MasterStationBehaviors**.
-**MasterAddress** | Required | `number` | Address that the adapter will use when communicating on a channel. Must be an available address on the Channel, **Outstations** may need to be configured to accept connections from this address. This is a 2 byte, unsigned integer.
+**MasterAddress** | Required | `number` | Address that the adapter uses when communicating on a channel. Must be an available address on the Channel, **Outstations** may need to be configured to accept connections from this address. This is a 2 byte, unsigned integer.
 **DataLinkLayerTimeout** | Optional | `string` | Period long enough for a Data Link Layer frame to be transmitted. "HH:MM:SS.##" format. The default value is `3` seconds.
-**DataLinkLayerRetries** | Optional | `number` | Number of times that the adapter will re-send a data link frame before resetting the link. The default value is `2`.
+**DataLinkLayerRetries** | Optional | `number` | Number of times that the adapter re-sends a data link frame before resetting the link. The default value is `2`.
 
 ### OutstationBehavior parameters
 
@@ -78,12 +78,12 @@ Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 **Id** | Required | `string` | Friendly identifier for the configuration. Must be unique among all **OutstationBehaviors**.
 **ApplicationLayerTimeout** | Optional | `string` |Period long enough for an entire Application Layer message to be transmitted. `HH:MM:SS.##` format. The default value is `3` seconds.
-**EnableUnsolicited** | Optional | `boolean` | If true, the adapter will accept unsolicited messages from an outstation that is configured to send unsolicited event data. The default value is `true`.
-**EnableTimeSync** | Optional | `boolean` | If true, the adapter will write the current time to an outstation that indicates "NeedTime" through the internal indication bits. The default value is `true`.
-**IntegrityScanOnStartup** | Optional | `boolean` | If true, the adapter will perform an integrity scan whenever the adapter or outstation is restarted. The default value is `true`.
-**IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter will perform an integrity scan whenever the outstation's event buffers overflow. The default value is `true`.
+**EnableUnsolicited** | Optional | `boolean` | If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data. The default value is `true`.
+**EnableTimeSync** | Optional | `boolean` | If true, the adapter writes the current time to an outstation that indicates "NeedTime" through the internal indication bits. The default value is `true`.
+**IntegrityScanOnStartup** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted. The default value is `true`.
+**IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the outstation's event buffers overflow. The default value is `true`.
 **IntegrityScanPeriod** | Optional | `string` | Frequency of integrity scans. Set to `00:00:00` for no periodic integrity scans. `HH:MM:SS.##` format. The default value is `1` hour.
-**EventClasses** | Optional | `array` | List of event classes that the adapter will scan during an event scan. Default is `[1, 2, 3]`, meaning all event classes.
+**EventClasses** | Optional | `array` | List of event classes that the adapter scans during an event scan. Default is `[1, 2, 3]`, meaning all event classes.
 **EventScanPeriod** | Optional | `string` | Frequency of event scans. `HH:MM:SS.##` format. Set to `00:00:00` for no event scans. The default value is `00:00:00`.
 
 ### TCPChannel parameters
@@ -92,10 +92,10 @@ The following parameters may be used to configure each channel in the **TCPChann
 
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
-**HostNameOrIpAddress** | Required | `string` | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter will establish a connection to this address.
+**HostNameOrIpAddress** | Required | `string` | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter establishes a connection to this address.
 **Port** | Optional | `number` | TCP port that the outstations are listening on. Default is `20000`.
 **MasterStationBehaviorId** | Required | `string` | Must match the **Id** of one of the configurations in the **MasterStationBehaviors** list.
-**Outstations** | Required | `array` | List of outstations that the adapter will connect to on the **TCPChannel**. <Br> **Note:** A **TCPChannel** is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each **TCPChannel** must have a unique combination of these properties.
+**Outstations** | Required | `array` | List of outstations that the adapter connects to on the **TCPChannel**. <Br> **Note:** A **TCPChannel** is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each **TCPChannel** must have a unique combination of these properties.
 
 ### Outstation parameters
 
@@ -111,7 +111,7 @@ Parameter | Required | Type | Description
 
 ### Minimum configuration for a single outstation
 
-The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values will be used. With the default configuration, the DNP3 adapter will accept unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).  For more information about the default configuration, reference the tables above.
+The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values are used. With the default configuration, the DNP3 adapter accepts unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery). For more information about the default configuration, reference the tables above.
 
 ```json
 {
@@ -146,7 +146,7 @@ The following example is a configuration for a single outstation on a single TCP
 
 The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. Rather than using the default configurations, many configuration options are expressed here.
 
-There are two **MasterStationBehaviors**, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any **TCPChannel** that references the master station behavior `poorNetworkConditions` will use these settings, while **TCPChannels** that reference `defaultMasterBehavior` will use the default settings.
+There are two **MasterStationBehaviors**, one of which increases the data link layer timeout and retry count. This may be needed when operating with network conditions that are less than ideal.  Any **TCPChannel** that references the master station behavior `poorNetworkConditions` uses these settings, while **TCPChannels** that reference `defaultMasterBehavior` uses the default settings.
 
 There are three **OutstationBehaviors**: `eventScans-integrityScan-noUnsolicited`, `busyOutstation`, and `class1Events`:
 
@@ -154,9 +154,9 @@ The behavior `eventScans-integrityScan-noUnsolicited` deviates from the default 
 
 The behavior `busyOutstation` deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans.
 
-**Note:** Disabling the integrity scan will prevent discovery and event scans are disabled by default.
+**Note:** Disabling the integrity scan prevents discovery and event scans are disabled by default.
 
-With this configuration, the DNP3 adapter will only collect data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). This type of configuration is useful if the outstation is very busy. For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.
+With this configuration, the DNP3 adapter only collects data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). This type of configuration is useful if the outstation is very busy. For instance, the adapter may not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. In addition, an integrity scan may put too much burden on the outstation if there are a large number of points.
 
 The behavior `class1Events` deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration may be useful if you are not interested in collecting data for points assigned to class 2 or class 3.
 

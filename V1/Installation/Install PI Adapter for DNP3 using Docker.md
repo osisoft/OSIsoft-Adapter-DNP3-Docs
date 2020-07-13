@@ -10,7 +10,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 ## Create a startup script for the adapter
 
-1. Use any text editor and create a script similar to one of the following examples:
+1. Use a text editor and create a script similar to one of the following examples:
 
 	**Note:** The script varies slightly by processor.
 
@@ -95,7 +95,7 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 3. Copy the `dnp3dockerstart.sh` script to the same directory as the `Dockerfile`.
 
-4. Run the following command line in the same directory (`sudo` may be necessary):
+4. Run the following command line in the same directory (you may need to use the `sudo` command):
 
 	```bash
 	docker build -t dnp3adapter .
@@ -107,31 +107,31 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 Complete the following to run the container:
 
-1. Use the docker container image `dnp3adapter` previously created.
-2. Type the following in the command line (`sudo` may be necessary):
+1. Use the docker container image `dnp3adapter` that you previously created.
+2. Type the following in the command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to DNP3 adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
+The default port `5590` is accessible from the host and you can make REST calls to DNP3 adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
 
 ### Provide persistent storage for the Docker container
 
 Complete the following to run the container:
 
 1. Use the docker container image `dnp3adapter` previously created.
-2. Type the following in the command line (`sudo` may be necessary):
+2. Type the following in the command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, `/dnp3` rather than the container. You can specify any directory.
+The default port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, `/dnp3` rather than the container. You can specify any directory.
 
 ### Port number change
 
-To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the DNP3 adapter using port `6000` instead of `5590`, use the following command:
+To use a different port other than the default `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the DNP3 adapter using port `6000` instead of `5590`, use the following command line:
 
 ```bash
 docker run -d -e portnum=6000 --network host dnp3adapter

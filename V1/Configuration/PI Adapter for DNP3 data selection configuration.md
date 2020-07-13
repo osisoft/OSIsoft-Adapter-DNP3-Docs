@@ -14,13 +14,13 @@ You cannot modify DNP3 data selection configurations manually. You must use the 
 
 Complete the following steps to configure the DNP3 data selection:
 
-1. Using any text editor, create a file that contains a DNP3 data selection in the JSON format.
-    - For content structure, see [DNP3 data selection examples](#dnp3-data-selection-examples).
+1. Use a text editor to create a file that contains a DNP3 data selection in the JSON format.
+    - For content structure, see the [DNP3 data selection example](#dnp3-data-selection-example).
     - For a table of all available parameters, see [DNP3 data selection parameters](#dnp3-data-selection-parameters).
 1. Save the file. For example, `DataSelection.config.json`.
 1. Use any of the configuration tools capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
 
-**Note:** The following examples use DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+**Note:** The following examples uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
 `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -48,19 +48,19 @@ The following parameters can be used to configure DNP3 data selection:
 
 | Parameter | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-| Selected | Optional | `boolean` | If true, data for this item will be collected and sent to the configured OMF endpoint(s). Default is `true`. |
-| StreamId | Optional | `string` | The custom identifier used to create the streams. If not specified, the DNP3 adapter will generate a default value based on the `DefaultStreamIdPattern` in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
-| Name | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
-| OutstationId | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
-| Group | Required | `number` | The DNP3 object group number for the point. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).  |
-| Variation | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
-| Index | Required | `number` | The index of the point on the outstation.
-| StaticScanScheduleId | Optional | `string` | The identifier of a schedule defined in the [Schedules configuration](xref:SchedulesConfiguration). By default, no static scan will be configured. For more information, see [Static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). |
-| DataFilterId | Optional | `string` | The identifier of a data filter defined in the [Data filters configuration](xref:DataFiltersConfiguration). By default, no filter will be applied. |
+| **Selected** | Optional | `boolean` | If true, data for this item is collected and sent to the configured OMF endpoint(s). Default is `true`. |
+| **StreamId** | Optional | `string` | The custom identifier used to create the streams. If not specified, the DNP3 adapter generates a default value based on the `DefaultStreamIdPattern` in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
+| **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
+| **OutstationId** | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
+| **Group** | Required | `number` | The DNP3 object group number for the point. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).  |
+| **Variation** | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
+| **Index** | Required | `number` | The index of the point on the outstation.
+| **StaticScanScheduleId** | Optional | `string` | The identifier of a schedule defined in the [Schedules configuration](xref:SchedulesConfiguration). By default, no static scan is configured. For more information, see [Static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). |
+| **DataFilterId** | Optional | `string` | The identifier of a data filter defined in the [Data filters configuration](xref:DataFiltersConfiguration). By default, no filter is applied. |
 
-## DNP3 data selection examples
+## DNP3 data selection example
 
-The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point may be configured by [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. You will notice that the second item is not selected, discovered items are not selected by default.
+The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point may be configured by [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected, discovered items are not selected by default.
 
 ```json
 [

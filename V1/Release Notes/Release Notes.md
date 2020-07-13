@@ -4,8 +4,7 @@ uid: ReleaseNotes
 
 # Release Notes
 
-PI Adapter for DNP3<br>
-© 2020 OSIsoft, LLC. All rights reserved.
+PI Adapter for DNP3 1.0
 
 ## Overview
 
