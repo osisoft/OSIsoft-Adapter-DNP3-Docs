@@ -82,7 +82,7 @@
 <p><strong>Note:</strong> If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the DNP3 adapter. Docker is not a requirement to use the adapter.</p>
 <h2 id="create-a-startup-script-for-the-adapter">Create a startup script for the adapter</h2>
 <ol>
-<li><p>Use any text editor and create a script similar to one of the following examples:</p>
+<li><p>Use a text editor and create a script similar to one of the following examples:</p>
 <p> <strong>Note:</strong> The script varies slightly by processor.</p>
 <p> <strong>ARM32</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
@@ -142,7 +142,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 </li>
 <li><p>Copy the <code>dnp3dockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</p>
 </li>
-<li><p>Run the following command line in the same directory (<code>sudo</code> may be necessary):</p>
+<li><p>Run the following command line in the same directory (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker build -t dnp3adapter .
 </code></pre></li>
 </ol>
@@ -150,23 +150,23 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
 <h3 id="rest-access-from-the-local-host-to-the-docker-container">REST access from the local host to the Docker container</h3>
 <p>Complete the following to run the container:</p>
 <ol>
-<li>Use the docker container image <code>dnp3adapter</code> previously created.</li>
-<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<li>Use the docker container image <code>dnp3adapter</code> that you previously created.</li>
+<li><p>Type the following in the command line (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker run -d --network host dnp3adapter
 </code></pre></li>
 </ol>
-<p>Port <code>5590</code> is accessible from the host and you can make REST calls to DNP3 adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.</p>
+<p>The default port <code>5590</code> is accessible from the host and you can make REST calls to DNP3 adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.</p>
 <h3 id="provide-persistent-storage-for-the-docker-container">Provide persistent storage for the Docker container</h3>
 <p>Complete the following to run the container:</p>
 <ol>
 <li>Use the docker container image <code>dnp3adapter</code> previously created.</li>
-<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<li><p>Type the following in the command line (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 </code></pre></li>
 </ol>
-<p>Port <code>5590</code> is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, <code>/dnp3</code> rather than the container. You can specify any directory.</p>
+<p>The default port <code>5590</code> is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, <code>/dnp3</code> rather than the container. You can specify any directory.</p>
 <h3 id="port-number-change">Port number change</h3>
-<p>To use a different port other than <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the DNP3 adapter using port <code>6000</code> instead of <code>5590</code>, use the following command:</p>
+<p>To use a different port other than the default <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the DNP3 adapter using port <code>6000</code> instead of <code>5590</code>, use the following command line:</p>
 <pre><code class="lang-bash">docker run -d -e portnum=6000 --network host dnp3adapter
 </code></pre><p>This command accesses the REST API with port <code>6000</code> instead of port <code>5590</code>. The following <code>curl</code> command returns the configuration for the container.</p>
 <pre><code class="lang-bash">curl http://localhost:6000/api/v1/configuration
@@ -200,7 +200,7 @@ ENTRYPOINT [&quot;/dnp3dockerstart.sh&quot;]
               <a href="#top">Back to top</a>
             </span>
             
-            <span><a href="https://www.osisoft.com/copyright/">Copyright</a></span>
+            <span><a href="https://www.osisoft.com/copyright/">© 2019- 2020 OSIsoft, LLC. All rights reserved.</a></span>
           </div>
         </div>
       </footer>

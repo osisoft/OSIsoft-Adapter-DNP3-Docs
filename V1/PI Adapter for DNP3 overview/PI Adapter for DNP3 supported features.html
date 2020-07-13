@@ -136,8 +136,8 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it will be able to parse any of the variations listed above.</p>
-<p><strong><sup>1</sup>Note:</strong> Although the <code>Octet String</code> point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (for example, ASCII <code>0x00</code>), the string will be truncated at the first <code>null</code> character.</p>
+<p><strong>Note:</strong> Some variations may include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter may be configured request variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it is able to parse any of the variations listed above.</p>
+<p><strong><sup>1</sup>Note:</strong> Although the <code>Octet String</code> point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (for example, ASCII <code>0x00</code>), the string is truncated at the first <code>null</code> character.</p>
 </article>
           </div>
           
@@ -166,7 +166,7 @@
               <a href="#top">Back to top</a>
             </span>
             
-            <span><a href="https://www.osisoft.com/copyright/">Copyright</a></span>
+            <span><a href="https://www.osisoft.com/copyright/">© 2019- 2020 OSIsoft, LLC. All rights reserved.</a></span>
           </div>
         </div>
       </footer>
