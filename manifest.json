@@ -73,6 +73,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -91,18 +94,6 @@
         ".html": {
           "relative_path": "V1/Installation/System requirements.html",
           "hash": "5SCfEfC9SJmsbR2Q3mY14g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/PI Adapter for DNP3 overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/PI Adapter for DNP3 overview.html",
-          "hash": "1EgpQ9ow+eH3DEa6+qhdgg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
-          "hash": "c4hQ9RrgqD+Uj8O8sfQndQ=="
+          "hash": "Kq3jznIhTit3/CNjdu/lcg=="
         }
       },
       "is_incremental": false,
@@ -161,6 +152,18 @@
       "output": {
         "resource": {
           "relative_path": "V1/images/atlas_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/index.html",
+          "hash": "UYx/+mExA9cgHIuNtuxWHQ=="
         }
       },
       "is_incremental": false,
@@ -542,9 +545,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
@@ -760,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "omfmwu72hQttSozJWBLTMQ=="
+          "hash": "C4ZvjdDNFaPSlDjm2ksjFQ=="
         }
       },
       "is_incremental": false,
@@ -772,7 +772,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "NNzr7LMIwXDfFT9CF/6zTg=="
+          "hash": "ShJMSbSJk86iJBvqTIytHg=="
         }
       },
       "is_incremental": false,
