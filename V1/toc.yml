@@ -1,7 +1,7 @@
 - name: PI Adapter for DNP3 overview
   href: PI Adapter for DNP3 overview/toc.yml
-  topicHref: PI Adapter for DNP3 overview.md
-  homepage: PI Adapter for DNP3 overview.md
+  topicHref: index.md
+  homepage: index.md
 - name: Installation
   href: Installation/toc.yml
   topicHref: main/V1/Installation/Installation.md
