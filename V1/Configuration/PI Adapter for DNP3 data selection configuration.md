@@ -6,7 +6,7 @@ uid: PIAdapterForDNP3DataSelectionConfiguration
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the DNP3 adapter to collect from your outstations.
 
-Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## Configure DNP3 data selection
 
@@ -44,11 +44,11 @@ Linux: `/opt/OSIsoft/Adapters/DNP3/Schemas`
 
 ## DNP3 data selection parameters
 
-The following parameters can be used to configure DNP3 data selection:
+The following parameters are available to configure DNP3 data selection:
 
 | Parameter | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-| **Selected** | Optional | `boolean` | If true, data for this item is collected and sent to the configured OMF endpoint(s). Default is `true`. |
+| **Selected** | Optional | `boolean` | If true, data for this item is collected and sent to one or more configured OMF endpoint. Default is `true`. |
 | **StreamId** | Optional | `string` | The custom identifier used to create the streams. If not specified, the DNP3 adapter generates a default value based on the `DefaultStreamIdPattern` in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
 | **OutstationId** | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
@@ -60,7 +60,7 @@ The following parameters can be used to configure DNP3 data selection:
 
 ## DNP3 data selection example
 
-The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point may be configured by [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected, discovered items are not selected by default.
+The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point can be configured by [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected; discovered items are not selected by default.
 
 ```json
 [

@@ -105,10 +105,10 @@ Docker is a set of tools that can be used on Linux to manage application deploym
 
 ### REST access from the local host to the Docker container
 
-Complete the following to run the container:
+Complete the following steps to run the container:
 
-1. Use the docker container image `dnp3adapter` that you previously created.
-2. Type the following in the command line (you may need to use the `sudo` command):
+1. Use the docker container image `dnp3adapter` that you created previously.
+2. Type the following command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host dnp3adapter
@@ -120,14 +120,14 @@ The default port `5590` is accessible from the host and you can make REST calls 
 
 Complete the following to run the container:
 
-1. Use the docker container image `dnp3adapter` previously created.
-2. Type the following in the command line (you may need to use the `sudo` command):
+1. Use the docker container image `dnp3adapter` created previously.
+2. Type the following command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host -v /dnp3:/usr/share/OSIsoft/ dnp3adapter
 	```
 
-The default port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine, `/dnp3` rather than the container. You can specify any directory.
+The default port `5590` is accessible from the host and you can make REST calls to the DNP3 adapter from applications on the local host computer. In this example, data is written to a host directory on the local machine `/dnp3` rather than the container. You can specify any directory.
 
 ### Port number change
 
@@ -145,4 +145,4 @@ curl http://localhost:6000/api/v1/configuration
 
 ### Remove REST access to the Docker container
 
-If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as the DNP3 adapter, but do not want to have external REST access enabled.
+If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This can be valuable when you want to host an application in the same container as the DNP3 adapter but do not want to have external REST access enabled.
