@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI Adapter for DNP3 overview/PI Adapter for DNP3 principles of operation.html",
-          "hash": "URiQk70wZM4oXJn8kiFKGg=="
+          "hash": "gGA2nOCk3CU0ar8N4/qz3Q=="
         }
       },
       "is_incremental": false,
@@ -183,11 +183,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/Templates/Release Notes Template.md",
+      "source_relative_path": "V1/main/Templates/Markdown Release Notes template-V1.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/Templates/Release Notes Template.html",
-          "hash": "MG5ybvdF8/M7YB5KA9hpzA=="
+          "relative_path": "V1/main/Templates/Markdown Release Notes template-V1.html",
+          "hash": "ElP2tDyq+LQUiqhuQwn/Sg=="
         }
       },
       "is_incremental": false,
