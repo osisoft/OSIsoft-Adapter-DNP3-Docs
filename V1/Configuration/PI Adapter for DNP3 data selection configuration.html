@@ -79,7 +79,7 @@
 <h1 id="pi-adapter-for-dnp3-data-selection-configuration">PI Adapter for DNP3 data selection configuration</h1>
 
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the DNP3 adapter to collect from your outstations.</p>
-<p>Depending on your data source configuration, your data selection configuration may be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
+<p>Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
 <h2 id="configure-dnp3-data-selection">Configure DNP3 data selection</h2>
 <p>You cannot modify DNP3 data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following steps to configure the DNP3 data selection:</p>
@@ -103,7 +103,7 @@
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>
 <p>Linux: <code>/opt/OSIsoft/Adapters/DNP3/Schemas</code></p>
 <h2 id="dnp3-data-selection-parameters">DNP3 data selection parameters</h2>
-<p>The following parameters can be used to configure DNP3 data selection:</p>
+<p>The following parameters are available to configure DNP3 data selection:</p>
 <table>
 <thead>
 <tr>
@@ -118,7 +118,7 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, data for this item is collected and sent to the configured OMF endpoint(s). Default is <code>true</code>.</td>
+<td>If true, data for this item is collected and sent to one or more configured OMF endpoint. Default is <code>true</code>.</td>
 </tr>
 <tr>
 <td><strong>StreamId</strong></td>
@@ -171,7 +171,7 @@
 </tbody>
 </table>
 <h2 id="dnp3-data-selection-example">DNP3 data selection example</h2>
-<p>The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a <code>Counter Input</code> point, the second item is an example of how an <code>Analog Input</code> point may be configured by <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>, and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected, discovered items are not selected by default.</p>
+<p>The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a <code>Counter Input</code> point, the second item is an example of how an <code>Analog Input</code> point can be configured by <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>, and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected; discovered items are not selected by default.</p>
 <pre><code class="lang-json">[
     {
         &quot;outstationId&quot;: &quot;Outstation1&quot;,
