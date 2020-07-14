@@ -33,8 +33,8 @@ The DNP3 adapter creates types at startup. One stream is created for each select
 
 Certain metadata are sent with each stream created. The following metadata are common for every adapter type:
 
-- **ComponentType**: Specifies the type of adapter, for example, _DNP3_
 - **ComponentId**: Specifies the data source, for example, _DNP3_1_
+- **ComponentType**: Specifies the type of adapter, for example, _DNP3_
 
 Each stream created for a given DNP point has a unique identifier (stream ID). If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
 If the stream ID is not specified, the adapter uses the `DefaultStreamIdPattern` in the data source configuration to determine the stream ID.
