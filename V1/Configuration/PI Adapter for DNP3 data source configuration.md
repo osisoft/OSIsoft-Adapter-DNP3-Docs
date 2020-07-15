@@ -56,7 +56,7 @@ The following parameters are available to configure a DNP3 data source:
 | **MasterStationBehaviors** | Required | `array` | List of **MasterStationBehavior** objects that specifies the adapter's behavior as a DNP3 master station. <br><br> For additional information, see [MasterStationBehavior Parameters](#masterstationbehavior-parameters). |
 | **OutstationBehaviors** | Required | `array` | List of **OutstationBehavior** objects that specifies general behaviors for DNP3 outstations. <br><br> For additional information, see [OutstationBehavior Parameters](#outstationbehavior-parameters). |
 | **TCPChannels** | Required | `array` | List of **TCPChannel** objects that specifies TCP connection information. <br><br> For additional information, see [TCPChannel Parameters](#tcpchannel-parameters).|
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter results in the **ComponentID** followed by a dot character being used to prefix the stream IDs. <br>**Note:** An empty string means no prefix is added to the stream IDs. |
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter results in the **ComponentID** followed by a dot character being used to prefix the stream IDs.<br><br>**Note:** An empty string means no prefix is added to the stream IDs. |
 | **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`. An empty or `null` value results in `{OutstationId}.{DNPPointType}.{Index}`. |
 
 ### MasterStationBehavior parameters
@@ -79,12 +79,12 @@ Parameter | Required | Type | Description
 **Id** | Required | `string` | Friendly identifier for the configuration. Must be unique among all **OutstationBehaviors**.
 **ApplicationLayerTimeout** | Optional | `string` |Period long enough for an entire Application Layer message to be transmitted represented in `hh:mm:ss.fff` format.<br><br>Default value: `00:00:03` for `3` seconds
 **EnableUnsolicited** | Optional | `boolean` | If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
-**EnableTimeSync** | Optional | `boolean` | If true, the adapter writes the current time to an outstation that indicates "NeedTime" through the internal indication bits. The default value is `true`.
+**EnableTimeSync** | Optional | `boolean` | If true, the adapter writes the current time to an outstation that indicates "NeedTime" through the internal indication bits.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
 **IntegrityScanOnStartup** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
 **IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the outstation's event buffers overflow.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
 **IntegrityScanPeriod** | Optional | `string` | Frequency of integrity scans. Set to `00:00:00` for no periodic integrity scans represented in `hh:mm:ss.fff` format.<br><br>Default value: `01:00:00` for `1` hour
 **EventClasses** | Optional | `array` | List of event classes that the adapter scans during an event scan. Default is `[1, 2, 3]`, meaning all event classes.
-**EventScanPeriod** | Optional | `string` | Frequency of event scans represnted in `hh:mm:ss.fff` format. Set to `00:00:00` for no event scans.<br><br>Default value: `00:00:00`.
+**EventScanPeriod** | Optional | `string` | Frequency of event scans represnted in `hh:mm:ss.fff` format. Set to `00:00:00` for no event scans.<br><br>Default value: `00:00:00`
 
 ### TCPChannel parameters
 
