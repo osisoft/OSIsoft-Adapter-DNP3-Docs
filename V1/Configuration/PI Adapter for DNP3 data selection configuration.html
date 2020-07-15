@@ -89,7 +89,7 @@
 <li>For a table of all available parameters, see <a href="#dnp3-data-selection-parameters">DNP3 data selection parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>DataSelection.config.json</code>.</li>
+<li>Save the file. For example, <code>DataSelection.json</code>.</li>
 <li>Use any of the configuration tools capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint:</li>
 </ol>
 <p><strong>Note:</strong> The following examples uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
@@ -97,7 +97,7 @@
 <p><code>POST</code> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentID&gt;/DataSelection/</code></p>
 <p>Example using <code>curl</code>:</p>
 <p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection&quot;
+<pre><code class="lang-bash">curl -d &quot;@DataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection&quot;
 </code></pre><h2 id="dnp3-data-selection-schema">DNP3 data selection schema</h2>
 <p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>
@@ -118,7 +118,7 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, data for this item is collected and sent to one or more configured OMF endpoint. Default is <code>true</code>.</td>
+<td>If true, data for this item is collected and sent to one or more configured OMF endpoint.<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value:<code>true</code></td>
 </tr>
 <tr>
 <td><strong>StreamId</strong></td>
@@ -148,7 +148,7 @@
 <td><strong>Variation</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>The DNP3 object variation to be requested for the point during a static scan. The default is <code>0</code>. For a list of supported objects, see <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20supported%20features.html">PI Adapter for DNP3 supported features</a>.</td>
+<td>The DNP3 object variation to be requested for the point during a static scan. For a list of supported objects, see <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20supported%20features.html">PI Adapter for DNP3 supported features</a>.<br><br>Default value: <code>0</code></td>
 </tr>
 <tr>
 <td><strong>Index</strong></td>

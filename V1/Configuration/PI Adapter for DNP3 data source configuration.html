@@ -88,13 +88,13 @@
 <li>For a table of all available parameters, see <a href="#dnp3-data-source-parameters">DNP3 data source parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>DataSource.config.json</code>.</li>
+<li>Save the file. For example, <code>DataSource.json</code>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:\&lt;port&gt;/api/v1/configuration/\&lt;adapterId&gt;/DataSource/</code>.</p>
 <p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
 <p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
 <p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.config.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
+<pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
 </code></pre></li>
 </ol>
 <p>After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html#discovery">Discovery</a>.</p>
@@ -181,13 +181,13 @@
 <td><strong>DataLinkLayerTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Period long enough for a Data Link Layer frame to be transmitted. &quot;HH:MM:SS.##&quot; format. The default value is <code>3</code> seconds.</td>
+<td>Period long enough for a Data Link Layer frame to be transmitted represented in <code>hhh:mm:ss.fff</code> format.<br><br>Default value: <code>00:00:03</code> for <code>3</code> seconds</td>
 </tr>
 <tr>
 <td><strong>DataLinkLayerRetries</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>Number of times that the adapter re-sends a data link frame before resetting the link. The default value is <code>2</code>.</td>
+<td>Number of times that the adapter re-sends a data link frame before resetting the link.<br><br> Default value: <code>2</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,13 +213,13 @@
 <td><strong>ApplicationLayerTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Period long enough for an entire Application Layer message to be transmitted. <code>HH:MM:SS.##</code> format. The default value is <code>3</code> seconds.</td>
+<td>Period long enough for an entire Application Layer message to be transmitted represented in <code>hh:mm:ss.fff</code> format.<br><br>Default value: <code>00:00:03</code> for <code>3</code> seconds</td>
 </tr>
 <tr>
 <td><strong>EnableUnsolicited</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data. The default value is <code>true</code>.</td>
+<td>If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data.<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value:<code>true</code></td>
 </tr>
 <tr>
 <td><strong>EnableTimeSync</strong></td>
@@ -231,19 +231,19 @@
 <td><strong>IntegrityScanOnStartup</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted. The default value is <code>true</code>.</td>
+<td>If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted.<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value:<code>true</code></td>
 </tr>
 <tr>
 <td><strong>IntegrityScanOnEventBufferOverflow</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, the adapter performs an integrity scan whenever the outstation&#39;s event buffers overflow. The default value is <code>true</code>.</td>
+<td>If true, the adapter performs an integrity scan whenever the outstation&#39;s event buffers overflow.<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value:<code>true</code></td>
 </tr>
 <tr>
 <td><strong>IntegrityScanPeriod</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Frequency of integrity scans. Set to <code>00:00:00</code> for no periodic integrity scans. <code>HH:MM:SS.##</code> format. The default value is <code>1</code> hour.</td>
+<td>Frequency of integrity scans. Set to <code>00:00:00</code> for no periodic integrity scans represented in <code>hh:mm:ss.fff</code> format.<br><br>Default value: <code>01:00:00</code> for <code>1</code> hour</td>
 </tr>
 <tr>
 <td><strong>EventClasses</strong></td>
@@ -255,7 +255,7 @@
 <td><strong>EventScanPeriod</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Frequency of event scans. <code>HH:MM:SS.##</code> format. Set to <code>00:00:00</code> for no event scans. The default value is <code>00:00:00</code>.</td>
+<td>Frequency of event scans represnted in <code>hh:mm:ss.fff</code> format. Set to <code>00:00:00</code> for no event scans.<br><br>Default value: <code>00:00:00</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -281,7 +281,7 @@
 <td><strong>Port</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>TCP port that the outstations are listening on. Default is <code>20000</code>.</td>
+<td>TCP port that the outstations are listening on.<br><br>Default value:<code>20000</code></td>
 </tr>
 <tr>
 <td><strong>MasterStationBehaviorId</strong></td>
