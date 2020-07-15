@@ -143,7 +143,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. Specifying <code>null</code> or omitting this parameter results in the <strong>ComponentID</strong> followed by a dot character being used to prefix the stream IDs. <br><strong>Note:</strong> An empty string means no prefix is added to the stream IDs.</td>
+<td>Specifies what prefix is used for stream IDs. Specifying <code>null</code> or omitting this parameter results in the <strong>ComponentID</strong> followed by a dot character being used to prefix the stream IDs.<br><br><strong>Note:</strong> An empty string means no prefix is added to the stream IDs.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
@@ -225,7 +225,7 @@
 <td><strong>EnableTimeSync</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>If true, the adapter writes the current time to an outstation that indicates &quot;NeedTime&quot; through the internal indication bits. The default value is <code>true</code>.</td>
+<td>If true, the adapter writes the current time to an outstation that indicates &quot;NeedTime&quot; through the internal indication bits.<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value:<code>true</code></td>
 </tr>
 <tr>
 <td><strong>IntegrityScanOnStartup</strong></td>
@@ -255,7 +255,7 @@
 <td><strong>EventScanPeriod</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Frequency of event scans represnted in <code>hh:mm:ss.fff</code> format. Set to <code>00:00:00</code> for no event scans.<br><br>Default value: <code>00:00:00</code>.</td>
+<td>Frequency of event scans represnted in <code>hh:mm:ss.fff</code> format. Set to <code>00:00:00</code> for no event scans.<br><br>Default value: <code>00:00:00</code></td>
 </tr>
 </tbody>
 </table>
