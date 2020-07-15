@@ -15,7 +15,7 @@ Complete the following steps to configure the DNP3 data source:
 1. Use a text editor to create a file that contains a DNP3 data source in JSON format.
     * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
-1. Save the file. For example, `DataSource.config.json`.
+1. Save the file. For example, `DataSource.json`.
 1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:\<port>/api/v1/configuration/\<adapterId>/DataSource/`.
 
    **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
@@ -27,7 +27,7 @@ Complete the following steps to configure the DNP3 data source:
    **Note:** Run this command from the same directory where the file is located.
 
    ```bash
-    curl -v -d `"@DataSource.config.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"`
+    curl -v -d `"@DataSource.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"`
     ```
 
 After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
@@ -67,8 +67,8 @@ Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 **Id** | Required | `string` | Friendly identifier for the configuration. Must be unique among all **MasterStationBehaviors**.
 **MasterAddress** | Required | `number` | Address that the adapter uses when communicating on a channel. Must be an available address on the channel. **Outstations** can be configured to accept connections from this address. This is a 2 byte, unsigned integer.
-**DataLinkLayerTimeout** | Optional | `string` | Period long enough for a Data Link Layer frame to be transmitted. "HH:MM:SS.##" format. The default value is `3` seconds.
-**DataLinkLayerRetries** | Optional | `number` | Number of times that the adapter re-sends a data link frame before resetting the link. The default value is `2`.
+**DataLinkLayerTimeout** | Optional | `string` | Period long enough for a Data Link Layer frame to be transmitted represented in `hhh:mm:ss.fff` format.<br><br>Default value: `00:00:03` for `3` seconds
+**DataLinkLayerRetries** | Optional | `number` | Number of times that the adapter re-sends a data link frame before resetting the link.<br><br> Default value: `2`
 
 ### OutstationBehavior parameters
 
@@ -77,14 +77,14 @@ The following parameters are available to configure each **OutstationBehavior** 
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 **Id** | Required | `string` | Friendly identifier for the configuration. Must be unique among all **OutstationBehaviors**.
-**ApplicationLayerTimeout** | Optional | `string` |Period long enough for an entire Application Layer message to be transmitted. `HH:MM:SS.##` format. The default value is `3` seconds.
-**EnableUnsolicited** | Optional | `boolean` | If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data. The default value is `true`.
+**ApplicationLayerTimeout** | Optional | `string` |Period long enough for an entire Application Layer message to be transmitted represented in `hh:mm:ss.fff` format.<br><br>Default value: `00:00:03` for `3` seconds
+**EnableUnsolicited** | Optional | `boolean` | If true, the adapter accepts unsolicited messages from an outstation that is configured to send unsolicited event data.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
 **EnableTimeSync** | Optional | `boolean` | If true, the adapter writes the current time to an outstation that indicates "NeedTime" through the internal indication bits. The default value is `true`.
-**IntegrityScanOnStartup** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted. The default value is `true`.
-**IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the outstation's event buffers overflow. The default value is `true`.
-**IntegrityScanPeriod** | Optional | `string` | Frequency of integrity scans. Set to `00:00:00` for no periodic integrity scans. `HH:MM:SS.##` format. The default value is `1` hour.
+**IntegrityScanOnStartup** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the adapter or outstation is restarted.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
+**IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the outstation's event buffers overflow.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
+**IntegrityScanPeriod** | Optional | `string` | Frequency of integrity scans. Set to `00:00:00` for no periodic integrity scans represented in `hh:mm:ss.fff` format.<br><br>Default value: `01:00:00` for `1` hour
 **EventClasses** | Optional | `array` | List of event classes that the adapter scans during an event scan. Default is `[1, 2, 3]`, meaning all event classes.
-**EventScanPeriod** | Optional | `string` | Frequency of event scans. `HH:MM:SS.##` format. Set to `00:00:00` for no event scans. The default value is `00:00:00`.
+**EventScanPeriod** | Optional | `string` | Frequency of event scans represnted in `hh:mm:ss.fff` format. Set to `00:00:00` for no event scans.<br><br>Default value: `00:00:00`.
 
 ### TCPChannel parameters
 
@@ -93,7 +93,7 @@ The following parameters are available to configure each channel in the **TCPCha
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 **HostNameOrIpAddress** | Required | `string` | IPv4 address or hostname that can be resolved to an IPv4 address. The adapter establishes a connection to this address.
-**Port** | Optional | `number` | TCP port that the outstations are listening on. Default is `20000`.
+**Port** | Optional | `number` | TCP port that the outstations are listening on.<br><br>Default value:`20000`
 **MasterStationBehaviorId** | Required | `string` | Must match the **Id** of one of the configurations in the **MasterStationBehaviors** list.
 **Outstations** | Required | `array` | List of outstations that the adapter connects to on the **TCPChannel**. <Br> **Note:** A **TCPChannel** is uniquely identified by the combination of its `HostNameOrIPAddress` and `Port` properties. For valid configuration, each **TCPChannel** must have a unique combination of these properties.
 

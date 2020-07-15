@@ -17,7 +17,7 @@ Complete the following steps to configure the DNP3 data selection:
 1. Use a text editor to create a file that contains a DNP3 data selection in the JSON format.
     - For content structure, see the [DNP3 data selection example](#dnp3-data-selection-example).
     - For a table of all available parameters, see [DNP3 data selection parameters](#dnp3-data-selection-parameters).
-1. Save the file. For example, `DataSelection.config.json`.
+1. Save the file. For example, `DataSelection.json`.
 1. Use any of the configuration tools capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
 
 **Note:** The following examples uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
@@ -31,7 +31,7 @@ Example using `curl`:
 **Note:** Run this command from the same directory where the file is located.
 
 ```bash
-curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection"
+curl -d "@DataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection"
 ```
 
 ## DNP3 data selection schema
@@ -48,12 +48,12 @@ The following parameters are available to configure DNP3 data selection:
 
 | Parameter | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-| **Selected** | Optional | `boolean` | If true, data for this item is collected and sent to one or more configured OMF endpoint. Default is `true`. |
+| **Selected** | Optional | `boolean` | If true, data for this item is collected and sent to one or more configured OMF endpoint.<br><br>Allowed value: `true` or `false`<br>Default value:`true` |
 | **StreamId** | Optional | `string` | The custom identifier used to create the streams. If not specified, the DNP3 adapter generates a default value based on the `DefaultStreamIdPattern` in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
 | **OutstationId** | Required | `string` | The identifier of the outstation where the DNP point data should be collected from. Must match the `Id` of one of the configured outstations in the [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration). |
 | **Group** | Required | `number` | The DNP3 object group number for the point. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).  |
-| **Variation** | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. The default is `0`. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures). |
+| **Variation** | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).<br><br>Default value: `0` |
 | **Index** | Required | `number` | The index of the point on the outstation.
 | **StaticScanScheduleId** | Optional | `string` | The identifier of a schedule defined in the [Schedules configuration](xref:SchedulesConfiguration). By default, no static scan is configured. For more information, see [Static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). |
 | **DataFilterId** | Optional | `string` | The identifier of a data filter defined in the [Data filters configuration](xref:DataFiltersConfiguration). By default, no filter is applied. |
