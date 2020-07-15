@@ -84,7 +84,7 @@ Parameter | Required | Type | Description
 **IntegrityScanOnEventBufferOverflow** | Optional | `boolean` | If true, the adapter performs an integrity scan whenever the outstation's event buffers overflow.<br><br>Allowed value: `true` or `false`<br>Default value:`true`
 **IntegrityScanPeriod** | Optional | `string` | Frequency of integrity scans. Set to `00:00:00` for no periodic integrity scans represented in `hh:mm:ss.fff` format.<br><br>Default value: `01:00:00` for `1` hour
 **EventClasses** | Optional | `array` | List of event classes that the adapter scans during an event scan. Default is `[1, 2, 3]`, meaning all event classes.
-**EventScanPeriod** | Optional | `string` | Frequency of event scans represnted in `hh:mm:ss.fff` format. Set to `00:00:00` for no event scans.<br><br>Default value: `00:00:00`
+**EventScanPeriod** | Optional | `string` | Frequency of event scans represented in `hh:mm:ss.fff` format. Set to `00:00:00` for no event scans.<br><br>Default value: `00:00:00`
 
 ### TCPChannel parameters
 
