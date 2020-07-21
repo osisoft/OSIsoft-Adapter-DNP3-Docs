@@ -17,9 +17,9 @@ Alternatively, you can use tar.gz files with binaries to build your own custom i
 
 ### Native runtime libraries
 ##### Windows 
-For Windows 10 installations, the latest Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 is required and installed by the PI Adapter for DNP3 installation kit. 
+For Windows 10 installations, the latest Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 is required and installed by the PI Adapter for DNP3 installation kit.
 As a best practice, OSIsoft recommends to install the [latest supported Microsoft Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) to receive the latest available updates.
 
 ##### Linux
-For Linux based operating systems, the GNU C++ Standard library is required. The PI Adapter for DNP3 depends on libstdc++.so.6.0.22 or newer. Newer versions of libstdc++.so must contain GLIBCXX_3.4.22. 
-In Debian, Ubuntu, and many other distributions, this library is distributed in the libstdc++6 package. This package is part of the base system for Debian 9 and 10, Ubuntu 18.04 and 20.04, as well as many other distributions, so there is often no user action required for this dependency. 
+For Linux based operating systems, the GNU C++ Standard library is required. PI Adapter for DNP3 depends on `libstdc++.so.6.0.22` or newer. Newer versions of `libstdc++.so` must contain `GLIBCXX_3.4.22`.
+In Debian, Ubuntu, and many other distributions, this library is distributed in the libstdc++6 package. This package is part of the base system for Debian 9 and 10, Ubuntu 18.04 and 20.04, as well as many other distributions, so there is often no action required for this dependency.
