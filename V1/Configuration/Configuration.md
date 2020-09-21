@@ -16,8 +16,8 @@ Complete the following steps to establish a data flow from a DNP3 data source de
 
 1. Configure one or several DNP3 system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
 
-2. Configure a DNP3 data source for each DNP3 device.<br>See [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#configure-dnp3-ua-data-source).
+2. Configure a DNP3 data source for each DNP3 device.<br>See [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#configure-dnp3-data-source).
 
-3. Configure a DNP3 data selection for each DNP3 data source.<br>See [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration#configure-dnp3-ua-data-selection).
+3. Configure a DNP3 data selection for each DNP3 data source.<br>See [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration#configure-dnp3-data-selection).
 
 4. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
