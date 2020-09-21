@@ -2,7 +2,7 @@
   href: System requirements.md
 - name: Install the adapter
   href: ../main/V1/Installation/Install the adapter.md
-  name: Install PI Adapter for DNP3 using Docker
+- name: Install PI Adapter for DNP3 using Docker
   href: Install PI Adapter for DNP3 using Docker.md
 - name: Uninstall the adapter
   href: ../main/V1/Installation/Uninstall the adapter.md
