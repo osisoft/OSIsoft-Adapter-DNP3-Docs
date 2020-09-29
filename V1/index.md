@@ -6,7 +6,7 @@ uid: PIAdapterforDNP3Overview
 
 PI Adapter for DNP3 is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers. DNP3 is a communication protocol common in SCADA networks. The protocol is maintained by the DNP Users Group, and defined by IEEE Std 1815-2012. The adapter adheres to this standard and operates as a DNP3-L1 compliant master station, which communicates with compliant outstations through TCP/IP.
 
-![PI Adapter for DNP3 architecture](images/pi-adapter-for-dnp3-architecture-diagram.png)
+![PI Adapter for DNP3 architecture](images/PI_Adapter_for_DNP3_architecture_diagram.png)
 
 ## Adapter installation
 
