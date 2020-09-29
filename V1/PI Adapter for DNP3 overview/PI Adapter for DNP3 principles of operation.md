@@ -8,9 +8,9 @@ The DNP3 adapter's operations focus on data collection and stream creation.
 
 ## Connectivity and interoperability
 
-The DNP3 adapter can connect to one or more DNP3 compliant outstations through TCP/IP connections. The total number of outstations that the adapter can connect to varies across different installation environments.  
+The DNP3 adapter can connect to one or more DNP3 compliant outstations through TCP/IP connections. The DNP3 adapter will not communicate with other DNP3 master stations. The total number of outstations that the adapter can connect to varies across different installation environments.  
 
-The DNP3 adapter is designed to operate with Level 1 (DNP3–L1) compliance, which defines minimum requirements for all DNP3 compliant devices. However, the adapter makes use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices can not support these same features. Any functionality described in this documentation that is not required for Level 1 compliance is be noted as such. Refer to the outstation documentation prior to using these features, as the adapter needs to be configured to only use the supported features of the outstation.  
+The DNP3 adapter is designed to operate as a Level 1 (DNP3–L1) master station. DNP3-L1 defines minimum requirements for all DNP3 compliant devices. However, the adapter makes use of some Level 2, Level 3, and Level 4 functions. Some DNP3 compliant devices can not support these same features. Any functionality described in this documentation that is not required for Level 1 compliance is be noted as such. Refer to the outstation documentation prior to using these features, as the adapter needs to be configured to only use the supported features of the outstation.  
 
 ## Adapter configuration
 
