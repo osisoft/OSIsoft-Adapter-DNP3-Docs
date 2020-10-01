@@ -111,7 +111,7 @@ references:
   href: V1/main/V1.3/Installation/installation.html
 - uid: InstallPIAdapterForDNP3UsingDocker
   name: Install PI Adapter for DNP3 using Docker
-  href: V1/Installation/Install%20PI%20Adapter%20for%20DNP3%20using%20Docker.html
+  href: V1/Installation/install-pi-adapter-for-dnp3-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/install-the-adapter.html
@@ -138,25 +138,25 @@ references:
   href: V1/main/V1.3/Health/next-health-message-expected.html
 - uid: PIAdapterForDNP3DataSelectionConfiguration
   name: PI Adapter for DNP3 data selection configuration
-  href: V1/Configuration/PI%20Adapter%20for%20DNP3%20data%20selection%20configuration.html
+  href: V1/Configuration/pi-adapter-for-dnp3-data-selection-configuration.html
 - uid: PIAdapterForDNP3DataSourceConfiguration
   name: PI Adapter for DNP3 data source configuration
-  href: V1/Configuration/PI%20Adapter%20for%20DNP3%20data%20source%20configuration.html
+  href: V1/Configuration/pi-adapter-for-dnp3-data-source-configuration.html
 - uid: PIAdapterforDNP3Overview
   name: PI Adapter for DNP3 overview
   href: V1/index.html
 - uid: PIAdapterForDNP3PrinciplesOfOperation
   name: PI Adapter for DNP3 principles of operation
-  href: V1/PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20principles%20of%20operation.html
+  href: V1/PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html
 - uid: PIAdapterForDNP3SupportedFeatures
   name: PI Adapter for DNP3 supported features
-  href: V1/PI%20Adapter%20for%20DNP3%20overview/PI%20Adapter%20for%20DNP3%20supported%20features.html
+  href: V1/PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-supported-features.html
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
-  href: V1/Release%20Notes/Release%20Notes.html
+  href: V1/Release-notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/retrieve-product-version-information.html
@@ -207,7 +207,7 @@ references:
   href: V1/main/V1.3/Configuration/system-components-configuration.html
 - uid: SystemRequirements
   name: System requirements
-  href: V1/Installation/System%20requirements.html
+  href: V1/Installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: V1/main/V1/technical-support-and-feedback.html
