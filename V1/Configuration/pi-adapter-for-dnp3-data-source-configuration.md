@@ -56,8 +56,8 @@ The following parameters are available to configure a DNP3 data source:
 | **MasterStationBehaviors** | Required | `array` | List of **MasterStationBehavior** objects that specifies the adapter's behavior as a DNP3 master station. <br><br> For additional information, see [MasterStationBehavior Parameters](#masterstationbehavior-parameters). |
 | **OutstationBehaviors** | Required | `array` | List of **OutstationBehavior** objects that specifies general behaviors for DNP3 outstations. <br><br> For additional information, see [OutstationBehavior Parameters](#outstationbehavior-parameters). |
 | **TCPChannels** | Required | `array` | List of **TCPChannel** objects that specifies TCP connection information. <br><br> For additional information, see [TCPChannel Parameters](#tcpchannel-parameters).|
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. Specifying `null` or omitting this parameter results in the **ComponentID** followed by a dot character being used to prefix the stream IDs.<br><br>Example: `DNP3-1.OutstationId.PointType.Index`<br><br>**Note:** An empty string means no prefix is added to the stream IDs. If you change the **StreamIdPrefix** of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update. 
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use.  An empty or `null` value results in the default value. Possible parameters: `{OutstationId}`,`{DNPPointType}`, `{Index}`, `{Group}`, and `{Variation}`.<br><br>Allowed value: any string<br>Default value: `{OutstationId}.{DNPPointType}.{Index}`. |
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `StreamIdPrefix.StreamId`.<br><br>Example: `DNP3-1.{OutstationId}.{PointType}.{Index}`<br><br>An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to **ComponentID** followed by a period.<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams no longer updated. 
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use.  An empty or `null` value results in the default value. Possible parameters: `{OutstationId}`,`{PointType}`, `{Index}`, `{Group}`, and `{Variation}`.<br><br>Allowed value: any string<br>Default value: `{OutstationId}.{PointType}.{Index}`. |
 
 ### MasterStationBehavior parameters
 
@@ -238,3 +238,13 @@ There are two **TCPChannels** configured. One channel has two outstations config
     ]
 }
 ```
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the DNP3 data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the DNP3 data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the DNP3 data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the DNP3 data source configuration |
+
+**Note:** Replace _ComponentId_ with the Id of your DNP3 component. For example, _DNP3-1_.
