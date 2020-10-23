@@ -143,13 +143,13 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. Specifying <code>null</code> or omitting this parameter results in the <strong>ComponentID</strong> followed by a dot character being used to prefix the stream IDs.<br><br><strong>Note:</strong> An empty string means no prefix is added to the stream IDs.</td>
+<td>Specifies what prefix is used for stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>.An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <strong>ComponentID</strong> followed by a period.<br><br>Example: <code>DNP3-1.{OutstationId}.{DNPPointType}.{Index}</code><br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the default stream ID pattern to use. Possible parameters: <code>{OutstationId}</code>,<code>{DNPPointType}</code>, <code>{Index}</code>, <code>{Group}</code>, and <code>{Variation}</code>. An empty or <code>null</code> value results in <code>{OutstationId}.{DNPPointType}.{Index}</code>.</td>
+<td>Specifies the default stream ID pattern to use.  An empty or <code>null</code> value results in the default value. Possible parameters: <code>{OutstationId}</code>,<code>{DNPPointType}</code>, <code>{Index}</code>, <code>{Group}</code>, and <code>{Variation}</code>.<br><br>Allowed value: any string<br>Default value: <code>{OutstationId}.{DNPPointType}.{Index}</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -442,7 +442,40 @@
         }
     ]
 }
-</code></pre></article>
+</code></pre><h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>GET</code></td>
+<td>Retrieves the DNP3 data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>POST</code></td>
+<td>Creates the DNP3 data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the DNP3 data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>DELETE</code></td>
+<td>Deletes the DNP3 data source configuration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your DNP3 component. For example, <em>DNP3-1</em>.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
