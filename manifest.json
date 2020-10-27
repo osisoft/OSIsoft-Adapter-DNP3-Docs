@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s/PI-Adapter-DNP3-Docs",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "WMtXSwSRvnyZJyYClEY/rQ=="
+          "hash": "EwzhapU5NqM6elFt3I6u4A=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Configuration.html",
-          "hash": "67a/5qNK29YzFMLD2nbdLQ=="
+          "hash": "X2ylbG6YZg9TWDe456LtVw=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-dnp3-data-selection-configuration.html",
-          "hash": "xyrbjX0jiEgAIWeGCvlwbA=="
+          "hash": "5/WE8+2G/WpWr5rI4NfT3A=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-dnp3-data-source-configuration.html",
-          "hash": "vZKDGVVsrF2r3TLPXd2xOw=="
+          "hash": "Xp8GEXf0+VRIXQvnoE4xMQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/Installation.html",
-          "hash": "XJEKqNfadspc0A2/cWkAKA=="
+          "hash": "sSi6MwrYGjq8YLQ8IlHHIw=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/install-pi-adapter-for-dnp3-using-docker.html",
-          "hash": "zWrVpGtlcyEXAKA/W3KDrQ=="
+          "hash": "NVjoUg4uSg4fu1DnK9B5Tw=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/system-requirements.html",
-          "hash": "ioHKOARer5onzt+Q3WLLgA=="
+          "hash": "MicHmQysmIaVl5hQOHVLWw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html",
-          "hash": "RP87SY916z8V6DBsNnf+qQ=="
+          "hash": "qKEqTZ5cQdeJtcF+fXgBew=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-supported-features.html",
-          "hash": "b+Y3ZiB55p3tq56PNul0EQ=="
+          "hash": "TrkYt18DnZbs6ZfohUWvDA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "a8+pQ+jEcXX67QNR/zAR+Q=="
+          "hash": "5kZibz+kmOvgrqDffHQUSw=="
         }
       },
       "is_incremental": false,
@@ -160,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "1cUmA54FC/IuPEn88sRaWQ=="
+          "hash": "IRtAKNbQMxIQatzdF4/dAg=="
         }
       },
       "is_incremental": false,
@@ -1141,7 +1141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/readme.html",
-          "hash": "rvtpYPxSdlG0nokhoRfXEQ=="
+          "hash": "CpgMrgz2ACeMFQ+hcGlrOA=="
         }
       },
       "is_incremental": false,
