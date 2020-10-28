@@ -16,7 +16,7 @@ Complete the following steps to configure the DNP3 data source:
     * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
 1. Save the file. For example, `DataSource.json`.
-1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSource/`
+1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`
 
    **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -242,9 +242,9 @@ There are two **TCPChannels** configured. One channel has two outstations config
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the DNP3 data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the DNP3 data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the DNP3 data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the DNP3 data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the DNP3 data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource  | `POST` | Creates the DNP3 data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the DNP3 data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the DNP3 data source configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your DNP3 component. For example, _DNP3-1_.
+**Note:** Replace \<ComponentId\> with the Id of your DNP3 component. For example, DNP3-1.
