@@ -89,12 +89,12 @@
 </ul>
 </li>
 <li>Save the file. For example, <code>DataSource.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:\&lt;port&gt;/api/v1/configuration/\&lt;adapterId&gt;/DataSource/</code>.</p>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code></p>
 <p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
 <p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash"> curl -v -d `&quot;@DataSource.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
+<pre><code class="lang-bash">curl -v -d `&quot;@DataSource.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
 </code></pre></li>
 </ol>
 <p>After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="pi-adapter-for-dnp3-data-selection-configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html#discovery">Discovery</a>.</p>
@@ -453,28 +453,28 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>GET</code></td>
 <td>Retrieves the DNP3 data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>POST</code></td>
 <td>Creates the DNP3 data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>PUT</code></td>
 <td>Configures or updates the DNP3 data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>DELETE</code></td>
 <td>Deletes the DNP3 data source configuration</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your DNP3 component. For example, <em>DNP3-1</em>.</p>
+<p><strong>Note:</strong> Replace &lt;ComponentId> with the Id of your DNP3 component. For example, DNP3-1.</p>
 </article>
           </div>
           
@@ -483,7 +483,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/adapter-doc-yml/V1/Configuration/pi-adapter-for-dnp3-data-source-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/master/V1/Configuration/pi-adapter-for-dnp3-data-source-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
