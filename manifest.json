@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/source/PI-Adapter-DNP3-Docs",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -61,9 +61,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -965,6 +962,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
