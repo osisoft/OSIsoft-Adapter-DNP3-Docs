@@ -24,7 +24,7 @@ Complete the following steps to configure the DNP3 data selection:
 
 `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-`POST` endpoint: `http://localhost:5590/api/v1/configuration/<componentID>/DataSelection/`
+`POST` endpoint: `http://localhost:5590/api/v1/configuration/<ComponentID>/DataSelection/`
 
 Example using `curl`:
 
@@ -109,11 +109,11 @@ The following is an example of a valid DNP3 data selection configuration. The fi
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the DNP3 data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the DNP3 data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the DNP3 data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the DNP3 data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `PUT` | Configures or updates the DNP3 data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `DELETE` | Deletes the DNP3 data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
 
-**Note:** Replace _ComponentId_ with the Id of your DNP3 component. For example, _DNP3-1_.
+**Note:** Replace \<ComponentId\> with the Id of your DNP3 component. For example, DNP3-1.
