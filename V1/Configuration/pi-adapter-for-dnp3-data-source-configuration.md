@@ -16,7 +16,7 @@ Complete the following steps to configure the DNP3 data source:
     * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
 1. Save the file. For example, `DataSource.json`.
-1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:\<port>/api/v1/configuration/\<adapterId>/DataSource/`.
+1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSource/`
 
    **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -27,8 +27,8 @@ Complete the following steps to configure the DNP3 data source:
    **Note:** Run this command from the same directory where the file is located.
 
    ```bash
-    curl -v -d `"@DataSource.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"`
-    ```
+   curl -v -d `"@DataSource.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"`
+   ```
 
 After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
