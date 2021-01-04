@@ -61,6 +61,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -1267,19 +1270,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
-          "hash": "mcB/JB66uQ7OCvdiYxJgVA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/main/V1/Configuration/egress-endpoint-configuration/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Configuration/egress-endpoint-configuration/toc.html",
-          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
+          "hash": "ZWY0Ra86ArBZ66n/IIRvuQ=="
         }
       },
       "is_incremental": false,
@@ -1490,9 +1481,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
@@ -1693,7 +1681,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "aX+VL9x1g64cq4UBQBcOPg=="
+          "hash": "J4jklOWQVjSMx7HmIsMO6A=="
         }
       },
       "is_incremental": false,
