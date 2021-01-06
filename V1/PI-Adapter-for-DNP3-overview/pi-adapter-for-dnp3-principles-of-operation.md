@@ -33,14 +33,14 @@ The DNP3 adapter creates types at startup. One stream is created for each select
 
 Certain metadata are sent with each stream created. The following metadata are common for every adapter type:
 
-- **DataSource**: Specifies the data source, for example, _DNP3_1_
-- **AdapterType**: Specifies the type of adapter, for example, _DNP3_ 
-- **SourceId**: Specifies the information used to uniquely identify the stream on the source system. For DNP3, this is the outstation Id, the DNP Point Type, and the index. For example, _Outstation1.AnalogInput.3_
-- **Schedule**: Specifies the schedule used to collect data for the stream. For DNP3, this correlates to the StaticScanScheduleId property of the selection item. For example, _schedule1_
+- **ComponentID**: Specifies the data source, for example, _DNP3_1_
+- **ComponentType**: Specifies the type of adapter, for example, _DNP3_
 
 The following metadata is specific to DNP3:
 
 - **Outstation**: Specifies the Id of the outstation that the stream data is collected from. For example, _Outstation1_
+- **SourceId**: Specifies the information used to uniquely identify the stream on the source system. For DNP3, this is the outstation Id, the DNP Point Type, and the index. For example, _Outstation1.AnalogInput.3_
+- **Schedule**: Specifies the schedule used to collect data for the stream. For DNP3, this correlates to the StaticScanScheduleId property of the selection item. For example, _schedule1_
 
 Each stream created for a given DNP point has a unique identifier (stream ID). If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
 If the stream ID is not specified, the adapter uses the `DefaultStreamIdPattern` in the data source configuration to determine the stream ID.
