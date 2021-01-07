@@ -115,14 +115,14 @@
 </table>
 <p>Certain metadata are sent with each stream created. The following metadata are common for every adapter type:</p>
 <ul>
-<li><strong>DataSource</strong>: Specifies the data source, for example, <em>DNP3_1</em></li>
-<li><strong>AdapterType</strong>: Specifies the type of adapter, for example, <em>DNP3</em> </li>
-<li><strong>SourceId</strong>: Specifies the information used to uniquely identify the stream on the source system. For DNP3, this is the outstation Id, the DNP Point Type, and the index. For example, <em>Outstation1.AnalogInput.3</em></li>
-<li><strong>Schedule</strong>: Specifies the schedule used to collect data for the stream. For DNP3, this correlates to the StaticScanScheduleId property of the selection item. For example, <em>schedule1</em></li>
+<li><strong>ComponentID</strong>: Specifies the data source, for example, <em>DNP3_1</em></li>
+<li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>DNP3</em></li>
 </ul>
 <p>The following metadata is specific to DNP3:</p>
 <ul>
 <li><strong>Outstation</strong>: Specifies the Id of the outstation that the stream data is collected from. For example, <em>Outstation1</em></li>
+<li><strong>SourceId</strong>: Specifies the information used to uniquely identify the stream on the source system. For DNP3, this is the outstation Id, the DNP Point Type, and the index. For example, <em>Outstation1.AnalogInput.3</em></li>
+<li><strong>Schedule</strong>: Specifies the schedule used to collect data for the stream. For DNP3, this correlates to the StaticScanScheduleId property of the selection item. For example, <em>schedule1</em></li>
 </ul>
 <p>Each stream created for a given DNP point has a unique identifier (stream ID). If you specify a custom stream ID for the DNP point in data selection configuration, the adapter uses that stream ID to create the stream.
 If the stream ID is not specified, the adapter uses the <code>DefaultStreamIdPattern</code> in the data source configuration to determine the stream ID.</p>
