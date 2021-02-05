@@ -15,8 +15,8 @@ Complete the following steps to configure the DNP3 data source:
 1. Use a text editor to create a file that contains a DNP3 data source in JSON format.
     * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
     * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
-1. Save the file. For example, `ConfigureDataSource.json`.
-1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`
+2. Save the file. For example, `ConfigureDataSource.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`
 
    **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -25,12 +25,12 @@ Complete the following steps to configure the DNP3 data source:
    Example using `curl`:
 
    ```bash
-   curl -d `"@DataSource.json"` -H `"Content-Type: application/json" "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"`
+   curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"
    ```
    
     **Note:** Run this command from the same directory where the file is located.
 
-After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+4. Configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## DNP3 data source schema
 
