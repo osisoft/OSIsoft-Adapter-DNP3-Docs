@@ -88,16 +88,17 @@
 <li>For a table of all available parameters, see <a href="#dnp3-data-source-parameters">DNP3 data source parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>DataSource.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code></p>
+<li>Save the file. For example, <code>ConfigureDataSource.json</code>.</li>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code></p>
 <p><strong>Note:</strong> The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
-<p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -v -d `&quot;@DataSource.json&quot;` -H `&quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;`
-</code></pre></li>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSource&quot;
+</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</li>
+<li><p>Configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="pi-adapter-for-dnp3-data-selection-configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html#discovery">Discovery</a>.</p>
+</li>
 </ol>
-<p>After you complete data source configuration, the next step is to configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="pi-adapter-for-dnp3-data-selection-configuration.html">PI Adapter for DNP3 data selection configuration</a> and <a class="xref" href="../PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html#discovery">Discovery</a>.</p>
 <h2 id="dnp3-data-source-schema">DNP3 data source schema</h2>
 <p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>

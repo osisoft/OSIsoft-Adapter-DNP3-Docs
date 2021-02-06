@@ -81,7 +81,7 @@
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the DNP3 adapter to collect from your outstations.</p>
 <p>Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see <a class="xref" href="pi-adapter-for-dnp3-data-source-configuration.html">PI Adapter for DNP3 data source configuration</a> and <a class="xref" href="../PI-Adapter-for-DNP3-overview/pi-adapter-for-dnp3-principles-of-operation.html#discovery">Discovery</a>.</p>
 <h2 id="configure-dnp3-data-selection">Configure DNP3 data selection</h2>
-<p>You cannot modify DNP3 data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
+<p><strong>Note:</strong> You cannot modify DNP3 data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following steps to configure the DNP3 data selection:</p>
 <ol>
 <li>Use a text editor to create a file that contains a DNP3 data selection in the JSON format.<ul>
@@ -89,16 +89,27 @@
 <li>For a table of all available parameters, see <a href="#dnp3-data-selection-parameters">DNP3 data selection parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>DataSelection.json</code>.</li>
-<li>Use any of the configuration tools capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint:</li>
-</ol>
+<li>Save the file. For example, <code>ConfigureDataSelection.json</code>.</li>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint:</p>
 <p><strong>Note:</strong> The following examples uses DNP3-1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/system-components-configuration.html">System components configuration</a>.</p>
-<p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p><code>POST</code> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentID&gt;/DataSelection/</code></p>
-<p>Example using <code>curl</code>:</p>
-<p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection&quot;
-</code></pre><h2 id="dnp3-data-selection-schema">DNP3 data selection schema</h2>
+<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<ul>
+<li><p><code>POST</code> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentID&gt;/DataSelection/</code></p>
+<p> Example using <code>curl</code>:</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection&quot;
+</code></pre><p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<ul>
+<li><p><code>PUT</code> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentId&gt;/DataSelection/&lt;StreamId&gt;</code></p>
+<p> Example using <code>curl</code>:</p>
+</li>
+</ul>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection/Outstation1.AnalogInput.1&quot;
+</code></pre><p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="dnp3-data-selection-schema">DNP3 data selection schema</h2>
 <p>The full schema definition for the DNP3 data source configuration is in the <code>DNP3_DataSource_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\DNP3\Schemas</code></p>
 <p>Linux: <code>/opt/OSIsoft/Adapters/DNP3/Schemas</code></p>
