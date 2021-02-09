@@ -61,6 +61,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -1540,9 +1543,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
