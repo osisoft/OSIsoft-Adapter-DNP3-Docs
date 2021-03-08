@@ -206,11 +206,11 @@ The following JSON samples provide examples for all configurations available for
 
 ## Data source configuration
 
-Use one the following data source configurations examples for the DNP3 adapter as a template for your own configuration.
+Use one of the following data source configurations examples for the DNP3 adapter as a template for your own configuration.
 
 ### Minimum configuration for a single outstation
 
-The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values are used. With the default configuration, the DNP3 adapter accepts unsolicited responses and perform an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values are used. With the default configuration, the DNP3 adapter accepts unsolicited responses and performs an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ```json
 {
