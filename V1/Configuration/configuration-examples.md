@@ -25,7 +25,7 @@ The following JSON samples provide examples for all configurations available for
 ]
 ```
 
-## DNP3 adapter configuration
+## Adapter configuration
 
 ```json
 {
@@ -210,7 +210,7 @@ Use one of the following data source configurations examples for the DNP3 adapte
 
 ### Minimum configuration for a single outstation
 
-The following example is a configuration for a single outstation on a single TCP channel. The optional configuration parameters have been omitted, so the default values are used. With the default configuration, the DNP3 adapter accepts unsolicited responses and performs an integrity scan every hour, potentially triggering [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+The following example is a configuration for a single outstation on a single TCP channel.
 
 ```json
 {
@@ -241,25 +241,9 @@ The following example is a configuration for a single outstation on a single TCP
 }
 ```
 
-### Example configuration for multiple outstations
+### Configuration for multiple outstations
 
 The following example is a configuration for two outstations that are on one channel and one outstation that is on a separate channel. Rather than using the default configurations, many configuration options are expressed here.
-
-There are two **MasterStationBehaviors**, one of which increases the data link layer timeout and retry count. This can be needed when operating with network conditions that are less than ideal.  Any **TCPChannel** that references the master station behavior `poorNetworkConditions` uses these settings, while **TCPChannels** that reference `defaultMasterBehavior` uses the default settings.
-
-There are three **OutstationBehaviors**: `eventScans-integrityScan-noUnsolicited`, `busyOutstation`, and `class1Events`:
-
-The behavior `eventScans-integrityScan-noUnsolicited` deviates from the default configuration options by disabling unsolicited responses and scanning for events every 10 minutes. This type of configuration is useful if the outstation does not support unsolicited events or it may be more efficient to scan for events periodically.
-
-The behavior `busyOutstation` deviates from the default configuration by increasing the application layer timeout, disabling the time sync, and disabling all integrity scans.
-
-**Note:** Disabling the integrity scan prevents discovery. Event scans are disabled by default.
-
-With this configuration, the DNP3 adapter only collects data if it is configured to collect [static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). This type of configuration is useful if the outstation is very busy. For instance, the adapter can not be the only master communicating with this outstation, so another master station is responsible for syncing the outstation's time and polling for events. In addition, an integrity scan can put too much burden on the outstation if there are a large number of points.
-
-The behavior `class1Events` deviates from the default configuration by disabling unsolicited responses, only performing an integrity scan on startup, and only scanning for events from points assigned to class 1. This configuration is useful if you are not interested in collecting data for points assigned to class 2 or class 3.
-
-There are two **TCPChannels** configured. One channel has two outstations configured. This channel might represent a connection to a DNP3 gateway at a substation. The other **TCPChannel** only contains one configured outstation. This might represent a DNP3 device that is in a remote location.
 
 ```json
 {
@@ -336,7 +320,7 @@ There are two **TCPChannels** configured. One channel has two outstations config
 
 ## Data selection configuration
 
-The following is an example of a valid DNP3 data selection configuration. The first item is an example of a minimally configured selection item for a `Counter Input` point, the second item is an example of how an `Analog Input` point can be configured by [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery), and the last three items show an example of some custom configurations for different DNP3 points. Notice that the second item is not selected; discovered items are not selected by default.
+The following is an example of a valid DNP3 data selection configuration.
 
 ```json
 [
