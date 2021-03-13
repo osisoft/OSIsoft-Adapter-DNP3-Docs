@@ -113,6 +113,8 @@ The following is an example of a valid DNP3 data selection configuration. The fi
 ]
 ```
 
+## REST URLs
+
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
 | api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the DNP3 data selection configuration. |
