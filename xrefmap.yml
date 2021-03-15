@@ -49,9 +49,6 @@ references:
 - uid: BufferingConfiguration1-4
   name: Buffering configuration
   href: V1/main/V1.4/Configuration/buffering-configuration.html
-- uid: ConfigurationExamples
-  name: PI Adapter for DNP3 configuration examples
-  href: V1/Configuration/configuration-examples.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/configuration-tools.html
@@ -217,6 +214,9 @@ references:
 - uid: NextHealthMessageExpected1-4
   name: Next health message expected
   href: V1/main/V1.4/Health/next-health-message-expected.html
+- uid: PIAdapterForDNP3ConfigurationExamples
+  name: PI Adapter for DNP3 configuration examples
+  href: V1/Configuration/pi-adapter-for-dnp3-configuration-examples.html
 - uid: PIAdapterForDNP3DataSelectionConfiguration
   name: PI Adapter for DNP3 data selection configuration
   href: V1/Configuration/pi-adapter-for-dnp3-data-selection-configuration.html
