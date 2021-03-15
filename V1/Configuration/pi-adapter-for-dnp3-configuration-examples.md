@@ -1,5 +1,5 @@
 ---
-uid: ConfigurationExamples
+uid: PIAdapterForDNP3ConfigurationExamples
 ---
 
 # PI Adapter for DNP3 configuration examples

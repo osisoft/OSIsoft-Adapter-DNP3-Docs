@@ -10,39 +10,36 @@ Depending on your data source configuration, your data selection configuration c
 
 ## Configure DNP3 data selection
 
-**Note:** You cannot modify DNP3 data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure a DNP3 data selection. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSelection` REST endpoint to initialize the configuration.
 
-Complete the following steps to configure the DNP3 data selection:
+1. Using a text editor, create an empty text file.
 
-1. Use a text editor to create a file that contains a DNP3 data selection in the JSON format.
-    - For content structure, see the [DNP3 data selection example](#dnp3-data-selection-example).
-    - For a table of all available parameters, see [DNP3 data selection parameters](#dnp3-data-selection-parameters).
-2. Save the file. For example, `ConfigureDataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
+2. Copy and paste an example configuration for a DNP3 data selection into the file.
 
-   **Note:** The following examples uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+    For sample JSON, see [DNP3 data selection examples](#dnp3-data-selection-examples).
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+3. Update the example JSON parameters for your environment.
 
-    - `POST` endpoint: `http://localhost:5590/api/v1/configuration/<ComponentID>/DataSelection/`
+    For a table of all available parameters, see [DNP3 data selection parameters](#dnp3-data-selection-parameters).
 
-       Example using `curl`:
-       
+4. Save the file. For example, as `ConfigureDataSelection.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureDataSelection.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the data selection configuration.
+
     ```bash
-      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection"
-      ```
-      
-      **Note:** Run this command from the same directory where the file is located.
-      
-      - `PUT` endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<StreamId>`
-      
-         Example using `curl`:
-      
-      ```bash
-      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection/Outstation1.AnalogInput.1"
-      ```
-      **Note:** Run this command from the same directory where the file is located.
-      
+    curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/DNP3-1/DataSelection"
+    ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If you use a component ID other than `DNP3-1`, update the endpoint with your chosen component ID and stream ID.
+    * For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
+
 ## DNP3 data selection schema
 
 The full schema definition for the DNP3 data source configuration is in the `DNP3_DataSource_schema.json` file located in one of the following folders:
@@ -115,6 +112,8 @@ The following is an example of a valid DNP3 data selection configuration. The fi
     }
 ]
 ```
+
+## REST URLs
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |

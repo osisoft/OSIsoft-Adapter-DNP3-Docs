@@ -8,29 +8,37 @@ To use the DNP3 adapter, you must configure the adapter to collect data from one
 
 ## Configure DNP3 data source
 
-**Note:** You cannot modify DNP3 data source configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure a DNP3 data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to initialize the configuration.
 
-Complete the following steps to configure the DNP3 data source:
+1. Using a text editor, create an empty text file.
 
-1. Use a text editor to create a file that contains a DNP3 data source in JSON format.
-    * For content structure, see [DNP3 data source examples](#dnp3-data-source-examples).
-    * For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
-2. Save the file. For example, `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`
+2. Copy and paste an example configuration for a DNP3 data source into the file.
 
-   **Note:** The following example uses DNP3-1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+    For sample JSON, see [DNP3 data source examples](#dnp3-data-source-examples).
 
-   `5590` is the default port number. If you selected a different port number, replace it with that value.
+3. Update the example JSON parameters for your environment.
 
-   Example using `curl`:
+    For a table of all available parameters, see [DNP3 data source parameters](#dnp3-data-source-parameters).
 
-   ```bash
-   curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"
-   ```
-   
-    **Note:** Run this command from the same directory where the file is located.
+4. Save the file. For example, as `ConfigureDataSource.json`.
 
-4. Configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
+5. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
+
+    ```bash
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/DNP3-1/DataSource"
+    ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If you use a component ID other than `DNP3-1`, update the endpoint with your chosen component ID.
+    * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
+
+7. Configure data selection. Depending on your data source configuration, your data selection configuration can be pre-populated by discovery. For more information, see [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and [Discovery](xref:PIAdapterForDNP3PrinciplesOfOperation#discovery).
 
 ## DNP3 data source schema
 
