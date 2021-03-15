@@ -23,3 +23,5 @@
   href: ../main/V1/Configuration/buffering-configuration.md
 - name: Logging configuration
   href: ../main/V1/Configuration/logging-configuration.md
+- name: PI Adapter for DNP3 configuration examples
+  href: pi-adapter-for-dnp3-configuration-examples.md
