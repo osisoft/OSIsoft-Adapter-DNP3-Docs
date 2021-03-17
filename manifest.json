@@ -73,9 +73,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/Installation.md",
       "output": {
@@ -378,6 +375,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -417,7 +415,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -877,6 +874,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -916,7 +914,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1615,6 +1612,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Installation/Installation.md",
       "output": {
