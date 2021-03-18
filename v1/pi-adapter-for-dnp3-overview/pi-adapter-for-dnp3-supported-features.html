@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PI Adapter for DNP3 supported features </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PI Adapter for DNP3 supported features ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../v1/index.html" width="46">
+                <img id="logo" src="../../v1/main/v1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3SupportedFeatures">
+<h1 id="pi-adapter-for-dnp3-supported-features">PI Adapter for DNP3 supported features</h1>
+
+<p>The adapter supports specific DNP3 point types.</p>
+<h2 id="supported-dnp-point-types">Supported DNP point types</h2>
+<p>You can configure PI Adapter for DNP3 to read data from each of the following point types as defined in the DNP3 specification. The conformance level defined for a request of each of these points is also listed. Responses can be considered a different conformance level. For more details, refer to the DNP3 specification.</p>
+<p><strong>Note:</strong> Do not configure the adapter to request data for point types that are unsupported by your outstation.</p>
+<table>
+<thead>
+<tr>
+<th>DNP3 point type</th>
+<th>Static object group</th>
+<th>Static object variations</th>
+<th>Event object group</th>
+<th>Event object group variations</th>
+<th>DNP3 conformance level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Binary Input</code></td>
+<td>0, 1</td>
+<td>0, 1, 2</td>
+<td>2</td>
+<td>1, 2, 3</td>
+<td>Level 1</td>
+</tr>
+<tr>
+<td><code>Double-bit Binary Input</code></td>
+<td>3</td>
+<td>0, 1, 2, 3</td>
+<td>4</td>
+<td>1, 2, 3</td>
+<td>Level 4</td>
+</tr>
+<tr>
+<td><code>Counter</code></td>
+<td>20</td>
+<td>0, 1, 2, 3, 4, 5, 6, 7, 8</td>
+<td>22</td>
+<td>1, 2, 3, 4, 5, 6, 7, 8</td>
+<td>Level 1</td>
+</tr>
+<tr>
+<td><code>Analog Input</code></td>
+<td>30</td>
+<td>0, 1, 2, 3, 4, 5, 6</td>
+<td>32</td>
+<td>1, 2, 3, 4, 5, 6, 7, 8</td>
+<td>Level 2</td>
+</tr>
+<tr>
+<td><code>Octet String</code><sup>1</sup></td>
+<td>110</td>
+<td>0 - 255</td>
+<td>111</td>
+<td>1 - 255</td>
+<td>Not required for any conformance level</td>
+</tr>
+</tbody>
+</table>
+<p>**<sup>1</sup>Although the <code>Octet String</code> point type is supported by the adapter, if the value returned by the outstation contains any <code>null</code> characters (for example, ASCII <code>0x00</code>), the string is truncated at the first <code>null</code> character.</p>
+<p><strong>Note:</strong> Some variations can include a flag octet to indicate status. While the PI Adapter for DNP3 can parse this data, storing this data is not currently supported. In addition, variation zero has a special meaning in DNP3. The adapter can be configured to request a variation zero for static scans, and the outstation should return data in a variation that it prefers. The outstation is not allowed to specify variation zero in its response. The adapter will not request a specific variation for event data, but it is able to parse any of the variations listed above.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/master/v1/pi-adapter-for-dnp3-overview/pi-adapter-for-dnp3-supported-features.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
