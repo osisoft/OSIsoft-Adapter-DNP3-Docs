@@ -16,7 +16,7 @@ Complete the following steps to configure a DNP3 data selection. Use the `PUT` m
 
 2. Copy and paste an example configuration for a DNP3 data selection into the file.
 
-    For sample JSON, see [DNP3 data selection examples](#dnp3-data-selection-examples).
+    For sample JSON, see [DNP3 data selection examples](#dnp3-data-selection-example).
 
 3. Update the example JSON parameters for your environment.
 

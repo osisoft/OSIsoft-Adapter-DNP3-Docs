@@ -14,7 +14,7 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 Complete the following steps to establish a data flow from a DNP3 data source device to a data endpoint.
 
-1. Configure one or several DNP3 system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
+1. Configure one or several DNP3 system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
 
 2. Configure a DNP3 data source for each DNP3 device.<br>See [PI Adapter for DNP3 data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration#configure-dnp3-data-source).
 
