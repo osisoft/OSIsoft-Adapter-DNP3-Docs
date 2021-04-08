@@ -1,5 +1,5 @@
 ---
-uid: Installation
+uid: InstallationPIAdapterForDNP3
 ---
 
 # Installation
