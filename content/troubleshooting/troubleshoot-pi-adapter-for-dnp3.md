@@ -8,7 +8,7 @@ PI Adapter for DNP3 provides troubleshooting features that enable you to verify 
 
 ## Check configurations
 
-Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps confirm correct configuration for your adapter.
+Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
 1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify that <!-- Insert data source parameters that need to be checked --> are correct.
 2. Navigate to [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and verify the following for each configured data selection item below:
