@@ -62,7 +62,7 @@ The following parameters are available to configure DNP3 data selection:
 | **Variation** | Optional | `number` | The DNP3 object variation to be requested for the point during a static scan. For a list of supported objects, see [PI Adapter for DNP3 supported features](xref:PIAdapterForDNP3SupportedFeatures).<br><br>Default value: `0` |
 | **Index** | Required | `number` | The index of the point on the outstation.
 | **StaticScanScheduleId** | Optional | `string` | The identifier of a schedule defined in the [Schedules configuration](xref:SchedulesConfiguration). By default, no static scan is configured. For more information, see [Static data](xref:PIAdapterForDNP3PrinciplesOfOperation#static-data). |
-| **DataFilterId** | Optional | `string` | The identifier of a data filter defined in the [Data filters configuration](xref:DataFiltersConfiguration). By default, no filter is applied. |
+| **DataFilterId** | Optional | `string` | The identifier of a data filter defined in the [Data filters configuration](xref:DataFiltersConfiguration). By default, no filter is applied.<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. |
 
 ## DNP3 data selection example
 
