@@ -10,10 +10,39 @@ PI Adapter for DNP3 provides troubleshooting features that enable you to verify 
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify that <!-- Insert data source parameters that need to be checked --> are correct.
+1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify that each parameter is correct in the following sections:
+
+      ##### MasterStationBehaviors
+      * **MasterAddress** - Verify that this is a unique DNP address on the TCP Channel that the adapter is communicating on. The adapter will identify itself using this address. If there is a conflict, the adapter may have trouble sending/receiving DNP messages to outstations. 
+      * **DataLinkLayerTimeout** - Verify that this timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default will be sufficient in most cases. 
+      
+      ##### OutstationBehaviors
+      * **ApplicationLayerTimeout** - Verify that this timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default will be sufficient in most cases. 
+      * **EnableUnsolicited** - Verify that your outstations support unsolicited data. If outstations support unsolicited data, there may be no need to configure static or event scans. If your outstations do not support unsolicited data, then the value of this parameter is largely inconsequential. 
+      * **EnableTimeSync** - Verify that your adapter machine has an accurate time sync. When enabled, the adapter will provide the current time to an outstation when requested. If you do not want the outstations to sync with the adapter machine time, mark this as false. 
+      * **IntegrityScanOnStartup** - Verify that your outstation can handle the burden of an integrity scan on startup. This scan will place additional load on the outstation whenever the adapter or outstation is restarted. 
+      * **IntegrityScanOnEventBufferOverflow** - Verify that your outstation can handle the burden of an integrity scan when the outstation's event buffer overflows. This scan will place additional load on the outstation whenever outstation's event buffer overflows. 
+      * **IntegrityScanPeriod** - Verify that your outstation can handle the burden of an integrity scan at this interval. This scan will place additional load on the outstation whenever this interval passes. 
+      * **EventClasses** - Verify that the points you wish to collect event data for are in one of the event classes listed here. If your point is not in any event class, you may need to configure a static scan. 
+      * **EventScanPeriod** - Verify that this interval is appropriate for your data collection needs. Too short may put unnecessary load on the network, adapter, and outstations. Too long may allow the outstation's event buffer to overflow. 
+
+      ###### TCPChannel
+      * **HostNameOrIpAddress** - Verify that this hostname is resolvable from the adapter machine, and/or that the IP address is reachable. Also verify that the outstation is listening at this hostname/address. Otherwise, the adapter will not be able to connect to the outstation. 
+      * **Port** - Verify that firewalls between the adapter and outstation allow connections on this port. Also verify that the outstation is listenting on this port. Otherwise, the adapter will not be able to connect to the outstation. 
+      * **MasterStationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **MasterStationBehaviors** list. 
+      
+      ###### Outstations 
+      * **DNPAddress** - Verify that this matches the DNP Address of your outstation. This is used as an identifier on the DNP network, the adapter will only accept data from an outstation at an address specified here in the config. 
+      * **OutstationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **OutstationBehaviors** list. 
+
 2. Navigate to [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and verify that the following data selection items are correct:
 
-    <!-- Insert data selection parameters that need to be checked-->
+      * **OutstationId** - Verify that this matches the **Id** of one of the **Outstation** configurations. 
+      * **Group** - Verify that this matches the DNP3 object group number of the point that you want to collect data from. 
+      * **Variation** - Verify that this variation is supported by your outstation. Behavior is outstation dependent if you specify a variation that is not supported. 
+      * **Index** - Verify that this matches the point index of the DNP3 point that you want to collect data from. 
+      * **StaticScanScheduleId** - Verify that this matches the **Id** of a schedule in the **Schedules** configuration. This will be the interval at which a static scan is requested, but it is not required if no static scan is desired. 
+      * **DataFilterId** - If configured, verify the referenced data filter exists.<br> A non-existent or incorrect DataFilterId  means that data filtering is not active.
 
 3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
