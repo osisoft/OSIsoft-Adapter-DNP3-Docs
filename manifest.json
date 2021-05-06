@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -25,15 +25,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "content/configuration/configuration.md",
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "WcvL2SWTitCG1zmKAHg+uA=="
+          "hash": "LKfsaeiwBw5knDEvtgdhQg=="
         }
       },
       "is_incremental": false,
