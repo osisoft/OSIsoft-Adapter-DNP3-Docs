@@ -24,7 +24,7 @@ This Quick Start guides you through setup of each configuration file available f
 
 4. Configure a DNP3 data selection for each DNP3 data source.<br>See [PI Adapter for DNP3 data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration#configure-dnp3-data-selection).
 
-5. **Optional**: Configure data filters. See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters)
+5. **Optional**: Configure data filters.<br>See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters).
 
 6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
 
