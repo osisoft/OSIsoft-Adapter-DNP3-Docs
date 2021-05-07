@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshoot PI Adapter for DNP3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshoot PI Adapter for DNP3 ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TroubleshootPIAdapterForDNP3">
+<h1 id="troubleshoot-pi-adapter-for-dnp3">Troubleshoot PI Adapter for DNP3</h1>
+
+<p>PI Adapter for DNP3 provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the <a href="https://my.osisoft.com/">OSIsoft Customer Portal</a>.</p>
+<h2 id="check-configurations">Check configurations</h2>
+<p>Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.</p>
+<ol>
+<li><p>Navigate to <a class="xref" href="../configuration/pi-adapter-for-dnp3-data-source-configuration.html">data source configuration</a> and verify the following for each configured data source item below:</p>
+<p>   <strong>MasterStationBehaviors</strong></p>
+<ul>
+<li><strong>MasterAddress</strong> - The DNP address on the TCP Channel that the adapter is communicating on is unique. The adapter identifies itself using this address. If there is a conflict, the adapter may have trouble sending/receiving DNP messages to outstations. </li>
+<li><p><strong>DataLinkLayerTimeout</strong> - The timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default is sufficient in most cases. </p>
+<p><strong>OutstationBehaviors</strong></p>
+</li>
+<li><strong>ApplicationLayerTimeout</strong> - The timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default is sufficient in most cases. </li>
+<li><strong>EnableUnsolicited</strong> - The outstations support unsolicited data. If outstations support unsolicited data, there may be no need to configure static or event scans. If your outstations do not support unsolicited data, then the value of this parameter is largely inconsequential. </li>
+<li><strong>EnableTimeSync</strong> - The adapter machine has an accurate time sync. When enabled, the adapter provides the current time to an outstation when requested. If you do not want the outstations to sync with the adapter machine time, mark this as false. </li>
+<li><strong>IntegrityScanOnStartup</strong> - The outstation can handle the burden of an integrity scan on startup. This scan places additional load on the outstation whenever the adapter or outstation is restarted. </li>
+<li><strong>IntegrityScanOnEventBufferOverflow</strong> - The outstation can handle the burden of an integrity scan when the outstation&#39;s event buffer overflows. This scan places additional load on the outstation whenever outstation&#39;s event buffer overflows. </li>
+<li><strong>IntegrityScanPeriod</strong> - The outstation can handle the burden of an integrity scan at this interval. This scan places additional load on the outstation whenever this interval passes. </li>
+<li><strong>EventClasses</strong> - The points you want to collect event data for are in one of the event classes listed here. If your point is not in any event class, you may need to configure a static scan. </li>
+<li><p><strong>EventScanPeriod</strong> - The interval is appropriate for your data collection needs. A too short interval may put unnecessary load on the network, adapter, and outstations. A too long interval may allow the outstation&#39;s event buffer to overflow. </p>
+<p><strong>TCPChannel</strong></p>
+</li>
+<li><strong>HostNameOrIpAddress</strong> - The hostname is resolvable from the adapter machine, the IP address is reachable, or both. Also, the outstation is listening at this hostname/address. Otherwise, the adapter cannot connect to the outstation. </li>
+<li><strong>Port</strong> - The firewalls between the adapter and outstation allow connections on this port. Also, the outstation is listening on this port. Otherwise, the adapter cannot connect to the outstation. </li>
+<li><p><strong>MasterStationBehaviorId</strong> - This parameter matches the <strong>Id</strong> of one of the configurations in the <strong>MasterStationBehaviors</strong> list. </p>
+<p><strong>Outstations</strong> </p>
+</li>
+<li><strong>DNPAddress</strong> - This parameter matches the DNP Address of your outstation. This is used as an identifier on the DNP network. The adapter only accepts data from an outstation at an address specified here in the configuration. </li>
+<li><strong>OutstationBehaviorId</strong> - This parameter matches the <strong>Id</strong> of one of the configurations in the <strong>OutstationBehaviors</strong> list. </li>
+</ul>
+</li>
+<li><p>Navigate to <a class="xref" href="../configuration/pi-adapter-for-dnp3-data-selection-configuration.html">data selection configuration</a> and verify the following for each configured data selection item below:</p>
+<ul>
+<li><strong>OutstationId</strong> - This parameter matches the <strong>Id</strong> of one of the <strong>Outstation</strong> configurations. </li>
+<li><strong>Group</strong> - This parameter matches the DNP3 object group number of the point that you want to collect data from. </li>
+<li><strong>Variation</strong> - This variation is supported by your outstation. Behavior is outstation dependent if you specify a variation that is not supported. </li>
+<li><strong>Index</strong> - This parameter matches the point index of the DNP3 point that you want to collect data from. </li>
+<li><strong>StaticScanScheduleId</strong> - This parameter matches the <strong>Id</strong> of a schedule in the <strong>Schedules</strong> configuration. This is the interval at which a static scan is requested, but it is not required if no static scan is desired. </li>
+<li><strong>DataFilterId</strong> - If configured, the referenced data filter exists.<br> A non-existent or incorrect DataFilterId  means that data filtering is not active.</li>
+</ul>
+</li>
+<li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints-configuration.html">egress endpoints configuration</a>. For each configured endpoint, verify that the <strong>Endpoint</strong> and authentication properties are correct.</p>
+<ul>
+<li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
+<li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="check-connectivity">Check connectivity</h2>
+<p>Perform the following steps to verify active connections to the data source and egress endpoints.</p>
+<ol>
+<li>Start PI Web API and verify that the PI point values are updating or start OCS and verify that the stream values are updating.</li>
+<li>If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/shared-content/health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
+</ol>
+<h2 id="check-logs">Check logs</h2>
+<p>Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.</p>
+<ol>
+<li>Navigate to the logs directory:<br>
+ Windows: <code>%ProgramData%\OSIsoft\Adapters\DNP3\Logs</code><br>
+ Linux: <code>/usr/share/OSIsoft/Adapters/DNP3/Logs</code>.</li>
+<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/shared-content/configuration/logging-configuration.html">Logging configuration</a>.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/main/content/troubleshooting/troubleshoot-pi-adapter-for-dnp3.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

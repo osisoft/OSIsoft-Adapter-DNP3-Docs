@@ -766,7 +766,19 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "QdL9rcnFp2My7+vZelATow=="
+          "hash": "A7M+FUlGr/TIFt64bhoCuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-dnp3.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-dnp3.html",
+          "hash": "cqvZtIouJmJhBBZZTn8bMw=="
         }
       },
       "is_incremental": false,
@@ -799,7 +811,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 52,
+          "total_file_count": 53,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

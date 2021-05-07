@@ -142,6 +142,9 @@ references:
 - uid: Troubleshooting
   name: Troubleshooting
   href: content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html
+- uid: TroubleshootPIAdapterForDNP3
+  name: Troubleshoot PI Adapter for DNP3
+  href: content/troubleshooting/troubleshoot-pi-adapter-for-dnp3.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html
