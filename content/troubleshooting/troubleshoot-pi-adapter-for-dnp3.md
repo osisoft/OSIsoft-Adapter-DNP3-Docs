@@ -10,7 +10,7 @@ PI Adapter for DNP3 provides troubleshooting features that enable you to verify 
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify that each parameter is correct in the following sections:
+1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify the following for each configured data source item below:
 
       **MasterStationBehaviors**
       * **MasterAddress** - Verify that this is a unique DNP address on the TCP Channel that the adapter is communicating on. The adapter will identify itself using this address. If there is a conflict, the adapter may have trouble sending/receiving DNP messages to outstations. 
