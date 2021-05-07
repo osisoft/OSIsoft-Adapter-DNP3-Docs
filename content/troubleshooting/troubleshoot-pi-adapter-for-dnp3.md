@@ -28,7 +28,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
       **TCPChannel**
       * **HostNameOrIpAddress** - The hostname is resolvable from the adapter machine, the IP address is reachable, or both. Also, the outstation is listening at this hostname/address. Otherwise, the adapter cannot connect to the outstation. 
-      * **Port** - Verify that firewalls between the adapter and outstation allow connections on this port. Also verify that the outstation is listenting on this port. Otherwise, the adapter will not be able to connect to the outstation. 
+      * **Port** - The firewalls between the adapter and outstation allow connections on this port. Also, the outstation is listening on this port. Otherwise, the adapter cannot connect to the outstation. 
       * **MasterStationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **MasterStationBehaviors** list. 
       
       ###### Outstations 
