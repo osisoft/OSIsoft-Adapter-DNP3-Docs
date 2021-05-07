@@ -32,7 +32,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       * **MasterStationBehaviorId** - This parameter matches the **Id** of one of the configurations in the **MasterStationBehaviors** list. 
       
       **Outstations** 
-      * **DNPAddress** - Verify that this matches the DNP Address of your outstation. This is used as an identifier on the DNP network, the adapter will only accept data from an outstation at an address specified here in the config. 
+      * **DNPAddress** - This parameter matches the DNP Address of your outstation. This is used as an identifier on the DNP network. The adapter only accepts data from an outstation at an address specified here in the configuration. 
       * **OutstationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **OutstationBehaviors** list. 
 
 2. Navigate to [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and verify that the following data selection items are correct:
