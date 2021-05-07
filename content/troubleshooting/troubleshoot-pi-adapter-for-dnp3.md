@@ -38,7 +38,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 2. Navigate to [data selection configuration](xref:PIAdapterForDNP3DataSelectionConfiguration) and verify the following for each configured data selection item below:
 
       * **OutstationId** - This parameter matches the **Id** of one of the **Outstation** configurations. 
-      * **Group** - Verify that this matches the DNP3 object group number of the point that you want to collect data from. 
+      * **Group** - This parameter matches the DNP3 object group number of the point that you want to collect data from. 
       * **Variation** - Verify that this variation is supported by your outstation. Behavior is outstation dependent if you specify a variation that is not supported. 
       * **Index** - Verify that this matches the point index of the DNP3 point that you want to collect data from. 
       * **StaticScanScheduleId** - Verify that this matches the **Id** of a schedule in the **Schedules** configuration. This will be the interval at which a static scan is requested, but it is not required if no static scan is desired. 
