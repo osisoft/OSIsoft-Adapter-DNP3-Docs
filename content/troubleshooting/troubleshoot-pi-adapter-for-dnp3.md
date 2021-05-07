@@ -31,7 +31,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       * **Port** - The firewalls between the adapter and outstation allow connections on this port. Also, the outstation is listening on this port. Otherwise, the adapter cannot connect to the outstation. 
       * **MasterStationBehaviorId** - This parameter matches the **Id** of one of the configurations in the **MasterStationBehaviors** list. 
       
-      ###### Outstations 
+      **Outstations** 
       * **DNPAddress** - Verify that this matches the DNP Address of your outstation. This is used as an identifier on the DNP network, the adapter will only accept data from an outstation at an address specified here in the config. 
       * **OutstationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **OutstationBehaviors** list. 
 
