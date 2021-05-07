@@ -24,7 +24,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       * **IntegrityScanOnEventBufferOverflow** - The outstation can handle the burden of an integrity scan when the outstation's event buffer overflows. This scan places additional load on the outstation whenever outstation's event buffer overflows. 
       * **IntegrityScanPeriod** - The outstation can handle the burden of an integrity scan at this interval. This scan places additional load on the outstation whenever this interval passes. 
       * **EventClasses** - The points you want to collect event data for are in one of the event classes listed here. If your point is not in any event class, you may need to configure a static scan. 
-      * **EventScanPeriod** - Verify that this interval is appropriate for your data collection needs. Too short may put unnecessary load on the network, adapter, and outstations. Too long may allow the outstation's event buffer to overflow. 
+      * **EventScanPeriod** - The interval is appropriate for your data collection needs. A too short interval may put unnecessary load on the network, adapter, and outstations. A too long interval may allow the outstation's event buffer to overflow. 
 
       ###### TCPChannel
       * **HostNameOrIpAddress** - Verify that this hostname is resolvable from the adapter machine, and/or that the IP address is reachable. Also verify that the outstation is listening at this hostname/address. Otherwise, the adapter will not be able to connect to the outstation. 
