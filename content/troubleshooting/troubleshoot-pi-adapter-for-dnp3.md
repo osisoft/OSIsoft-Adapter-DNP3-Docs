@@ -12,7 +12,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 1. Navigate to [data source configuration](xref:PIAdapterForDNP3DataSourceConfiguration) and verify that each parameter is correct in the following sections:
 
-      ##### MasterStationBehaviors
+      **MasterStationBehaviors**
       * **MasterAddress** - Verify that this is a unique DNP address on the TCP Channel that the adapter is communicating on. The adapter will identify itself using this address. If there is a conflict, the adapter may have trouble sending/receiving DNP messages to outstations. 
       * **DataLinkLayerTimeout** - Verify that this timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default will be sufficient in most cases. 
       
