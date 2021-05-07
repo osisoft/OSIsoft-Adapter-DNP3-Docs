@@ -18,7 +18,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       
       **OutstationBehaviors**
       * **ApplicationLayerTimeout** - The timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default is sufficient in most cases. 
-      * **EnableUnsolicited** - Verify that your outstations support unsolicited data. If outstations support unsolicited data, there may be no need to configure static or event scans. If your outstations do not support unsolicited data, then the value of this parameter is largely inconsequential. 
+      * **EnableUnsolicited** - The outstations support unsolicited data. If outstations support unsolicited data, there may be no need to configure static or event scans. If your outstations do not support unsolicited data, then the value of this parameter is largely inconsequential. 
       * **EnableTimeSync** - Verify that your adapter machine has an accurate time sync. When enabled, the adapter will provide the current time to an outstation when requested. If you do not want the outstations to sync with the adapter machine time, mark this as false. 
       * **IntegrityScanOnStartup** - Verify that your outstation can handle the burden of an integrity scan on startup. This scan will place additional load on the outstation whenever the adapter or outstation is restarted. 
       * **IntegrityScanOnEventBufferOverflow** - Verify that your outstation can handle the burden of an integrity scan when the outstation's event buffer overflows. This scan will place additional load on the outstation whenever outstation's event buffer overflows. 
