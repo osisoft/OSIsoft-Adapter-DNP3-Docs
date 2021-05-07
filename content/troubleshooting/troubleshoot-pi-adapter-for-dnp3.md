@@ -26,7 +26,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       * **EventClasses** - The points you want to collect event data for are in one of the event classes listed here. If your point is not in any event class, you may need to configure a static scan. 
       * **EventScanPeriod** - The interval is appropriate for your data collection needs. A too short interval may put unnecessary load on the network, adapter, and outstations. A too long interval may allow the outstation's event buffer to overflow. 
 
-      ###### TCPChannel
+      **TCPChannel**
       * **HostNameOrIpAddress** - Verify that this hostname is resolvable from the adapter machine, and/or that the IP address is reachable. Also verify that the outstation is listening at this hostname/address. Otherwise, the adapter will not be able to connect to the outstation. 
       * **Port** - Verify that firewalls between the adapter and outstation allow connections on this port. Also verify that the outstation is listenting on this port. Otherwise, the adapter will not be able to connect to the outstation. 
       * **MasterStationBehaviorId** - Verify that this matches the **Id** of one of the configurations in the **MasterStationBehaviors** list. 
