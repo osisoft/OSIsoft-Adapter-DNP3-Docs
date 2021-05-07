@@ -16,7 +16,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
       * **MasterAddress** - Verify that this is a unique DNP address on the TCP Channel that the adapter is communicating on. The adapter will identify itself using this address. If there is a conflict, the adapter may have trouble sending/receiving DNP messages to outstations. 
       * **DataLinkLayerTimeout** - Verify that this timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default will be sufficient in most cases. 
       
-      ##### OutstationBehaviors
+      **OutstationBehaviors**
       * **ApplicationLayerTimeout** - Verify that this timeout is appropriate for your network. If too small, communications may timeout before completing. If the value is too large, it will take longer to notice communication failures. The default will be sufficient in most cases. 
       * **EnableUnsolicited** - Verify that your outstations support unsolicited data. If outstations support unsolicited data, there may be no need to configure static or event scans. If your outstations do not support unsolicited data, then the value of this parameter is largely inconsequential. 
       * **EnableTimeSync** - Verify that your adapter machine has an accurate time sync. When enabled, the adapter will provide the current time to an outstation when requested. If you do not want the outstations to sync with the adapter machine time, mark this as false. 
