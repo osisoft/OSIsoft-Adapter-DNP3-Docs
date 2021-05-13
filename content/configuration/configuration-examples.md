@@ -2,7 +2,7 @@
 uid: PIAdapterForDNP3ConfigurationExamples
 ---
 
-# PI Adapter for DNP3 configuration examples
+# Configuration examples
 
 The following JSON samples provide examples for all configurations available for PI Adapter for DNP3.
 

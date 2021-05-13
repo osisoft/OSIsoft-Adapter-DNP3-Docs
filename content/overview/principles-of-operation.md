@@ -2,7 +2,7 @@
 uid: PIAdapterForDNP3PrinciplesOfOperation
 ---
 
-# PI Adapter for DNP3 principles of operation
+# Principles of operation
 
 The DNP3 adapter's operations focus on data collection and stream creation.
 
