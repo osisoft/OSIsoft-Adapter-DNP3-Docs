@@ -2,7 +2,7 @@
 uid: PIAdapterForDNP3DataSelectionConfiguration
 ---
 
-# PI Adapter for DNP3 data selection configuration
+# Data selection
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the DNP3 adapter to collect from your outstations.
 

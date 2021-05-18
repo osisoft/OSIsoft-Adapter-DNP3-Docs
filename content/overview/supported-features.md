@@ -2,7 +2,7 @@
 uid: PIAdapterForDNP3SupportedFeatures
 ---
 
-# PI Adapter for DNP3 supported features
+# Supported features
 
 The adapter supports specific DNP3 point types.
 

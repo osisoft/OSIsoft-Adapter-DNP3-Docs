@@ -2,7 +2,7 @@
 uid: PIAdapterForDNP3DataSourceConfiguration
 ---
 
-# PI Adapter for DNP3 data source configuration
+# Data source
 
 To use the DNP3 adapter, you must configure the adapter to collect data from one or more DNP3 compliant outstations. The adapter can make many TCP connections by defining multiple TCP channels, and many connections to outstations by defining multiple outstation configurations.
 
