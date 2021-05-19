@@ -62,8 +62,8 @@ references:
   name: Installation
   href: content/main/shared-content/installation/installation.html
 - uid: InstallPIAdapterForDNP3UsingDocker
-  name: Install PI Adapter for DNP3 using Docker
-  href: content/installation/install-pi-adapter-for-dnp3-using-docker.html
+  name: Installation using Docker
+  href: content/installation/installation-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: content/main/shared-content/installation/install-the-adapter.html
@@ -80,23 +80,23 @@ references:
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
 - uid: PIAdapterForDNP3ConfigurationExamples
-  name: PI Adapter for DNP3 configuration examples
-  href: content/configuration/pi-adapter-for-dnp3-configuration-examples.html
+  name: Configuration examples
+  href: content/configuration/configuration-examples.html
 - uid: PIAdapterForDNP3DataSelectionConfiguration
-  name: PI Adapter for DNP3 data selection configuration
-  href: content/configuration/pi-adapter-for-dnp3-data-selection-configuration.html
+  name: Data selection
+  href: content/configuration/data-selection.html
 - uid: PIAdapterForDNP3DataSourceConfiguration
-  name: PI Adapter for DNP3 data source configuration
-  href: content/configuration/pi-adapter-for-dnp3-data-source-configuration.html
+  name: Data source
+  href: content/configuration/data-source.html
 - uid: PIAdapterforDNP3Overview
-  name: PI Adapter for DNP3 overview
+  name: Overview
   href: content/index.html
 - uid: PIAdapterForDNP3PrinciplesOfOperation
-  name: PI Adapter for DNP3 principles of operation
-  href: content/pi-adapter-for-dnp3-overview/pi-adapter-for-dnp3-principles-of-operation.html
+  name: Principles of operation
+  href: content/overview/principles-of-operation.html
 - uid: PIAdapterForDNP3SupportedFeatures
-  name: PI Adapter for DNP3 supported features
-  href: content/pi-adapter-for-dnp3-overview/pi-adapter-for-dnp3-supported-features.html
+  name: Supported features
+  href: content/overview/supported-features.html
 - uid: PIAdapterUsers
   name: PI Adapter users
   href: content/main/shared-content/pi-adapter-users.html

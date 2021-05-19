@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PI Adapter for DNP3 principles of operation </title>
+    <title>Principles of operation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PI Adapter for DNP3 principles of operation ">
+    <meta name="title" content="Principles of operation ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,7 +76,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="PIAdapterForDNP3PrinciplesOfOperation">
-<h1 id="pi-adapter-for-dnp3-principles-of-operation">PI Adapter for DNP3 principles of operation</h1>
+<h1 id="principles-of-operation">Principles of operation</h1>
 
 <p>The DNP3 adapter&#39;s operations focus on data collection and stream creation.</p>
 <h2 id="connectivity-and-interoperability">Connectivity and interoperability</h2>
@@ -89,7 +89,7 @@
 <li>Data selection: Select the DNP points on the outstations you want the adapter to collect for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more information, see <a class="xref" href="../configuration/pi-adapter-for-dnp3-data-source-configuration.html">PI Adapter for DNP3 data source configuration</a>, <a class="xref" href="../configuration/pi-adapter-for-dnp3-data-selection-configuration.html">PI Adapter for DNP3 data selection configuration</a>, and <a class="xref" href="../main/shared-content/configuration/logging.html">Logging configuration</a>.</p>
+<p>For more information, see <a class="xref" href="../configuration/data-source.html">PI Adapter for DNP3 data source configuration</a>, <a class="xref" href="../configuration/data-selection.html">PI Adapter for DNP3 data selection configuration</a>, and <a class="xref" href="../main/shared-content/configuration/logging.html">Logging configuration</a>.</p>
 <h2 id="stream-creation">Stream creation</h2>
 <p>The DNP3 adapter creates types at startup. One stream is created for each selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:</p>
 <table>
@@ -146,7 +146,7 @@ The outstation should report the current value of each point, but the outstation
 <p>The DNP3 specification defines event data as the information that is retained regarding an event. An event is defined by the DNP3 specification as the occurrence of something significant happening. What constitutes an event can vary depending on the implementation of the outstation. Typically, an event results in a value change for a DNP point, although it is possible for an event to occur that does not change the value of any point on the outstation. Event data is saved at the outstations and should be kept until the adapter confirms that it has received the event object. The event object is the description of the event that the adapter should receive from the outstations. The event object can contain the value, time, and status code relating to the event and corresponding point. The exact information contained in the object is dependent on both the point type and variation defined in the DNP3 specification.  </p>
 <p>DNP3 events belong to one of three different classes of data: Class 1, Class 2, or Class 3. These event classes can be used to group events by priority, though neither the DNP3 adapter nor the DNP3 specification assign significance to the three event classes. According to the DNP3 specification, all DNP3 – Level 1 compliant outstations accepts read requests for event class data.  </p>
 <h4 id="event-scans">Event scans</h4>
-<p>The DNP3 adapter can be configured to request event data through an event scan. During an event scan, the adapter polls the outstation(s) for the event data from each of the configured event classes. The event classes and the polling interval can be configured in the data source configuration. For more information, see <a class="xref" href="../configuration/pi-adapter-for-dnp3-data-source-configuration.html#outstationbehavior-parameters">PI Adapter for DNP3 data source configuration</a>.</p>
+<p>The DNP3 adapter can be configured to request event data through an event scan. During an event scan, the adapter polls the outstation(s) for the event data from each of the configured event classes. The event classes and the polling interval can be configured in the data source configuration. For more information, see <a class="xref" href="../configuration/data-source.html#outstationbehavior-parameters">PI Adapter for DNP3 data source configuration</a>.</p>
 <p>Event scans offer several advantages over polling for static data. When polling for static data, it is possible to miss value changes for points on the outstation; however, event scans ensures that each outstation reports every event to the adapter. Similarly, even when polling quickly, some events could be missed if they do not change the value of the DNP point. If bandwidth is a concern, the adapter can make efficient use of the network by only requesting event data. When polling for static data, the outstation can report unchanging data unnecessarily, whereas event scans should only return new events. It is important that the adapter is configured to perform event scans at an interval that is not long enough to allow the outstation event buffers to become full. To determine what constitutes an event and how much time it takes before the buffer becomes full, refer to the documentation for a specific outstation.</p>
 <h4 id="unsolicited-events">Unsolicited events</h4>
 <p>In addition to the event scans above, the DNP3 adapter can be configured to receive unsolicited responses containing event data. An unsolicited response is a message sent from an outstation that the adapter did not explicitly request. If the adapter is configured to receive unsolicited data, outstations that support sending unsolicited data should report event data to the adapter as it occurs. This could eliminate the need for the adapter to poll the outstation(s) for data. The decision to configure the adapter to receive unsolicited data or to perform event scans should be carefully considered.  </p>
@@ -162,7 +162,7 @@ The adapter performs an integrity scan by polling <code>Object Group 60</code>. 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/main/content/pi-adapter-for-dnp3-overview/pi-adapter-for-dnp3-principles-of-operation.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-DNP3-Docs/blob/main/content/overview/principles-of-operation.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
