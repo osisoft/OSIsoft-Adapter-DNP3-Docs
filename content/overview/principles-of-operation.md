@@ -24,12 +24,15 @@ For more information, see [PI Adapter for DNP3 data source configuration](xref:P
 
 ## Stream creation
 
-The DNP3 adapter creates types at startup. One stream is created for each selected DNP point represented by an item in the data selection configuration. Each stream contains two properties:
+The DNP3 adapter creates types at startup. One stream is created for each selected DNP point represented by an item in the data selection configuration. Each stream contains three properties:
 
 | Property name | Data type | Description
 | ------------- | --------- | -----------
 | `Timestamp` | DateTime | Timestamp of the value update for the DNP point
 | `Value` | Specified in the data selection configuration | Value of the DNP point
+| `Quality` | Byte | Data quality of the given DNP3 item update. Quality values are `Good` and `Bad`.<br><br>**Note:** The indicator for bad data quality changes based on the data selection item's data type. |
+
+**Note:** All streams contain the `Quality` property except if the data type is `string`.
 
 Certain metadata are sent with each stream created. The following metadata are common for every adapter type:
 
